@@ -1,6 +1,6 @@
-##Circus Restaurant
+## Circus Restaurant
 
-###Background
+### Background
 You have a customer opening a new restaurant in the middle of Stockholm city. He has a new concept in mind... He wants people to eat and watch a circus show every Friday or Saturday. The restaurant owner is going to get a famous circus person to the restaurant in every show, which means every Friday/Saturday.
 
 ###Requirements
@@ -14,5 +14,5 @@ The customer wants your help building a website for his new Circus restaurant.
 </ul>
 
 
-###Tools used
+### Tools used
 The design of the website is done in Balsamiq. 
