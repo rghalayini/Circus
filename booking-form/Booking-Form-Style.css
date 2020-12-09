@@ -1,10 +1,11 @@
 body {
-    background-image: url("circus-828680_1920.jpg");
-    background-repeat: no-repeat;
+  background-image: url("circus-828680_1920.jpg");
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+ 
+  
 }
-
 
 .section {
     position: relative;
@@ -21,7 +22,7 @@ body {
 }
 
 #booking {
-    font-family: 'Raleway', sans-serif
+    font-family: 'Poppins', sans-serif;
 }
 
 .booking-form {
@@ -31,14 +32,14 @@ body {
     margin: auto;
     padding: 40px;
     overflow: hidden;
-    background-image: linear-gradient(to right, #04054e, #6f64d1);
+    background-image: linear-gradient(to right, #000000, #61892f);
     background-size: cover;
-    border-radius: 35px;
+    border-radius: 55px;
     z-index: 20;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    -ms-border-radius: 35px;
-    -o-border-radius: 35px;
+    -webkit-border-radius: 55px;
+    -moz-border-radius: 55px;
+    -ms-border-radius: 55px;
+    -o-border-radius: 55px;
 }
 
 .booking-form::before {
@@ -55,37 +56,37 @@ body {
 .booking-form .form-header {
     text-align: center;
     position: relative;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 .booking-form .form-header h1 {
-    font-weight: 700;
+    font-weight: 300;
     text-transform: capitalize;
     font-size: 42px;
     margin: 0px;
-    color: #fff
+    color: #fff;
 }
 
 .booking-form .form-group {
     position: relative;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 .booking-form .form-control {
-    background-color: rgba(255, 255, 255, 0.2);
-    height: 60px;
-    padding: 0px 25px;
-    border: none;
-    border-radius: 10px 100px / 120px;
-    color: #fff;
-    -webkit-box-shadow: 0px 0px 0px 2px transparent;
-    box-shadow: 0px 0px 0px 2px transparent;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+   background-color: rgba(255, 255, 255, 0.2);
+   height: 60px;
+   padding: 0px 25px;
+   border: none;
+   border-radius: 35px;
+   color: #fff;
+   -webkit-box-shadow: 0px 0px 0px 2px transparent;
+   box-shadow: 0px 0px 0px 2px transparent;
+   -webkit-transition: 0.2s;
+   transition: 0.2s;
+   -webkit-border-radius: 35px;
+   -moz-border-radius: 35px;
+   -ms-border-radius: 35px;
+   -o-border-radius: 35px;
 }
 
 .booking-form .form-control::-webkit-input-placeholder {
@@ -101,8 +102,8 @@ body {
 }
 
 .booking-form .form-control:focus {
-    -webkit-box-shadow: 0px 0px 0px 2px #e74747;
-    box-shadow: 0px 0px 0px 2px #e74747
+    -webkit-box-shadow: 0px 0px 0px 2px #61892f;
+    box-shadow: 0px 0px 0px 2px #61892f;
 }
 
 .booking-form input[type="date"].form-control {
@@ -139,7 +140,7 @@ body {
     height: 32px;
     text-align: center;
     pointer-events: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     font-size: 14px
 }
 
@@ -159,9 +160,9 @@ body {
     top: -10px;
     left: 25px;
     opacity: 0;
-    color: #e74747;
+    color: #61892f;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     height: 15px;
@@ -180,26 +181,28 @@ body {
 }
 
 .booking-form .submit-btn {
+    background: #86C232;
     color: #fff;
-    background-color: #e74747;
-    font-weight: 700;
-    height: 60px;
+    border: 2px solid #86C232;
+      border-radius: 50px;
+      padding: 8px 25px;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: 0.3s;
+      height: 60px;
     padding: 10px 30px;
     width: 100%;
-    border-radius: 10px 100px / 120px;
-    border: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 1.3px;
+      letter-spacing: 1.3px;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
 }
+
 
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
-    opacity: 0.9
+    opacity: 0.9;
+    background: #61892f;
+    
 }

@@ -4,7 +4,7 @@ body {
     color: #fff;
   }
 
-  a{
+  a, .jumbotron{
     color: #86C232;
   }
   
@@ -198,7 +198,7 @@ body {
     transition: 0.3s;
 }
 
-.nav-menu .book-a-table a:hover {
+.btn .nav-menu .book-a-table a:hover {
   background: #61892f;
     color: #fff;
 }
@@ -529,6 +529,40 @@ section {
   font-weight: 100;
   color: #61892f;
 } 
+
+/*--------------------------------------------------------------
+      # Jumbotron datapolicy
+      --------------------------------------------------------------*/
+      .jumbotron{
+        background-color: transparent;
+        margin: 100px;
+
+      }
+      .btn .btn-2{
+        
+      }
+      .btn{
+        font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    line-height: 1;
+    color: white;
+    border: 2px solid #86C232;
+    
+      }
+      a:link {
+        text-decoration: none;
+    }
+    
+    .btn:hover {
+        background: #61892f;
+        color: #fff;
+    }
 
 /*--------------------------------------------------------------
       # About Us
