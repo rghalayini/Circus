@@ -14,17 +14,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  
+
 
   <title>Circus Grill</title>
 </head>
 
 <body>
   <!-- ======= Top Bar ======= -->
-  <div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex">
+  <div id="topbar" class="navbar smart-scroll ">
+    <div class="container">
       <div class="contact-info mr-auto">
-        <i class="fas fa-phone"></i> +46 739 66 66 66
-        <span class="d-none d-lg-inline-block"><i class="far fa-clock"></i> Mon-Sat: 11:00 AM - 23:00 PM</span>
+        <i class="fas fa-phone"></i> +46 739 66 66 66 &nbsp
+        <span class="d-none d-lg-inline-block"><i class="far fa-clock"></i> Fri & Sat: 11:00 AM - 23:00 PM</span>
       </div>
       <div class="languages">
         <ul>
@@ -34,27 +36,43 @@
       </div>
     </div>
   </div>
+
+  <!-- nav-menu -->
   
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo mr-auto"><a href="main.html">Circus Grill</a></h1>
-      <a href="main.html" class="logo mr-auto"><img src="circusLogo.png" alt="" class="img-fluid"></a>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="book-a-table text-center"><a href="#book-a-table">Book Now</a></li>
-        </ul>
-        
-      </nav><!-- .nav-menu -->
+  <nav id="navBar" class="navbar navbar-expand-lg navbar-fixed-top">
+    
+    <a class="navbar-brand" href="#">Circus Grill</a>
+    <!-- add logo if you wish -->
+    <a href="main.html" class="logo mr-auto"><img src="#" alt="" class="img-fluid"></a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+          <li class="book-a-table text-center"><a href="#book-a-table">Book a table</a></li>
+        </li>
+      </ul>
     </div>
-  </header><!-- End Header -->
+  </nav>
+<!-- nav-menu -->
+
+
+
+  
   
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -63,71 +81,110 @@
         <div class="col-lg-8">
           <h1>Welcome to <span>Circus Grill</span></h1>
           <h2>Vegan Grill and Circus</h2>
-
+          
           <div class="btns">
-            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
-            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+            <a href="Menu.html" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+            <a href="Form.html" class="btn-book animated fadeInUp scrollto">Book a Table</a>
           </div>
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-          <a href="https://#" class="venobox play-btn" data-vbtype="video" data-autoplay="true"></a>
+          <a href="https://youtu.be/fqfHLsT1b0o" class="venobox play-btn" data-vbtype="video" data-autoplay="true"></a>
         </div>
 
       </div>
     </div>
   </section> <!-- End Hero -->
-  <!-- ======= About Section =======  -->
-  <section id="about" class="about">
-    <div class="container" data-aos="fade-up">
 
+
+<!-- ======= About Us Section ======= -->
+<section id="why-us" class="why-us">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>About us</h2>
+      <p>Why Choose Our Restaurant</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4">
+        <div class="box">
+          <i class="fas fa-cocktail"></i> <span>01</span>
+          <h4>Lorem Ipsum</h4>
+          <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="box">
+          <i class="fas fa-cocktail"></i> <span>02</span>
+          <h4>Repellat Nihil</h4>
+          <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="box">
+          <i class="fas fa-cocktail"></i> <span>03</span>
+          <h4> Ad ad velit qui</h4>
+          <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- AboutUs Section -->
+
+
+
+  <!-- ======= About Section =======  -->
+  
+  <section id="about" class="about">
       <div class="row">
-        <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-lg-6 order-1 order-lg-2">
           <div class="about-img">
-            <img src="hero-bg.jpg" alt="">
+            <img src="img/food.jpg" alt="">
           </div>
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
           <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
           <p class="font-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna aliqua.
+            Lorem ipsum dolor sit amet, 
           </p>
           <ul>
-            <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-            <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-              irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+            <li><i class="fas fa-cocktail"></i> Ullamco laboris .</li>
+            <li><i class="fas fa-cocktail"></i> Duis aute irure dolor lit.</li>
+            <li><i class="fas fa-cocktail"></i> Ullamco laboris 
             </li>
           </ul>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+            Ullamco
           </p>
         </div>
       </div>
     </div>
   </section><!-- End About Section -->
 
+  
   <!-- ======= Gallery Section ======= -->
   <section id="gallery" class="gallery">
 
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
       <div class="section-title">
         <h2>Gallery</h2>
         <p>Some photos from Our Restaurant</p>
       </div>
     </div>
 
-    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    <div class="container-fluid">
 
       <div class="row no-gutters">
 
         <div class="col-lg-3 col-md-4">
           <div class="gallery-item">
-            <a href="hero-bg.jpg" class="venobox" data-gall="gallery-item">
-              <img src="hero-bg.jpg" alt="" class="img-fluid">
+            <a href="img/al-battison-3UG-aieX1_Y-unsplash.jpg" data-gall="gallery-item">
+              <img src="img/hero-bg.jpg" alt="" class="img-fluid">
             </a>
           </div>
         </div>
@@ -135,7 +192,15 @@
         <div class="col-lg-3 col-md-4">
           <div class="gallery-item">
             <a href="hero-bg.jpg" class="venobox" data-gall="gallery-item">
-              <img src="hero-bg.jpg" alt="" class="img-fluid">
+              <img src="img/macau-photo-agency-K6FNss_WhqA-unsplash.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="#" class="venobox" data-gall="gallery-item">
+              <img src="img/mark-williams-9bNmhMKQM1Q-unsplash.jpg" alt="" class="img-fluid">
             </a>
           </div>
         </div>
@@ -143,7 +208,7 @@
         <div class="col-lg-3 col-md-4">
           <div class="gallery-item">
             <a href="hero-bg.jpg" class="venobox" data-gall="gallery-item">
-              <img src="hero-bg.jpg" alt="" class="img-fluid">
+              <img src="img/al-battison-3UG-aieX1_Y-unsplash.jpg" alt="" class="img-fluid">
             </a>
           </div>
         </div>
@@ -151,7 +216,7 @@
         <div class="col-lg-3 col-md-4">
           <div class="gallery-item">
             <a href="hero-bg.jpg" class="venobox" data-gall="gallery-item">
-              <img src="hero-bg.jpg" alt="" class="img-fluid">
+              <img src="img/mark-williams-9bNmhMKQM1Q-unsplash.jpg" alt="" class="img-fluid">
             </a>
           </div>
         </div>
@@ -159,7 +224,7 @@
         <div class="col-lg-3 col-md-4">
           <div class="gallery-item">
             <a href="hero-bg.jpg" class="venobox" data-gall="gallery-item">
-              <img src="hero-bg.jpg" alt="" class="img-fluid">
+              <img src="img/mark-williams-9bNmhMKQM1Q-unsplash.jpg" alt="" class="img-fluid">
             </a>
           </div>
         </div>
@@ -167,7 +232,7 @@
         <div class="col-lg-3 col-md-4">
           <div class="gallery-item">
             <a href="hero-bg.jpg" class="venobox" data-gall="gallery-item">
-              <img src="hero-bg.jpg" alt="" class="img-fluid">
+              <img src="img/macau-photo-agency-K6FNss_WhqA-unsplash.jpg" alt="" class="img-fluid">
             </a>
           </div>
         </div>
@@ -175,15 +240,7 @@
         <div class="col-lg-3 col-md-4">
           <div class="gallery-item">
             <a href="hero-bg.jpg" class="venobox" data-gall="gallery-item">
-              <img src="hero-bg.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="hero-bg.jpg" class="venobox" data-gall="gallery-item">
-              <img src="hero-bg.jpg" alt="" class="img-fluid">
+              <img src="img/hero-bg.jpg" alt="" class="img-fluid">
             </a>
           </div>
         </div>
@@ -195,7 +252,842 @@
 
 
 
+  <!-- Food menu Section -->
+  <section id="FoodMenu" class="FoodMenu">
+  <div class="container">
+    <div class="section-title">
+        <h2>Our food menu</h2>
+        <p>Our chefs serves better to our valuable customers</p>
+    </div>
+    <div class="food-menu-card">
+        <div>
 
+            <!-- Nav tabs -->
+            <ul class="nav  tabs-menu-nav justify-content-center mb30" role="tablist">
+                <li class="nav-item" role="presentation"><a class="nav-link active show" href="#All" aria-controls="All" role="tab" data-toggle="tab" aria-selected="true">All</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#Starters" aria-controls="Starters" role="tab" data-toggle="tab" aria-selected="false"> Starters</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#Salads" aria-controls="Salads" role="tab" data-toggle="tab" aria-selected="false">Salads</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#Dessert" aria-controls="Specialty" role="tab" data-toggle="tab" aria-selected="false">Dessert</a></li>
+
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active show" id="All">
+                    <div class="row">
+                        <div class="col-md-6 mb20">
+                            <article class="media">
+
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food1.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font600">120 kr</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <!--/Content -->
+
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food2.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food3.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food4.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">120 kr</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+
+
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food5.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+
+
+                            </article><!--/Article -->
+                        </div>
+                          <div class="col-md-6 mb20">
+                            <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food6.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+
+
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food7.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+
+
+
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food8.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+
+
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food9.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+
+
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food10.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                        
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="Starters">
+                       <div class="row">
+                        <div class="col-md-6 mb20">
+                            <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food10.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food9.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food8.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food7.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food6.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                        </div>
+                          <div class="col-md-6 mb20">
+                            <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food5.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food4.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food3.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food2.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food1.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                        </div>
+                    </div>
+                </div>   
+                <div role="tabpanel" class="tab-pane fade" id="Salads">
+                       <div class="row">
+                        <div class="col-md-6 mb20">
+                            <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food10.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food9.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food8.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food4.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food5.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">320 kr</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, .</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                        </div>
+                          <div class="col-md-6 mb20">
+                            <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food6.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food7.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                               <article class="media">
+                                <!-- Article Image -->
+                                <a class="g-width-100" href="#">
+                                    <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food8.jpg" alt="Menu title">
+                                </a>
+                                <!--Image -->
+                                <!--Content -->
+                                <div class="media-body align-self-center g-pl-10">
+                                    <div class="d-flex justify-content-between mb10">
+                                        <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                        <div class="align-self-center">
+                                            <strong class="text-white font700">$1.20</strong>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <!--/Content -->
+                            </article><!--/Article -->
+                           
+                          
+                        </div>
+                    </div>
+                </div> 
+                <div role="tabpanel" class="tab-pane fade" id="Dessert">
+                    <div class="row">
+                     <div class="col-md-6 mb20">
+                         <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food10.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                            <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food9.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                            <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food8.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                            <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food7.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                            <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food6.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                     </div>
+                       <div class="col-md-6 mb20">
+                         <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food5.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                            <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food4.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                            <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food3.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                            <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food2.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                            <article class="media">
+                             <!-- Article Image -->
+                             <a class="g-width-100" href="#">
+                                 <img class="img-fluid mr-4" width="80" src="http://bootstraplovers.com/assan-kit-3.8/bootstrap4/website-templates/classic-template/html/images/resto/food1.jpg" alt="Menu title">
+                             </a>
+                             <!--Image -->
+                             <!--Content -->
+                             <div class="media-body align-self-center g-pl-10">
+                                 <div class="d-flex justify-content-between mb10">
+                                     <h3 class="align-self-center text-capitalize mb0 h6 text-white font400">Menu title</h3>
+
+                                     <div class="align-self-center">
+                                         <strong class="text-white font700">$1.20</strong>
+                                     </div>
+                                 </div>
+
+                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             </div>
+                             <!--/Content -->
+                         </article><!--/Article -->
+                     </div>
+                 </div>
+             </div>  
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 
 
 
@@ -260,8 +1152,7 @@
       </div>
       <div class="credits">
 
-        <!-- Optional JavaScript; choose one of the two! -->
-
+        
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
           integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
