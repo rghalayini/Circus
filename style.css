@@ -424,7 +424,7 @@ section {
   font-weight: 500;
   padding: 0;
   line-height: 1px;
-  margin: 0 0 5px 0;
+  margin: 0 0 55px 0;
   letter-spacing: 2px;
   
   color: #aaaaaa;
@@ -441,11 +441,53 @@ section {
 
 .section-title p {
   margin: 0;
-  margin: 0;
   font-size: 36px;
   font-weight: 600;
   color: #61892f;
 }
+
+/*--------------------------------------------------------------
+      # About Us
+      --------------------------------------------------------------*/
+
+.AboutUs .box {
+  padding: 50px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+  border: 1px solid #222629;
+}
+
+.AboutUs .box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+  color: #61892f;
+}
+.AboutUs .box h4 {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 0;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.AboutUs .box p {
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+.AboutUs .box:hover {
+  background: #61892f;
+  padding: 30px 30px 70px 30px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+}
+.AboutUs .box:hover span, .AboutUs .box:hover h4, .AboutUs .box:hover p {
+  color: #fff;
+}
+
+
+
+
 
 
 
@@ -555,17 +597,17 @@ section {
   /*--------------------------------------------------------------
   # Gallery
   --------------------------------------------------------------*/
-  .gallery .FoodMenu .gallery-item {
+  .gallery .gallery-item {
     overflow: hidden;
-    border-right: 3px solid #222629;
-    border-bottom: 3px solid #222629;
-  }
+    border-right: 1px solid #61892f;
+    border-bottom: 1px solid #61892f;
+}
   
-  .gallery .FoodMenu .gallery-item img {
+  .gallery .gallery-item img {
     transition: all ease-in-out 0.4s;
   }
   
-  .gallery .FoodMenu .gallery-item:hover img {
+  .gallery .gallery-item:hover img {
     transform: scale(1.1);
   }
   
@@ -584,6 +626,10 @@ section {
 .food-menu-card .media .img-fluid {
   border-radius: 3px;
   width: 80px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 .food-menu-card .media .d-flex {
