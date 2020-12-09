@@ -15,12 +15,17 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 
+  <script src="./lang/lang_engine.js"></script>
+  <script src="./lang/lang.js"></script>
+
   <title>Circus Grill</title>
 </head>
 
 <body>
-  <!-- ======= Top Bar ======= -->
-  <div id="topbar" class="d-flex align-items-center fixed-top">
+  <!-- ======= Modified by Daryl 20201208 =======  -->
+   <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center">
+ <!-- <div id="topbar" class="d-flex align-items-center fixed-top"> -->
     <div class="container d-flex">
       <div class="contact-info mr-auto">
         <i class="fas fa-phone"></i> +46 739 66 66 66
@@ -35,7 +40,32 @@
     </div>
   </div>
   
+  <!-- ======= Added by Daryl 20201208 =======  -->
   <!-- ======= Header ======= -->
+  <header id="header" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="main.html">Circus Grill</a></h1>
+      <a href="main.html" class="logo mr-auto"><img src="circusLogo.png" alt="" class="img-fluid"></a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse nav-menu" id="navbarNavAltMarkup">
+          <ul class="navbar-nav ml-auto">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="book-a-table text-center"><a href="#book-a-table">Book Now</a></li>
+          </ul>
+      </div><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Header 
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
@@ -51,11 +81,11 @@
           <li><a href="#contact">Contact</a></li>
           <li class="book-a-table text-center"><a href="#book-a-table">Book Now</a></li>
         </ul>
-        
-      </nav><!-- .nav-menu -->
+      </nav>
     </div>
-  </header><!-- End Header -->
-  
+  </header>
+  ======= -->
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
@@ -70,9 +100,25 @@
           </div>
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-          <a href="https://#" class="venobox play-btn" data-vbtype="video" data-autoplay="true"></a>
+    <!--      <a href="https://#" class="venobox play-btn" data-vbtype="video" data-autoplay="true"></a> -->
+    <!-- ======= Added by Daryl 20201208 =======  -->
+          <a href="#" class="venobox play-btn" data-vbtype="video" data-autoplay="true" onclick="centeredPopup(this.href,'myWindow','700','300','no');return false"></a>
         </div>
 
+<!-- ======= Added by Daryl 20201208 =======  -->
+<!-- ======= Pop up script =======  -->
+        <script language="javascript">
+          var popupWindow = null;
+          function centeredPopup(url,winName,w,h,scroll){
+              LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+              TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+              settings =
+              'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+              popupWindow = window.open(url,winName,settings)
+          }
+        </script>
+<!-- ======= Pop up script =======  -->
+          
       </div>
     </div>
   </section> <!-- End Hero -->
