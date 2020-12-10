@@ -5,6 +5,12 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="./Lang/translation.js"></script>
+  <script src="./Lang/lang_engine.js"></script>
+
+
+
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/fa32db5069.js" crossorigin="anonymous"></script>
   <!-- Google Fonts -->
@@ -15,9 +21,9 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   
+  
 
-  <script src="./Lang/lang_engine.js"></script>
-  <script src="./Lang/translation.js"></script>
+
 
   <title>Circus Grill</title>
 </head>
@@ -34,8 +40,8 @@
       </div>
       <div class="languages">
         <ul>
-            <li><a id="enButton" href="#">En</a></li>
-            <li><a id="seButton" href="#">Se</a></li>
+            <li><a href="#" onclick="SwitchToEn()">En</a></li>
+            <li><a href="#" onclick="SwitchToSe()">Se</a></li>
         </ul>
       </div>
     </div>
@@ -54,18 +60,19 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      <div lang="sv">
       <div class="collapse navbar-collapse nav-menu" id="navbarNavAltMarkup">
           <ul class="navbar-nav ml-auto">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="book-a-table text-center"><a href="#book-a-table">Book Now</a></li>
+            <li class="active"><a lang-key="home" href="index.html">Home</a></li>
+            <li><a lang-key="about" href="#about">About</a></li>
+            <li><a lang-key="menu" href="#menu">Menu</a></li>
+            <li><a lang-key="events" href="#events">Events</a></li>
+            <li><a lang-key="contact" href="#contact">Contact</a></li>
+            <li class="book-a-table text-center"><a lang-key="booking" href="#book-a-table">Book Now</a></li>
           </ul>
-      </div><!-- .nav-menu -->
+      </div>
     </div>
+</div>
   </header><!-- End Header -->
 
   <!-- ======= Header 

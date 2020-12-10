@@ -3,18 +3,22 @@ let langdata = {
   "languages": {
     "en": {
       "strings": {
-        "btn-en": "EN",
-        "btn-sw": "SW",
-        "h1": "This is an English header.",
-        "p1": "This is an English paragraph."
+        "home": "Home",
+        "about": "About",
+        "menu": "Menu",
+        "events": "Events",
+        "contact": "Contact",
+        "booking": "Booking"
       }
    },
    "sv": {
       "strings": {
-        "btn-en": "EN",
-        "btn-sw": "SV",
-        "h1": "Det här är svensk rubrik.",
-        "p1": "Det här är svensk paragraf."
+        "home": "Hem",
+        "about": "Om",
+        "menu": "Menu",
+        "events": "Events",
+        "contact": "Contact",
+        "booking": "Boka"
       }
     }
   }
