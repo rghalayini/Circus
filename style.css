@@ -235,7 +235,7 @@ body {
         width: 100%;
         height: 100vh;
         background: #eee;
-        background: url("img/girl_acrobat.jpg") top center;
+        background: url("img/fire_show.jpg") top center;
         background-size: cover;
         position: relative;
         padding: 0;
@@ -568,7 +568,7 @@ section {
       # About Us
       --------------------------------------------------------------*/
 
-.AboutUs .box {
+  #events, .AboutUs .box {
   padding: 50px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
@@ -599,23 +599,23 @@ section {
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
-.AboutUs .box:hover span, .AboutUs .box:hover h4, .AboutUs .box:hover p {
+#events, .AboutUs .box:hover span, .AboutUs .box:hover h4, .AboutUs .box:hover p {
   color: #fff;
 }
 
       /*--------------------------------------------------------------
       # About
       --------------------------------------------------------------*/
-      
+
       .about {
-        background: url("img/raphael-maksian-ANKC6i_nTb4-unsplash.jpg") center center;
+        background: url("img/cloun-.jpg") center center;
         background-size: cover;
         position: relative;
         padding: 80px 0;
       }
       .about:before {
         content: "";
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.7);
         position: absolute;
         bottom: 0;
         top: 0;
@@ -627,6 +627,7 @@ section {
         position: relative;
         transition: .5s;
       }
+      
       
       .about .about-img img {
         max-width: 100%;
