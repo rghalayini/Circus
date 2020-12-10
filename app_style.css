@@ -184,11 +184,11 @@ a:link {
 
 .small-grid-description {
     position: absolute;
-    top: 50%;
+    top: 37%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    background-color: rgba(68, 8, 8, 0.753);
+    width: 80%;
+    /* background-color: rgba(68, 8, 8, 0.753); */
     text-align: center;
 }
 
@@ -197,7 +197,6 @@ a:link {
 }
 
 .overlay-color {
-    background-color: rgba(0, 0, 0, 0.281);
     position: absolute;
     top: 0;
     left: 0;
@@ -205,11 +204,40 @@ a:link {
     height: 100%;
 }
 
+.table-booking {
+    background-color: rgba(5, 113, 117, 0.8);
+}
+
+.waiter-call {
+    background-color: rgba(56, 58, 56, 0.8);
+}
+
+.take-away {
+    background-color: rgba(12, 59, 8, 0.8);
+}
+
+.become-member {
+    background-color: rgba(43, 44, 43, 0.8);
+}
+
 .show-image:hover {
     filter: brightness(160%);
     transform: scale(1.3);
     transition: transform 1s, filter 1.5s ease-in-out;
     transform-origin: center center;
+}
+
+.home-icon {
+    padding: 0;
+    margin: 0;
+    height: 55px;
+    width: 80px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    position: absolute;
+    z-index: 10;
 }
 
 
@@ -230,6 +258,13 @@ a:link {
     .show-description-container h2 {
         font-size: 0.5em;
     }
+    .home-icon {
+        /* aspect ratio 16:11  */
+        height: 41px;
+        width: 60px;
+        top: 70%;
+        left: 50%;
+    }
 }
 
 
@@ -245,36 +280,68 @@ a:link {
     z-index: 997;
     padding: 15px 0;
     /* top: 40px; */
-    height: 100px;
+    height: 140px;
 }
 
+.welcome {
+    display: flex;
+}
+
+.restaurant-name {
+    float: left;
+    width: 50%;
+}
+
+.restaurant-name h1 {
+    font-size: 24px;
+    color: #61892f;
+    font-weight: bold;
+}
+
+.welcome-guest {
+    text-align: right;
+    float: right;
+    width: 50%;
+}
+
+.welcome-guest h2 {
+    font-size: 24px;
+    color: rgb(187, 48, 48);
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+}
 #header.header-scrolled {
     top: 0;
     background: rgba(0, 0, 0, 0.85);
     border-bottom: 1px solid #37332a;
 }
-
 .d-flex {
     display: block !important;
 }
-
 .nav-menu ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
 .nav-menu>ul {
     display: flex;
     align-items: center;
 }
-
 .nav-menu>ul>li {
     position: relative;
     white-space: nowrap;
     padding: 38px;
 }
-
 .nav-menu a {
     display: flex;
     position: relative;
@@ -282,140 +349,141 @@ a:link {
     transition: 0.3s;
     font-size: 16px;
 }
-
 .nav-menu {
     float: none;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 @media screen and (max-width: 992px) {
     .d-lg-block {
         display: block!important;
     }
 }
 
-
 /* --- nav menu on hover --- */
-
 .nav-menu a:hover,
 .nav-menu .active>a,
 .nav-menu li:hover>a {
     color: #86C232;
 }
 
-
 /* IPAD ---If the screen size is 700px wide or more*/
-
 @media screen and (min-width: 700px) {
     .nav-menu a {
         font-size: 22px;
     }
 }
 
-
 /* IPHONE X --- If the screen size is 699px wide or less*/
-
 @media screen and (max-width: 699px) {
     .nav-menu>ul>li {
         padding: 18px;
     }
+    
     #header {
-        height: 80px;
+        height: 110px;
+    }
+    
+    .restaurant-name h1 {
+        font-size: 16px;
+        color: #61892f;
+        font-weight: bold;
+    }
+    
+    .welcome-guest h2 {
+        font-size: 15px;
+        color: rgb(187, 48, 48);
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 0;
+        padding: 0;
     }
 }
-
 
 /* --------------------------------------------------------------
                             FOOD ITEMS      
 --------------------------------------------------------------*/
-
 .top-container {
-    height: 100px;
+    height: 140px;
     width: 100%;
 }
-
 .food-item-container {
     /* margin-top: 100px; */
+    
     position: relative;
 }
-
 .food-item-container h1 {
     font-size: 1.5em;
 }
-
 .food-item-container h2 {
     font-size: 1em;
 }
-
 .food-name-container {
     margin-top: 20px;
     position: absolute;
     z-index: 1;
 }
-
 .food-item-container .btns {
     position: absolute;
     left: 5%;
     bottom: 5%;
 }
-
 .food-item-container .food-name {
     position: absolute;
     left: 5%;
     top: 5%;
 }
-
 .food-item-container .food-price {
     position: absolute;
     right: 5%;
     top: 5%;
 }
-
 .overlay-food {
     position: absolute;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(0, 0, 0));
     width: 100%;
     height: 100%;
 }
-
 .food-image-container {
     position: relative;
     z-index: -1;
 }
-
 .food-image-container img {
     width: 100%;
     height: auto;
 }
 
-
 /* IPAD ---If the screen size is 700px wide or more*/
-
 @media screen and (min-width: 700px) {
     .nav-menu a {
         font-size: 22px;
     }
 }
 
-
 /* IPHONE X --- If the screen size is 699px wide or less*/
-
 @media screen and (max-width: 699px) {
     .food-item-container h1 {
         font-size: 1em;
     }
+    
+    .top-container {
+        height: 110px;
+    }
 }
 
-
 /* =================================================================
-                             HOME PAGE      
+                             EVENT PAGE      
 =================================================================*/
-
 .grid-container-events {
     /* margin-top: 100px; */
+    
     padding-top: 100px;
     height: 100vh;
     width: 100vw;
@@ -423,16 +491,15 @@ a:link {
     grid-template-columns: auto auto;
     /* grid-template-rows: 50% 25% 25%; */
 }
-
 .grid-item-events {
     border: 2px solid rgba(0, 0, 0, 0.8);
     /* padding: 20px; */
+    
     font-size: 30px;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
-
 .grid-top {
     grid-column: 1/3;
 }
