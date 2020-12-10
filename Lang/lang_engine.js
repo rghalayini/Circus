@@ -45,13 +45,20 @@
                return langMatch;
            }
 */       
-           $("#buttonEn").on("click", function(event) {
+
+            $(document).on('click', '#enButton', function( event ) {
+                //Do Code here
+                //For #one click event
+                console.log("en");
+            });
+
+           $("#enButton").on("click", function(event) {
                console.log("en");
                $("div").attr("lang", "en");
                applyStrings();
            });
 
-           $("#buttonSw").on("click", function(event) {
+           $("#seButton").on("click", function(event) {
                console.log("sv");
                $("div").attr("lang", "sv");
                applyStrings();
