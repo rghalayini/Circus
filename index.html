@@ -110,11 +110,13 @@
         <div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
     <!--      <a href="https://#" class="venobox play-btn" data-vbtype="video" data-autoplay="true"></a> -->
     <!-- ======= Added by Daryl 20201208 =======  -->
-          <a href="#" class="venobox play-btn" data-vbtype="video" data-autoplay="true" onclick="centeredPopup(this.href,'myWindow','700','300','no');return false"></a>
+    <!-- <a href="#" class="venobox play-btn" data-vbtype="video" data-autoplay="true" onclick="centeredPopup(this.href,'myWindow','700','300','no');return false"></a> -->
+    <!-- ======= Added by Daryl 20201210 =======  -->    
+    <a href="#" class="venobox play-btn" data-vbtype="video" data-toggle="modal" data-target="#exampleModalCenter"></a>  
         </div>
 
 <!-- ======= Added by Daryl 20201208 =======  -->
-<!-- ======= Pop up script =======  -->
+<!-- ======= Pop up script =======
         <script language="javascript">
           var popupWindow = null;
           function centeredPopup(url,winName,w,h,scroll){
@@ -125,8 +127,21 @@
               popupWindow = window.open(url,winName,settings)
           }
         </script>
-<!-- ======= Pop up script =======  -->
-          
+ ======= Pop up script =======  -->
+<!-- ======= Added by Daryl 20201210 =======  -->    
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <video width="100%" controls>
+                    <source src="Ferris - 36034.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+
       </div>
     </div>
   </section> <!-- End Hero -->

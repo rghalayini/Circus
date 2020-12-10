@@ -961,3 +961,13 @@ section {
   background: #86c232;
   color: #1a1814;
 }
+
+
+/* Modal Content/Box */
+.modal-content {
+  background-color:rgba(0,0,0,0.5);
+  margin: 0px auto; /* 0 from the top and centered */
+  padding: 0px;
+  border: 0px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
