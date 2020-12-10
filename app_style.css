@@ -75,8 +75,12 @@ a:link {
     color: #fff;
 }
 
+.remove-btns {
+    display: none;
+}
 
-/* If the screen size is 700px wide or more*/
+
+/* --IPAD -- If the screen size is 700px wide or more*/
 
 @media screen and (min-width: 700px) {
     .text-container {
@@ -95,10 +99,23 @@ a:link {
     .btns {
         margin-top: 60px;
     }
+    .fa {
+        font-size: 20px;
+    }
+    .add-btns .btns {
+        position: absolute;
+        right: 5%;
+        bottom: 50%;
+    }
+    .remove-btns .btns {
+        position: absolute;
+        left: 5%;
+        bottom: 50%;
+    }
 }
 
 
-/* If the screen size is 699px wide or less*/
+/* --IPHONE -- If the screen size is 699px wide or less*/
 
 @media screen and (max-width: 699px) {
     .text-container {
@@ -114,8 +131,24 @@ a:link {
         /* margin-bottom: 10px 0 0 0; */
         font-size: 18px;
     }
+    .btn-menu {
+        padding: 10px 10px;
+    }
     .btns {
         margin-top: 90px;
+    }
+    .fa {
+        font-size: 16px;
+    }
+    .add-btns .btns {
+        position: absolute;
+        right: 5%;
+        bottom: 50%;
+    }
+    .remove-btns .btns {
+        position: absolute;
+        left: 5%;
+        bottom: 50%;
     }
 }
 
@@ -430,7 +463,7 @@ hr {
     position: absolute;
     z-index: 1;
 }
-.food-item-container .btns {
+.customize-button .btns {
     position: absolute;
     left: 5%;
     bottom: 5%;
