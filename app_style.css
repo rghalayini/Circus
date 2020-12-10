@@ -207,7 +207,8 @@ a:link {
     text-align: center;
 }
 
-.show-image {
+.show-image,
+.event-image {
     /* grid-area: photo; */
     height: 100%;
     background-size: cover;
@@ -237,20 +238,27 @@ a:link {
     height: 100%;
 }
 
-.table-booking {
+
+/* ---shows and events color overlay ---*/
+
+.overlay-blue {
     background-color: rgba(5, 113, 117, 0.8);
 }
 
-.waiter-call {
+.overlay-grey {
     background-color: rgba(56, 58, 56, 0.8);
 }
 
-.take-away {
+.overlay-green {
     background-color: rgba(12, 59, 8, 0.8);
 }
 
-.become-member {
+.overlay-black {
     background-color: rgba(43, 44, 43, 0.8);
+}
+
+.overlay-red {
+    background-color: rgba(66, 10, 10, 0.8);
 }
 
 .show-image:hover {
@@ -258,6 +266,17 @@ a:link {
     transform: scale(1.3);
     transition: transform 1s, filter 1.5s ease-in-out;
     transform-origin: center center;
+}
+
+.event-image:hover {
+    filter: brightness(100%);
+    transform: scale(1.2);
+}
+
+.event-image .overlay-color:hover {
+    background-color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    transition: transform 1s, background-color 1s, background-image 1s ease-in-out;
 }
 
 .home-icon {
@@ -517,7 +536,7 @@ hr {
 .grid-container-events {
     /* margin-top: 100px; */
     
-    padding-top: 100px;
+    padding-top: 140px;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -535,4 +554,109 @@ hr {
 }
 .grid-top {
     grid-column: 1/3;
+}
+.event-name {
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    transform: translate(00%, -50%);
+    width: 100%;
+    text-align: center;
+}
+.event-type {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    width: 100%;
+    text-align: left;
+    background-image: linear-gradient(45deg, #6d0d0d, #ff6767);
+    transform: skewY(-11deg);
+}
+.event-date {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    
+    width: 80%;
+    text-align: center;
+}
+
+/* IPAD ---If the screen size is 700px wide or more*/
+@media screen and (min-width: 700px) {
+    .event-name h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .event-type h1 {
+        font-size: 30px;
+        text-transform: capitalize;
+        padding-left: 7px;
+        padding-top: 10px;
+    }
+    /* .event-date h2 {
+        font-size: 22px;
+        color: #86C232;
+    } */
+}
+
+/* IPHONE X --- If the screen size is 699px wide or less*/
+@media screen and (max-width: 699px) {
+    .grid-container-events {
+        padding-top: 110px;
+    }
+    
+    .event-type h1 {
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    
+    .event-name h1 {
+        font-size: 20px;
+        text-align: center;
+        padding-left: 7px;
+        padding-top: 5px;
+    }
+    /* .event-date h2 {
+        font-size: 15px;
+        color: #86C232;
+    } */
+}
+
+/* =================================================================
+                             PULL UP ORDER     
+=================================================================*/
+#demo article h2 {
+    color: #333;
+    font-size: 1.2em;
+}
+#demo article .content_w {
+    background-color: #eee;
+    overflow: hidden;
+    height: 0;
+}
+#demo article .content_w.transition {
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+}
+section.entries article .content {
+    padding-top: 1em;
+    line-height: 1.3;
+}
+.collapsible:after {
+    content: 'U+02C4';
+    /* Unicode character for "plus" sign (^) */
+    
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "U+02C5";
+    /* Unicode character for "minus" sign (-) */
 }
