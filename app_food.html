@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <!-- for the + - buttons in  -->
 
 
     <link rel="stylesheet" href="app_style.css">
@@ -54,6 +55,53 @@
     <!-- End Header -->
     <div class="top-container"></div>
     <!------------ burger ----------------->
+    <!-- popup to order food -->
+    <section id="order-popup">
+        <article>
+            <div class="order-box">
+                <h1>ORDER</h1>
+            </div>
+            <!-- <p>U+02C4</p> -->
+            <div class="content_w">
+                <div class="content">
+                    <div class="food-list-price">
+                        <ul class="food-list">
+                            <!-- <li class="list-item-food">
+                                <i class="fas fa-minus-circle"></i>
+                                <p class="unit-quantity">1</p>
+                                <p class="unit-name">Burger</p>
+                                <i class="fas fa-plus-circle"></i>
+                            </li>
+                            <li class="list-item-food">
+                                <i class="fas fa-minus-circle"></i>
+                                <p class="unit-quantity">1</p>
+                                <p class="unit-name">Pizza</p>
+                                <i class="fas fa-plus-circle"></i>
+                            </li>
+                            <li class="list-item-food">
+                                <i class="fas fa-minus-circle"></i>
+                                <p class="unit-quantity">1</p>
+                                <p class="unit-name">Pizza</p>
+                                <i class="fas fa-plus-circle"></i>
+                            </li>
+                            <li class="list-item-food">
+                                <i class="fas fa-minus-circle"></i>
+                                <p class="unit-quantity">1</p>
+                                <p class="unit-name">Pizza</p>
+                                <i class="fas fa-plus-circle"></i>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="total-price">
+                        <p class="total">TOTAL</p>
+                        <p id="PriceTotal">200kr</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
     <div class='food-item-container'>
         <div class="food-name">
             <h1>Signature Vegan Burger</h1>
@@ -70,19 +118,19 @@
         </div>
         <div class="customize-button">
             <div class="btns" type="button">
-                <a href="" class="btn-menu animated fadeInUp ">Customize</a>
+                <a class="btn-menu animated fadeInUp ">Customize</a>
             </div>
         </div>
         <div class="add-btns">
             <div class="btns" type="button">
-                <a href="" class="btn-menu animated fadeInUp AddFood-item">
+                <a class="btn-menu animated fadeInUp AddFood-item">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
         <div class="remove-btns">
             <div class="btns" type="button">
-                <a href="" class="btn-menu animated fadeInUp RemoveFood-item">
+                <a class="btn-menu animated fadeInUp RemoveFood-item">
                     <i class="fa fa-minus" aria-hidden="true"></i>
                 </a>
             </div>
@@ -194,21 +242,7 @@
         </div>
     </div>
 
-    <!-- popup to order food -->
-    <section id="demo">
-        <article>
-            <h1>ORDER</h2>
-                <p>U+02C4</p>
 
-
-                <div class="content_w">
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-        </article>
-    </section>
 
     <!-- 
     <div class="order-popup">

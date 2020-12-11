@@ -76,7 +76,9 @@ a:link {
 }
 
 .remove-btns {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 
@@ -628,35 +630,134 @@ hr {
 /* =================================================================
                              PULL UP ORDER     
 =================================================================*/
-#demo article h2 {
-    color: #333;
-    font-size: 1.2em;
+#order-popup {
+    display: none;
+    /* visibility: hidden; */
+    
+    opacity: 0;
+    transition: opacity 1s ease-out;
 }
-#demo article .content_w {
+.order-box {
+    background-color: #86C232;
+}
+#order-popup h1 {
+    font-size: 16px;
+    margin-left: 30px;
+}
+#order-popup .content_w {
     background-color: #eee;
     overflow: hidden;
     height: 0;
 }
-#demo article .content_w.transition {
-    -webkit-transition: height 0.5s;
+#order-popup .content_w.transition {
+    /* -webkit-transition: height 0.5s;
     -moz-transition: height 0.5s;
-    -o-transition: height 0.5s;
+    -o-transition: height 0.5s; */
+    
     transition: height 0.5s;
 }
-section.entries article .content {
+section.entries .content {
     padding-top: 1em;
     line-height: 1.3;
 }
-.collapsible:after {
-    content: 'U+02C4';
-    /* Unicode character for "plus" sign (^) */
-    
-    font-size: 13px;
+.content {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 2%;
+}
+#order-popup ul {
+    color: black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2.5;
+    font-size: 12px;
+}
+#order-popup p {
+    color: black;
+}
+#order-popup hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid rgb(0, 0, 0);
+    clear: both;
+}
+.list-item-food {
+    display: flex;
+    width: 100%;
+}
+.list-item-food i p {
+    flex: 50%;
+    padding: 10px;
+    margin-bottom: 0;
+    height: auto;
+}
+.list-item-food i {
+    width: 10%;
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 5px;
+}
+.unit-quantity {
+    width: 5%
+}
+.unit-name {
+    width: 90%;
+}
+.total {
+    float: left;
+    width: 70%;
+}
+#PriceTotal {
+    float: right;
+}
+
+/* .food-list,
+.total {
+    float: left;
+    width: 70%;
+}
+.food-price,
+#PriceTotal {
+    text-align: right;
+    float: right;
+    width: 30%;
+}
+*/
+.fa-plus-circle {
+    font-size: 20px;
+    color: green;
+}
+.fa-minus-circle {
+    font-size: 20px;
+    color: red;
+}
+
+/* .restaurant-name h1 {
+    font-size: 24px;
+    color: #61892f;
+    font-weight: bold;
+} */
+
+/* .welcome-guest h2 {
+    font-size: 24px;
+    color: rgb(187, 48, 48);
+} */
+
+/* .collapsible:after {
+    content: 'U+02C4'; */
+
+/* Unicode character for "plus" sign (^) */
+
+/* font-size: 13px;
     color: white;
     float: right;
     margin-left: 5px;
 }
 .active:after {
-    content: "U+02C5";
-    /* Unicode character for "minus" sign (-) */
-}
+    content: "U+02C5"; */
+
+/* Unicode character for "minus" sign (-) */
+
+/* } */
