@@ -20,9 +20,10 @@ body {
     height: 40px;
     font-size: 14px;
     transition: all 0.5s;
+    background-color: #86C232;
   }
   
-  #topbar.topbar-scrolled {
+  #topbar .topbar-scrolled {
     top: -40px;
   }
   
@@ -31,7 +32,7 @@ body {
   } 
   
   #topbar .contact-info i {
-    color: #86C232;
+    color: #1a1814;
     padding-right: 4px;
   }
   
@@ -45,7 +46,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    color: #86C232;
+    color: #1a1814;
   }
   /* .languages a:hover, .languages .active > a, .languages ul:hover > a{
     color: white;
@@ -68,7 +69,8 @@ body {
 /*--------------------------------------------------------------
 # Nav Bar 
 --------------------------------------------------------------*/
-  
+
+
   #header {
     background: rgba(12, 11, 9, 0.6);
     border-bottom: 1px solid rgba(12, 11, 9, 0.6);
@@ -157,23 +159,6 @@ body {
 
 
   
-    /* Mobile Navigation */
-    /* .navbar-toggler-icon{
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(134,194,50, 01)' stroke-width='2' stroke-linecap='none' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-      right: 15px;
-      top: 15px;
-      z-index: 9998;
-      border: 0;
-      font-size: 24px;
-      transition: all 0.4s;
-    }
-    
-  
-    .navbar-nav {
-      text-align: center;
-  }
-   */
-  
     
       
     
@@ -189,6 +174,7 @@ body {
       /*--------------------------------------------------------------
       # Hero Section
       --------------------------------------------------------------*/
+      
       #hero {
         width: 100%;
         height: 100vh;
@@ -391,7 +377,6 @@ body {
           opacity: 0;
         }
       }
-      
       /*--------------------------------------------------------------
       # About
       --------------------------------------------------------------*/
@@ -562,16 +547,17 @@ section {
 }
 
       /*--------------------------------------------------------------
-      # About
+      # Meet the chef 
       --------------------------------------------------------------*/
 
-      .about {
-        background: url("img/cloun-.jpg") center center;
+      .chef {
+        background: url("img/clown.jpg") center center;
         background-size: cover;
         position: relative;
         padding: 80px 0;
-      }
-      .about:before {
+        
+}
+      .chef:before {
         content: "";
         background: rgba(0, 0, 0, 0.7);
         position: absolute;
@@ -581,19 +567,19 @@ section {
         right: 0;
       }
       
-      .about .about-img {
+      .chef .chef-img {
         position: relative;
         transition: .5s;
       }
       
       
-      .about .about-img img {
+      .chef .chef-img img {
         max-width: 100%;
         border: 4px solid #222629;
         position: relative;
       }
       
-      .about .about-img::before {
+      .chef .chef-img::before {
         position: absolute;
         left: 20px;
         top: 20px;
@@ -606,7 +592,7 @@ section {
         transition: .5s;
       }
       
-      .about .about-img::after {
+      .chef .chef-img::after {
         position: absolute;
         right: 20px;
         bottom: 20px;
@@ -617,50 +603,52 @@ section {
         border-right: 5px solid #61892f;
         border-bottom: 5px solid #61892f;
         transition: .5s;
-      }
+        
+}
       
-      .about .about-img:hover {
+      .chef .chef-img:hover {
         transform: scale(1.03);
       }
       
-      .about .about-img:hover::before {
+      .chef .chef-img:hover::before {
         left: 10px;
         top: 10px;
       }
       
-      .about .about-img:hover::after {
+      .chef .chef-img:hover::after {
         right: 10px;
         bottom: 10px;
       }
       
-      .about .content h3 {
-        font-weight: 600;
-        font-size: 26px;
+      .chef .content h3 {
+        font-weight: 300;
+        font-size: 20px;
+        padding-bottom: 22px;
         
       }
       
-      .about .content ul {
+      .chef .content ul {
         list-style: none;
         padding: 0;
       }
       
-      .about .content ul li {
+      .chef .content ul li {
         padding-bottom: 10px;
         
       }
       
-      .about .content ul i {
+      .chef .content ul i {
         font-size: 20px;
         padding-right: 4px;
         color: #61892f;
       }
       
-      .about .content p:last-child {
+      .chef .content p:last-child {
         margin-bottom: 0;
       }
       
       @media (min-width: 1024px) {
-        .about {
+        .chef {
           background-attachment: fixed;
         }
       }
@@ -687,7 +675,7 @@ section {
   --------------------------------------------------------------*/
   .food-menu-card {
     padding: 30px 20px;
-    background-color: black;
+    background-color: #121516;
     border-radius: 8px;
 }
 .food-menu-card .media {
@@ -710,29 +698,24 @@ position: relative;
 .food-menu-card .media .d-flex:before {
 content: "";
 position: absolute;
-left: auto;
-right: 0;
-width: 100%;
+align-items: center;
+right: 90px;
+width: 50%;
 height: 1px;
 background-color: rgba(255, 255, 255, 0.2);
 top: 50%;
 }
+
 .food-menu-card .media h3 {
 position: relative;
 display: inline-block;
 margin-bottom: 0;
 padding-right: 1.07143rem;
-background-color: #000;
 z-index: 2;
+
 }
 
-.food-menu-card .media strong {
-background-color: #000;
-display: block;
-padding-left: 15px;
-z-index: 2;
-position: relative;
-}
+
 
 .tabs-menu-nav > li > a {
 color: #86C232;
@@ -750,6 +733,14 @@ opacity: 1;
 .media-body, p {
 color: #999;
 } 
+
+
+/* --------------------------
+event slider 
+-----------------------------*/
+.chef-bio{
+font-size: 10px;
+}
 
 
 
