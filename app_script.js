@@ -1,14 +1,7 @@
-//remove buttons appear/disappear
-// .remove - btns {
-//         display: none;
-//     }
-//pull up banner appears\\
-
-
 $(document).ready(function() {
     var count = 0;
 
-    //Add items for the first time
+    //Add items for the first time to make the popup appear
     $(".add-btns").on('click', function() {
         $("#order-popup").css("display", "block");
         $("#order-popup").css("opacity", "1");
@@ -22,48 +15,29 @@ $(document).ready(function() {
             .addClass("list-item-food")
             .append($('<i>')
                 .addClass('fas fa-minus-circle')
-                .on("click", AddMore))
+                .on("click", RemoveQuantity))
             .append($('<p>')
                 .addClass("unit-quantity")
                 .text('1'))
             .append($('<p>')
                 .addClass('unit-name'))
+            .append($('<p>')
+                .addClass("unit-price"))
             .append($('<i>')
-                .addClass("fas fa-plus-circle")));
+                .addClass("fas fa-plus-circle")
+                .on("click", AddQuantity)));
     });
 
-    //Add items inside the popup
-    function AddMore() {
-        let counterDisplayElem = $('.unit-quantity');
-        let counterMinusElem = $('.fa-minus-circle');
-        let counterPlusElem = $('.fa-plus-circle');
-        updateDisplay();
-        counterPlusElem.addEventListener("click", () => {
-            count++;
-            updateDisplay();
-        });
-        counterMinusElem.addEventListener("click", () => {
-            count--;
-            updateDisplay();
-        });
-
-        function updateDisplay() {
-            counterDisplayElem.innerHTML = count;
-        };
+    //Add items inside the popup --> this should  be working, not sure why it is not
+    function AddQuantity() {
+        var newCount = parseInt($('.unit-quantity').text()) + 1;
+        $('.unit-quantity').text(newCount);
     };
 
-
-
-
-    //remove items
-    // $(".remove-btns").on('click', function() {
-    //     itemNumber--;
-    // });
-
-
-
-
-
+    function RemoveQuantity() {
+        var newCount = parseInt($('.unit-quantity').text()) - 1;
+        $('.unit-quantity').text(newCount);
+    };
 
     if (count == 0) {
         $("#order-popup").css("display", "none");

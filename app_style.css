@@ -639,6 +639,7 @@ hr {
 }
 .order-box {
     background-color: #86C232;
+    width: 100%;
 }
 #order-popup h1 {
     font-size: 16px;
