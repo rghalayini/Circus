@@ -16,5 +16,3 @@ The customer wants your help building a website for his new Circus restaurant.
 
 ### Tools used
 The design of the website is done in Balsamiq. 
-
-## small change in branch for test
