@@ -1,9 +1,9 @@
 body {
-  background-image: url("circus-828680_1920.jpg");
+  /* background-image: url("circus-828680_1920.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
- 
+  */
   
 }
 
@@ -126,7 +126,7 @@ body {
 }
 
 .booking-form select.form-control:invalid {
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .booking-form select.form-control+.select-arrow {
@@ -141,7 +141,7 @@ body {
     text-align: center;
     pointer-events: none;
     color: #fff;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .booking-form select.form-control+.select-arrow:after {
@@ -205,4 +205,8 @@ body {
     opacity: 0.9;
     background: #61892f;
     
+}
+
+#message{
+    padding-top: 16px;
 }
