@@ -21,7 +21,7 @@ body {
     object-fit: cover;
 }
 
-img {
+.background-image-container img {
     width: 100%;
     height: auto;
 }
@@ -75,8 +75,14 @@ a:link {
     color: #fff;
 }
 
+.remove-btns {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
 
-/* If the screen size is 700px wide or more*/
+
+/* --IPAD -- If the screen size is 700px wide or more*/
 
 @media screen and (min-width: 700px) {
     .text-container {
@@ -95,10 +101,23 @@ a:link {
     .btns {
         margin-top: 60px;
     }
+    .fa {
+        font-size: 20px;
+    }
+    .add-btns .btns {
+        position: absolute;
+        right: 5%;
+        bottom: 50%;
+    }
+    .remove-btns .btns {
+        position: absolute;
+        left: 5%;
+        bottom: 50%;
+    }
 }
 
 
-/* If the screen size is 699px wide or less*/
+/* --IPHONE -- If the screen size is 699px wide or less*/
 
 @media screen and (max-width: 699px) {
     .text-container {
@@ -114,17 +133,193 @@ a:link {
         /* margin-bottom: 10px 0 0 0; */
         font-size: 18px;
     }
+    .btn-menu {
+        padding: 10px 10px;
+    }
     .btns {
         margin-top: 90px;
+    }
+    .fa {
+        font-size: 16px;
+    }
+    .add-btns .btns {
+        position: absolute;
+        right: 5%;
+        bottom: 50%;
+    }
+    .remove-btns .btns {
+        position: absolute;
+        left: 5%;
+        bottom: 50%;
     }
 }
 
 
-/* --------------------------------------------------------------
------------------------------------------------------------------
+/* =================================================================
                              HOME PAGE      
------------------------------------------------------------------
---------------------------------------------------------------*/
+=================================================================*/
+
+.grid-container {
+    /* margin-top: 100px; */
+    padding-top: 100px;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50% 25% 25%;
+}
+
+.grid-item {
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    /* padding: 20px; */
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-top {
+    grid-column: 1/3;
+}
+
+
+/* ------next show event ------ */
+
+.show-description-container {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 40%;
+    background-color: rgba(42, 68, 8, 0.507);
+}
+
+.show-description-container h1 {
+    padding-top: 30px;
+    text-align: left;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+}
+
+.show-description-container h2 {
+    /* padding-top: 70px; */
+    font-size: 1em;
+    text-align: center;
+}
+
+.show-image,
+.event-image {
+    /* grid-area: photo; */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.small-grid-description {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    /* background-color: rgba(68, 8, 8, 0.753); */
+    text-align: center;
+}
+
+.small-grid-description h2 {
+    font-size: 1em;
+}
+
+.overlay-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ---shows and events color overlay ---*/
+
+.overlay-blue {
+    background-color: rgba(5, 113, 117, 0.8);
+}
+
+.overlay-grey {
+    background-color: rgba(56, 58, 56, 0.8);
+}
+
+.overlay-green {
+    background-color: rgba(12, 59, 8, 0.8);
+}
+
+.overlay-black {
+    background-color: rgba(43, 44, 43, 0.8);
+}
+
+.overlay-red {
+    background-color: rgba(66, 10, 10, 0.8);
+}
+
+.show-image:hover {
+    filter: brightness(160%);
+    transform: scale(1.3);
+    transition: transform 1s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+}
+
+.event-image:hover {
+    filter: brightness(100%);
+    transform: scale(1.2);
+}
+
+.event-image .overlay-color:hover {
+    background-color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    transition: transform 1s, background-color 1s, background-image 1s ease-in-out;
+}
+
+.home-icon {
+    padding: 0;
+    margin: 0;
+    height: 55px;
+    width: 80px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    position: absolute;
+    z-index: 10;
+}
+
+
+/* --IPAD -- If the screen size is 700px wide or more*/
+
+@media screen and (min-width: 700px) {}
+
+
+/* --IPHONE --If the screen size is 699px wide or less*/
+
+@media screen and (max-width: 699px) {
+    .small-grid-description h2 {
+        font-size: 0.5em;
+    }
+    .show-description-container h1 {
+        font-size: 1em;
+    }
+    .show-description-container h2 {
+        font-size: 0.5em;
+    }
+    .home-icon {
+        /* aspect ratio 16:11  */
+        height: 41px;
+        width: 60px;
+        top: 70%;
+        left: 50%;
+    }
+}
 
 
 /* --------------------------------------------------------------
@@ -139,36 +334,68 @@ a:link {
     z-index: 997;
     padding: 15px 0;
     /* top: 40px; */
-    height: 100px;
+    height: 140px;
 }
 
+.welcome {
+    display: flex;
+}
+
+.restaurant-name {
+    float: left;
+    width: 50%;
+}
+
+.restaurant-name h1 {
+    font-size: 24px;
+    color: #61892f;
+    font-weight: bold;
+}
+
+.welcome-guest {
+    text-align: right;
+    float: right;
+    width: 50%;
+}
+
+.welcome-guest h2 {
+    font-size: 24px;
+    color: rgb(187, 48, 48);
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+}
 #header.header-scrolled {
     top: 0;
     background: rgba(0, 0, 0, 0.85);
     border-bottom: 1px solid #37332a;
 }
-
 .d-flex {
     display: block !important;
 }
-
 .nav-menu ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
 .nav-menu>ul {
     display: flex;
     align-items: center;
 }
-
 .nav-menu>ul>li {
     position: relative;
     white-space: nowrap;
     padding: 38px;
 }
-
 .nav-menu a {
     display: flex;
     position: relative;
@@ -176,124 +403,362 @@ a:link {
     transition: 0.3s;
     font-size: 16px;
 }
-
 .nav-menu {
     float: none;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 @media screen and (max-width: 992px) {
     .d-lg-block {
         display: block!important;
     }
 }
 
-
 /* --- nav menu on hover --- */
-
 .nav-menu a:hover,
 .nav-menu .active>a,
 .nav-menu li:hover>a {
     color: #86C232;
 }
 
-
 /* IPAD ---If the screen size is 700px wide or more*/
-
 @media screen and (min-width: 700px) {
     .nav-menu a {
         font-size: 22px;
     }
 }
 
-
 /* IPHONE X --- If the screen size is 699px wide or less*/
-
 @media screen and (max-width: 699px) {
     .nav-menu>ul>li {
         padding: 18px;
     }
+    
     #header {
-        height: 80px;
+        height: 110px;
+    }
+    
+    .restaurant-name h1 {
+        font-size: 16px;
+        color: #61892f;
+        font-weight: bold;
+    }
+    
+    .welcome-guest h2 {
+        font-size: 15px;
+        color: rgb(187, 48, 48);
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 0;
+        padding: 0;
     }
 }
-
 
 /* --------------------------------------------------------------
                             FOOD ITEMS      
 --------------------------------------------------------------*/
-
 .top-container {
-    height: 100px;
+    height: 140px;
     width: 100%;
 }
-
 .food-item-container {
     /* margin-top: 100px; */
+    
     position: relative;
 }
-
 .food-item-container h1 {
     font-size: 1.5em;
 }
-
 .food-item-container h2 {
     font-size: 1em;
 }
-
 .food-name-container {
     margin-top: 20px;
     position: absolute;
     z-index: 1;
 }
-
-.food-item-container .btns {
+.customize-button .btns {
     position: absolute;
     left: 5%;
     bottom: 5%;
 }
-
 .food-item-container .food-name {
     position: absolute;
     left: 5%;
     top: 5%;
 }
-
 .food-item-container .food-price {
     position: absolute;
     right: 5%;
     top: 5%;
 }
-
 .overlay-food {
     position: absolute;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(0, 0, 0));
     width: 100%;
     height: 100%;
 }
-
 .food-image-container {
     position: relative;
     z-index: -1;
 }
-
+.food-image-container img {
+    width: 100%;
+    height: auto;
+}
 
 /* IPAD ---If the screen size is 700px wide or more*/
-
 @media screen and (min-width: 700px) {
     .nav-menu a {
         font-size: 22px;
     }
 }
 
-
 /* IPHONE X --- If the screen size is 699px wide or less*/
-
 @media screen and (max-width: 699px) {
     .food-item-container h1 {
         font-size: 1em;
     }
+    
+    .top-container {
+        height: 110px;
+    }
 }
+
+/* =================================================================
+                             EVENT PAGE      
+=================================================================*/
+.grid-container-events {
+    /* margin-top: 100px; */
+    
+    padding-top: 140px;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    /* grid-template-rows: 50% 25% 25%; */
+}
+.grid-item-events {
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    /* padding: 20px; */
+    
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.grid-top {
+    grid-column: 1/3;
+}
+.event-name {
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    transform: translate(00%, -50%);
+    width: 100%;
+    text-align: center;
+}
+.event-type {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    width: 100%;
+    text-align: left;
+    background-image: linear-gradient(45deg, #6d0d0d, #ff6767);
+    transform: skewY(-11deg);
+}
+.event-date {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    
+    width: 80%;
+    text-align: center;
+}
+
+/* IPAD ---If the screen size is 700px wide or more*/
+@media screen and (min-width: 700px) {
+    .event-name h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .event-type h1 {
+        font-size: 30px;
+        text-transform: capitalize;
+        padding-left: 7px;
+        padding-top: 10px;
+    }
+    /* .event-date h2 {
+        font-size: 22px;
+        color: #86C232;
+    } */
+}
+
+/* IPHONE X --- If the screen size is 699px wide or less*/
+@media screen and (max-width: 699px) {
+    .grid-container-events {
+        padding-top: 110px;
+    }
+    
+    .event-type h1 {
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    
+    .event-name h1 {
+        font-size: 20px;
+        text-align: center;
+        padding-left: 7px;
+        padding-top: 5px;
+    }
+    /* .event-date h2 {
+        font-size: 15px;
+        color: #86C232;
+    } */
+}
+
+/* =================================================================
+                             PULL UP ORDER     
+=================================================================*/
+#order-popup {
+    display: none;
+    /* visibility: hidden; */
+    
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+.order-box {
+    background-color: #86C232;
+    width: 100%;
+}
+#order-popup h1 {
+    font-size: 16px;
+    margin-left: 30px;
+}
+#order-popup .content_w {
+    background-color: #eee;
+    overflow: hidden;
+    height: 0;
+}
+#order-popup .content_w.transition {
+    /* -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s; */
+    
+    transition: height 0.5s;
+}
+section.entries .content {
+    padding-top: 1em;
+    line-height: 1.3;
+}
+.content {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 2%;
+}
+#order-popup ul {
+    color: black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2.5;
+    font-size: 12px;
+}
+#order-popup p {
+    color: black;
+}
+#order-popup hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid rgb(0, 0, 0);
+    clear: both;
+}
+.list-item-food {
+    display: flex;
+    width: 100%;
+}
+.list-item-food i p {
+    flex: 50%;
+    padding: 10px;
+    margin-bottom: 0;
+    height: auto;
+}
+.list-item-food i {
+    width: 10%;
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 5px;
+}
+.unit-quantity {
+    width: 5%
+}
+.unit-name {
+    width: 90%;
+}
+.total {
+    float: left;
+    width: 70%;
+}
+#PriceTotal {
+    float: right;
+}
+
+/* .food-list,
+.total {
+    float: left;
+    width: 70%;
+}
+.food-price,
+#PriceTotal {
+    text-align: right;
+    float: right;
+    width: 30%;
+}
+*/
+.fa-plus-circle {
+    font-size: 20px;
+    color: green;
+}
+.fa-minus-circle {
+    font-size: 20px;
+    color: red;
+}
+
+/* .restaurant-name h1 {
+    font-size: 24px;
+    color: #61892f;
+    font-weight: bold;
+} */
+
+/* .welcome-guest h2 {
+    font-size: 24px;
+    color: rgb(187, 48, 48);
+} */
+
+/* .collapsible:after {
+    content: 'U+02C4'; */
+
+/* Unicode character for "plus" sign (^) */
+
+/* font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "U+02C5"; */
+
+/* Unicode character for "minus" sign (-) */
+
+/* } */
