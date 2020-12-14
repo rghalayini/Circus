@@ -61,10 +61,13 @@
                         <li><a lang-key="about" href="#about">About</a></li>
                         <li><a lang-key="menu" href="#menu">Menu</a></li>
                         <li><a lang-key="events" href="#events">Events</a></li>
-                        <li><a lang-key="contact" href="#contact">Contact</a></li>
-                        <button id="modalActivate" lang-key="booking" type="button" class="btn book-a-table text-center" data-toggle="modal" data-target="#exampleModalPreview">
-                            BOOK NOW
-                          </button>
+                        <li><a lang-key="contact" href="#">Contact</a></li>
+                        
+                        <button id="modalActivate" lang-key="booking" 
+                        type="button" 
+                        class="btn book-a-table text-center" 
+                        data-toggle="modal" 
+                        data-target="#exampleModalPreview">BOOK NOW</button>
                         <!-- <li class="book-a-table text-center"><a lang-key="booking" href="Form.html">BOOK NOW</a>
                         </li> -->
                     </ul>
@@ -1259,6 +1262,71 @@
             </div>
             <div class="credits">
 
+
+
+<!-- Contact form Modal -->
+<div class="modal fade right" id="ContactModalLabel" tabindex="-1" role="dialog" aria-labelledby="ContactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div id="booking" class="section">
+            <div class="section-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="booking-form">
+                            <div class="form-header">
+                                <h1>Contact Us</h1>
+                            </div>
+                            <div>
+                                <div class="row">                                                              
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <input class="form-control" id="name" type="name"
+                                            placeholder="First Name" required> <span
+                                            class="form-label">Name</span> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <input class="form-control" id="name" type="name"
+                                            placeholder="Last Name" required> <span
+                                            class="form-label">Name</span> </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <input class="form-control" id="email" type="email"
+                                                placeholder="Email" required> <span 
+                                                class="form-label">Email</span><b id='emailResult'></b> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <input class="form-control" id="tel" type="tel" placeholder="Phone number" 
+                                            pattern="[0-9]{3}-[0-9]{3} [0-9]{2} [0-9]{2} placeholder="Enter you Phone" required> <span
+                                                class="form-label">Phone</span><b id='telResult'></b> </div>
+                                    </div>
+                                    <div class="col-md-12">
+    
+                                        <div class="form-group">
+                                            <textarea id="message" class="form-control" type="text" id="message" name="message" rows="4" placeholder="Your message" class="form-control"></textarea>
+                                            
+                                        </div>
+                
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                <div class="form-btn"> <button class="submit-btn">Send<i class="far fa-paper-plane ml-2"></i></button> </div>
+    
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+</div>
+</div>
+<!-- End of Contact form Modal -->
+    
+
   <!-- booking form Modal -->
   <div class="modal fade right" id="exampleModalPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -1342,16 +1410,18 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-  
   <!-- End of booking form Modal -->
+
+
+
+
+
+
+
+
+
+
+
                 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
                     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
