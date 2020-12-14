@@ -499,6 +499,10 @@ hr {
     right: 5%;
     top: 5%;
 }
+.food-price h1,
+span {
+    display: inline;
+}
 .overlay-food {
     position: absolute;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(0, 0, 0));
@@ -512,6 +516,18 @@ hr {
 .food-image-container img {
     width: 100%;
     height: auto;
+}
+.item-quantity-big-container {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+.item-quantity-big-container p {
+    font-size: 200px;
+    text-align: center;
 }
 
 /* IPAD ---If the screen size is 700px wide or more*/
@@ -636,6 +652,7 @@ hr {
     
     opacity: 0;
     transition: opacity 1s ease-out;
+    position: relative;
 }
 .order-box {
     background-color: #86C232;
