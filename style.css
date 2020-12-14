@@ -18,10 +18,16 @@ body {
 # Top Bar
 --------------------------------------------------------------*/
   #topbar {
-    height: 40px;
+    height: 30px;
     font-size: 14px;
     transition: all 0.5s;
-    background-color: #86C232;
+    /* background-color: #86C232; */
+    background: hsla(85, 59%, 48%, 0.342);
+    /* border-bottom: 1px solid rgba(12, 11, 9, 0.6); */
+    transition: all 0.5s;
+    z-index: 997;
+    
+    
   }
   
   #topbar .topbar-scrolled {
