@@ -295,6 +295,126 @@ a:link {
 }
 
 
+/* -----call a waiter -------- */
+
+#home-popup {
+    margin-top: 200px;
+    height: 70vh;
+    width: 90vw;
+    background-color: rgb(87, 119, 138);
+    position: fixed;
+    left: 5%;
+    border-radius: 40px;
+    border: rgb(189, 190, 120);
+    border-style: solid;
+    border-width: 2px;
+    z-index: 20;
+    display: none;
+}
+
+.waiter-text {
+    margin: 20%;
+    margin-top: 20%;
+    text-align: center;
+    line-height: 60px;
+}
+
+.waiter-text h2 {
+    padding-top: 5%;
+}
+
+.call-waiter-btn .btns {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.waiter-confirmation {
+    display: none;
+}
+
+.waiter-confirmation h2 {
+    line-height: 60px;
+}
+
+.waiter-confirmation h1 {
+    line-height: 60px;
+    padding-top: 20%;
+}
+
+.call-waiter-container {
+    display: none;
+}
+
+.become-member {
+    display: none;
+    margin: 10%
+}
+
+.membership-text h1,
+.membership-text h2 {
+    display: block;
+    text-align: justify;
+}
+
+.membership-text h2 {
+    padding-top: 10%;
+    font-size: 20px;
+}
+
+.submit-email-btn .btns {
+    position: absolute;
+    left: 50%;
+    bottom: 7%;
+    transform: translate(-50%, -50%);
+}
+
+.member-confirmation {
+    display: none;
+}
+
+form {
+    margin-top: 30px;
+    background: #222629;
+    padding: 6px 10px;
+    border-radius: 50px;
+    border: 1px solid #222629;
+    position: fixed;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+form input[type="email"] {
+    border: 0;
+    padding: 4px;
+    width: calc(100% - 110px);
+    background: #222629;
+    color: white;
+}
+
+form input[type="submit"] {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 20px 2px 20px;
+    background: #61892f;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+form input[type="submit"]:hover {
+    background: #61892f;
+}
+
+
 /* --IPAD -- If the screen size is 700px wide or more*/
 
 @media screen and (min-width: 700px) {}
@@ -326,7 +446,7 @@ a:link {
                        NAVIGATION MENU   and    HEADER      
 --------------------------------------------------------------*/
 
-#header {
+#header-container {
     /* background: rgba(51, 50, 49, 0.6); */
     background: rgba(31, 30, 29);
     border-bottom: 1px solid rgba(12, 11, 9, 0.6);
@@ -335,6 +455,12 @@ a:link {
     padding: 15px 0;
     /* top: 40px; */
     height: 140px;
+}
+
+.header-scrolled {
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #37332a;
 }
 
 .welcome {
@@ -372,30 +498,27 @@ hr {
     padding: 0;
 }
 
-
-}
-#header.header-scrolled {
-    top: 0;
-    background: rgba(0, 0, 0, 0.85);
-    border-bottom: 1px solid #37332a;
-}
 .d-flex {
     display: block !important;
 }
+
 .nav-menu ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 .nav-menu>ul {
     display: flex;
     align-items: center;
 }
+
 .nav-menu>ul>li {
     position: relative;
     white-space: nowrap;
     padding: 38px;
 }
+
 .nav-menu a {
     display: flex;
     position: relative;
@@ -403,6 +526,7 @@ hr {
     transition: 0.3s;
     font-size: 16px;
 }
+
 .nav-menu {
     float: none;
     position: absolute;
@@ -410,47 +534,50 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 @media screen and (max-width: 992px) {
     .d-lg-block {
         display: block!important;
     }
 }
 
+
 /* --- nav menu on hover --- */
+
 .nav-menu a:hover,
 .nav-menu .active>a,
 .nav-menu li:hover>a {
     color: #86C232;
 }
 
+
 /* IPAD ---If the screen size is 700px wide or more*/
+
 @media screen and (min-width: 700px) {
     .nav-menu a {
         font-size: 22px;
     }
 }
 
+
 /* IPHONE X --- If the screen size is 699px wide or less*/
+
 @media screen and (max-width: 699px) {
     .nav-menu>ul>li {
         padding: 18px;
     }
-    
-    #header {
+    #header-container {
         height: 110px;
     }
-    
     .restaurant-name h1 {
         font-size: 16px;
         color: #61892f;
         font-weight: bold;
     }
-    
     .welcome-guest h2 {
         font-size: 15px;
         color: rgb(187, 48, 48);
     }
-    
     hr {
         display: block;
         height: 1px;
@@ -461,62 +588,69 @@ hr {
     }
 }
 
+
 /* --------------------------------------------------------------
                             FOOD ITEMS      
 --------------------------------------------------------------*/
+
 .top-container {
     height: 140px;
     width: 100%;
 }
+
 .food-item-container {
     /* margin-top: 100px; */
-    
     position: relative;
 }
+
 .food-item-container h1 {
     font-size: 1.5em;
 }
+
 .food-item-container h2 {
     font-size: 1em;
 }
-.food-name-container {
-    margin-top: 20px;
-    position: absolute;
-    z-index: 1;
-}
+
 .customize-button .btns {
     position: absolute;
     left: 5%;
     bottom: 5%;
 }
+
 .food-item-container .food-name {
     position: absolute;
     left: 5%;
     top: 5%;
 }
+
 .food-item-container .food-price {
     position: absolute;
     right: 5%;
     top: 5%;
 }
+
 .food-price h1,
 span {
     display: inline;
 }
+
 .overlay-food {
     position: absolute;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(0, 0, 0));
     width: 100%;
     height: 100%;
 }
+
 .food-image-container {
     position: relative;
     z-index: -1;
 }
+
 .food-image-container img {
     width: 100%;
     height: auto;
 }
+
 .item-quantity-big-container {
     position: absolute;
     right: 50%;
@@ -525,54 +659,142 @@ span {
     opacity: 0;
     transition: opacity 0.5s ease-out;
 }
+
 .item-quantity-big-container p {
     font-size: 200px;
     text-align: center;
 }
 
+.takeaway-container {
+    background-color: rgb(146, 155, 149);
+    height: 120px;
+    position: relative;
+    display: none;
+}
+
+.take-away-time {
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
+.takeaway-container h1 {
+    font-size: 18px;
+}
+
+.close-takeaway {
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+}
+
+
 /* IPAD ---If the screen size is 700px wide or more*/
+
 @media screen and (min-width: 700px) {
     .nav-menu a {
         font-size: 22px;
     }
 }
 
+
 /* IPHONE X --- If the screen size is 699px wide or less*/
+
 @media screen and (max-width: 699px) {
     .food-item-container h1 {
         font-size: 1em;
     }
-    
     .top-container {
         height: 110px;
     }
 }
 
+
 /* =================================================================
                              EVENT PAGE      
 =================================================================*/
+
 .grid-container-events {
-    /* margin-top: 100px; */
-    
-    padding-top: 140px;
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: auto auto;
-    /* grid-template-rows: 50% 25% 25%; */
+    position: relative;
+    display: block;
 }
+
+.event-detail {
+    height: 80vh;
+    width: 90vw;
+    background-color: rgb(155, 114, 97);
+    position: fixed;
+    left: 5%;
+    z-index: 10;
+    border-radius: 40px;
+    border: rgb(189, 190, 120);
+    border-style: solid;
+    border-width: 2px;
+    display: none;
+}
+
+.description-container {
+    text-align: left;
+    margin: 8%
+}
+
+.event-date {
+    /* position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 80%; */
+    text-align: right;
+}
+
+.close-event-button {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.close-event-button a {
+    text-decoration: none;
+}
+
+.close-event-button .btns {
+    margin-top: 0;
+}
+
+.event-text-description {
+    padding-top: 8%;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.close-event-button .btn-menu {
+    padding: 10px 12px;
+}
+
 .grid-item-events {
-    border: 2px solid rgba(0, 0, 0, 0.8);
-    /* padding: 20px; */
-    
+    /* border: 2px solid rgba(0, 0, 0, 0.8);
     font-size: 30px;
-    text-align: center;
+    text-align: center;*/
     position: relative;
     overflow: hidden;
+    float: left;
+    width: 50%;
+    height: 250px;
+    padding: 2px;
+    text-align: center;
 }
-.grid-top {
+
+.row-events {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+
+/* .grid-top {
     grid-column: 1/3;
-}
+} */
+
 .event-name {
     position: absolute;
     top: 90%;
@@ -581,6 +803,7 @@ span {
     width: 100%;
     text-align: center;
 }
+
 .event-type {
     position: absolute;
     top: 5%;
@@ -591,23 +814,36 @@ span {
     background-image: linear-gradient(45deg, #6d0d0d, #ff6767);
     transform: skewY(-11deg);
 }
-.event-date {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    /* transform: translate(-50%, -50%); */
-    
-    width: 80%;
-    text-align: center;
+
+.click-event {
+    text-decoration: none;
+    color: white;
 }
 
+.grid-container-events a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#fireshow,
+#acro-familj,
+#starka-max,
+#silent-lili,
+#houdini,
+#yoyo,
+#pippi,
+#bozo {
+    display: none;
+}
+
+
 /* IPAD ---If the screen size is 700px wide or more*/
+
 @media screen and (min-width: 700px) {
     .event-name h1 {
         font-size: 40px;
         text-align: center;
     }
-    
     .event-type h1 {
         font-size: 30px;
         text-transform: capitalize;
@@ -620,17 +856,17 @@ span {
     } */
 }
 
+
 /* IPHONE X --- If the screen size is 699px wide or less*/
+
 @media screen and (max-width: 699px) {
     .grid-container-events {
         padding-top: 110px;
     }
-    
     .event-type h1 {
         font-size: 16px;
         text-transform: capitalize;
     }
-    
     .event-name h1 {
         font-size: 20px;
         text-align: center;
@@ -643,46 +879,53 @@ span {
     } */
 }
 
+
 /* =================================================================
                              PULL UP ORDER     
 =================================================================*/
+
 #order-popup {
     display: none;
     /* visibility: hidden; */
-    
     opacity: 0;
     transition: opacity 1s ease-out;
     position: relative;
 }
+
 .order-box {
     background-color: #86C232;
     width: 100%;
 }
+
 #order-popup h1 {
     font-size: 16px;
     margin-left: 30px;
 }
+
 #order-popup .content_w {
     background-color: #eee;
     overflow: hidden;
     height: 0;
 }
+
 #order-popup .content_w.transition {
     /* -webkit-transition: height 0.5s;
     -moz-transition: height 0.5s;
     -o-transition: height 0.5s; */
-    
     transition: height 0.5s;
 }
+
 section.entries .content {
     padding-top: 1em;
     line-height: 1.3;
 }
+
 .content {
     margin-left: 5%;
     margin-right: 5%;
     padding-top: 2%;
 }
+
 #order-popup ul {
     color: black;
     list-style-type: none;
@@ -691,9 +934,11 @@ section.entries .content {
     line-height: 2.5;
     font-size: 12px;
 }
+
 #order-popup p {
     color: black;
 }
+
 #order-popup hr {
     display: block;
     height: 2px;
@@ -701,81 +946,81 @@ section.entries .content {
     border-top: 1px solid rgb(0, 0, 0);
     clear: both;
 }
+
 .list-item-food {
     display: flex;
     width: 100%;
 }
+
 .list-item-food i p {
     flex: 50%;
     padding: 10px;
     margin-bottom: 0;
     height: auto;
 }
+
 .list-item-food i {
     width: 10%;
     text-align: center;
     margin-bottom: 0;
     padding-top: 5px;
 }
+
 .unit-quantity {
     width: 5%
 }
+
 .unit-name {
     width: 90%;
 }
+
 .total {
     float: left;
     width: 70%;
 }
+
 #PriceTotal {
     float: right;
 }
 
-/* .food-list,
-.total {
-    float: left;
-    width: 70%;
-}
-.food-price,
-#PriceTotal {
-    text-align: right;
-    float: right;
-    width: 30%;
-}
-*/
 .fa-plus-circle {
     font-size: 20px;
     color: green;
 }
+
 .fa-minus-circle {
     font-size: 20px;
     color: red;
 }
 
-/* .restaurant-name h1 {
-    font-size: 24px;
-    color: #61892f;
-    font-weight: bold;
-} */
-
-/* .welcome-guest h2 {
-    font-size: 24px;
-    color: rgb(187, 48, 48);
-} */
-
-/* .collapsible:after {
-    content: 'U+02C4'; */
-
-/* Unicode character for "plus" sign (^) */
-
-/* font-size: 13px;
-    color: white;
-    float: right;
-    margin-left: 5px;
+.close-takeaway {
+    position: absolute;
+    top: 30%;
+    bottom: 5%;
 }
-.active:after {
-    content: "U+02C5"; */
 
-/* Unicode character for "minus" sign (-) */
 
-/* } */
+/* section style when clicking on nav button */
+
+
+/* #landing-page  */
+
+#home-page {
+    display: none;
+}
+
+#food-page {
+    display: none;
+}
+
+#drinks-page {
+    display: none;
+}
+
+#events-page {
+    display: none;
+}
+
+#header {
+    display: none;
+}

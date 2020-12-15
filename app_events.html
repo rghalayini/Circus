@@ -11,14 +11,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="app_style.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="app_script.js"></script>
+
 
     <title>Circus Grill</title>
 </head>
 
 <body>
-    <header id="header" class="fixed-top">
+    <header id="header-container" class="fixed-top">
         <div class="container d-flex align-items-center">
             <div class="welcome">
                 <div class="restaurant-name">
@@ -35,92 +40,421 @@
                     <li><a href="app_food.html">Food</a></li>
                     <li><a href="app_drinks.html">Drinks</a></li>
                     <li class="active"><a href="app_events.html">Events</a></li>
-                    <!-- <li class="book-a-table text-center"><a href="#book-a-table">Book Now</a></li> -->
                 </ul>
             </nav>
-            <!-- .nav-menu -->
-        </div>
-    </header>
-    <!-- End Header -->
 
-    <!-- Content Grid -->
+        </div>
+    </header> -->
+    <!-- End Header
+
+    <-- Content Grid !-->
+    <div class="top-container"></div>
+
+    <div class='event-detail'>
+        <div id='fireshow'>
+            <div class="close-event-button close-event">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">x</a>
+                </div>
+            </div>
+            <div class='description-container'>
+                <div class='name-details'>
+                    <h1>Christmas Special</h1>
+                    <h2>Dave the brave on fire</h2>
+                </div>
+                <div class='event-date'>
+                    Friday December 25th
+                </div>
+                <div class='event-text-description'>
+                    <p>
+                        A chic and daring 1920's fire show with acrobatics, audacious fire stunts, gangster pizazz and a blast of mojo that will have you screaming!This is an elegant, powerful yet playfully upbeat act with world class fire prop manipulation and unique effects.
+                    </p>
+                    <p>
+                        Dave the brave and his group consists of some of Sweden's most established fire artists who work in close collaboration with professional circus acts from different parts of the world. With precision and feeling, they invite audiences into their sparkling
+                        world, which is magical, beautiful and breathtaking! With over 10 years of experience performing to huge crowds all over the world, the performers offer a range of customised packages for all events and budgets. From intimate and
+                        dynamic solo acts, duo shows and explosive fire productions synchronised with live musicians, lighting effects and a range of circus performers.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div id='houdini'>
+            <div class="close-event-button close-event">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp">x</a>
+                </div>
+            </div>
+            <div class='description-container'>
+                <div class='name-details'>
+                    <h1>The one and only</h1>
+                    <h2>Harry Houdini</h2>
+                </div>
+                <div class='event-date'>
+                    Saturday December 26th
+                </div>
+                <div class='event-text-description'>
+                    <p>
+                        An exclusive night, a unique experience, a magical event. Meet the one and only Harry Houdini, coming to Sweden for the first time to perform in Cirus Vegan!
+                    </p>
+                    <p>
+                        Do you think he can escape a well-locked safe? Do you think you have the courage to see this breathtaking show? Then join us to find out. </p>
+
+                </div>
+            </div>
+        </div>
+        <div id='acro-familj'>
+            <div class="close-event-button close-event">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp">x</a>
+                </div>
+            </div>
+            <div class='description-container'>
+                <div class='name-details'>
+                    <h2>AcroFamilj </h2>
+                </div>
+                <div class='event-date'>
+                    Satruday December 26th
+                </div>
+                <div class='event-text-description'>
+                    <p>
+                        The nation-wide famous AcroFamilj is back to circus Vegan. The highly-trained Andersson family acrobats, known as AcroFamilj will show us their latest life-daring tricks. Action packed with outstanding feats, beautiful choreography, color and excitement
+                        — the show is one of the favorite nightlife performances in Sweden.
+                    </p>
+                    <p>
+                        From contortionist acts to high wire stunts, this performance has it all. Now is your chance to witness the most extreme acrobat skill in China, at the theater known to be the best acrobatic show in Beijing.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div id='starka-max'>
+            <div class="close-event-button close-event">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp">x</a>
+                </div>
+            </div>
+            <div class='description-container'>
+                <div class='name-details'>
+                    <h1>New Year Special</h1>
+                    <h2>The strongest man in Europe </h2>
+                </div>
+                <div class='event-date'>
+                    Friday January 1st
+                </div>
+                <div class='event-text-description'>
+                    <p>
+                        You asked and we listened. The strongest man in Europe is back to Circus Vegan for this new year's special event. Holding a guiness world-record, Max Starkarson, aka Starka Max, will make the impossible!
+                    </p>
+                    <p>
+                        If you think Pipi Longstocking is strong, then you should think twice </p>
+
+                </div>
+            </div>
+        </div>
+        <div id='silent-lili'>
+            <div class="close-event-button close-event">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp">x</a>
+                </div>
+            </div>
+            <div class='description-container'>
+                <div class='name-details'>
+                    <h2>Silent Lili</h2>
+                </div>
+                <div class='event-date'>
+                    Friday January 8th
+                </div>
+                <div class='event-text-description'>
+                    <p>
+                        You asked and we listened. The strongest man in Europe is back to Circus Vegan for this new year's special event. Holding a guiness world-record, Max Starkarson, aka Starka Max, will make the impossible!
+                    </p>
+                    <p>
+                        If you think Pipi Longstocking is strong, then you should think twice </p>
+
+                </div>
+            </div>
+        </div>
+        <div id='yoyo'>
+            <div class="close-event-button close-event">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp">x</a>
+                </div>
+            </div>
+            <div class='description-container'>
+                <div class='name-details'>
+                    <h1>A night with laughter and fun</h1>
+                    <h2>YoYo The Clown</h2>
+                </div>
+                <div class='event-date'>
+                    Saturday January 9th
+                </div>
+                <div class='event-text-description'>
+                    <p>
+                        Sweden's funniest clown will come to Circus Vegan on January the 8th. A promise night full of laughter and joy for both kids and grow-ups!
+                    </p>
+                    <p>
+                        Yoyo's show is packed full of rib tickling fun & tricks that will have kids and mums and dads in stitches! Children & families love to see funny business, Unicycles, magical tricks, juggling, colourful hat tricks, balancing rola-rola, lots of ”kiddy Comedy”
+                        party games, the latest pop tunes & balloons of course. </p>
+
+                </div>
+            </div>
+        </div>
+        <div id='pippi'>
+            <div class="close-event-button close-event">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp">x</a>
+                </div>
+            </div>
+            <div class='description-container'>
+                <div class='name-details'>
+                    <h1>Sweden's Favourite</h1>
+                    <h2>Pippi with a twist</h2>
+                </div>
+                <div class='event-date'>
+                    Friday January 15th
+                </div>
+                <div class='event-text-description'>
+                    <p>
+                        Sweden's most famous girl and the world's strongest kid. This time, having a circus and an acrobatic twist to the main story.
+                    </p>
+                    <p>
+                        Are you eager to see what Pippi will do to Kling och Klang? Wondering what herr Nielsson and Lilla Gubben will perform in this show? Brin your kids and live your childhood memories with a twist at Vegan Circus on Friday January 15th with Pippi and her
+                        friends. </p>
+
+                </div>
+            </div>
+        </div>
+        <div id='bozo'>
+            <div class="close-event-button close-event">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp">x</a>
+                </div>
+            </div>
+            <div class='description-container'>
+                <div class='name-details'>
+                    <h1>Meet the clown couple</h1>
+                    <h2>Twisty and Bozo</h2>
+                </div>
+                <div class='event-date'>
+                    Satruday January 16th
+                </div>
+                <div class='event-text-description'>
+                    <p>
+                        Coming straight from Malmö, the most hilarious couple of Skåne will be in circus Vegan to make you laugh.
+                    </p>
+                    <p>
+                        What's better than having a stand-up comedy, couple with clown performances, kids shows, balloons and candy-tricks? Enjoy watching this increadibly funny couple while having dinner with your family. A guaranteed fun night for both the kids and the grown-ups
+                        in the family. </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------EVENT LISTING -------------------------------------------- -->
+
     <div class="grid-container-events">
-        <div class="grid-item-events">
-            <div class="show-image event-image" style="background-image: url('img/fire_show.jpg')">
-                <div class="overlay-color overlay-grey"></div>
+        <div class=row-events>
+            <div class="grid-item-events">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/fire_show.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-type">
+                        <h1>Christmas Special</h1>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>Fireshow</h1>
+                        <p style="display:none">fireshow</p>
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>December 25</h2>
+                </div> -->
+                </a>
             </div>
-            <div class="small-grid-description event-type">
-                <h1>Christmas Special</h1>
-            </div>
-            <div class="small-grid-description event-name">
-                <h1>Fireshow</h1>
-            </div>
-            <!-- <div class="small-grid-description event-date">
-                <h2>December 25</h2>
-            </div> -->
-        </div>
-        <div class="grid-item-events small-grid">
-            <div class="show-image event-image" style="background-image: url('img/TwistyBozo.jpg')">
-                <div class="overlay-color overlay-grey"></div>
-            </div>
-            <div class="small-grid-description event-name">
-                <h1>Mimi och Bozo</h1>
-            </div>
-            <!-- <div class="small-grid-description event-date">
-                <h2>December 26</h2>
-            </div> -->
 
-        </div>
-        <div class="grid-item small-grid">
-            <div class="show-image event-image" style="background-image: url('img/alfonso.jpg')">
-                <div class="overlay-color overlay-grey"></div>
-            </div>
-            <div class="small-grid-description event-type">
-                <h1>New Year Special</h1>
-            </div>
-            <div class="small-grid-description event-name">
-                <h1>Starka Max</h1>
-            </div>
-            <!-- <div class="small-grid-description event-date">
-                <h2>January 01</h2>
-            </div> -->
 
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/magician.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>Harry Houdini</h1>
+                        <p style="display:none">houdini</p>
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>December 26</h2>
+                </div> -->
+                </a>
+            </div>
         </div>
-        <div class="grid-item small-grid">
-            <div class="show-image event-image" style="background-image: url('img/acrobats.jpg')">
-                <div class="overlay-color overlay-grey"></div>
-            </div>
-            <div class="small-grid-description event-name">
-                <h1>AcroFamilj</h1>
-            </div>
-            <!-- <div class="small-grid-description event-date">
-                <h2>January 02</h2>
-            </div> -->
+        <div class=row-events>
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
 
-        </div>
-        <div class="grid-item small-grid">
-            <div class="show-image event-image" style="background-image: url('img/mimiClown.jpg')">
-                <div class="overlay-color overlay-grey"></div>
-            </div>
-            <div class="small-grid-description event-name">
-                <h1>Silent Lili</h1>
-            </div>
-            <!-- <div class="small-grid-description event-date">
-                <h2>January 08</h2>
-            </div> -->
-        </div>
-        <div class="grid-item small-grid">
-            <div class="show-image event-image" style="background-image: url('img/Yoyo.jpg')">
-                <div class="overlay-color overlay-grey"></div>
-            </div>
-            <div class="small-grid-description event-name">
-                <h1>YoYo Clown</h1>
-            </div>
-            <!-- <div class="small-grid-description event-date">
-                <h2>January 09</h2>
-            </div> -->
-        </div>
+                    <div class="show-image event-image" style="background-image: url('img/alfonso.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-type">
+                        <h1>New Year Special</h1>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>Starka Max</h1>
+                        <p style="display:none">starka-max</p>
 
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>January 01</h2>
+                </div> -->
+                </a>
+            </div>
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/acrobats.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>AcroFamilj</h1>
+                        <p style="display:none">acro-familj</p>
+
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>January 02</h2>
+                </div> -->
+                </a>
+            </div>
+        </div>
+        <div class=row-events>
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/mimiClown.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>Silent Lili</h1>
+                        <p style="display:none">silent-lili</p>
+
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>January 08</h2>
+                </div> -->
+                </a>
+            </div>
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/Yoyo.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>YoYo Clown</h1>
+                        <p style="display:none">yoyo</p>
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>January 09</h2>
+                </div> -->
+                </a>
+            </div>
+        </div>
+        <div class=row-events>
+
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/pippi.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>Pippi Longstockins</h1>
+                        <p style="display:none">pippi</p>
+
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>December 26</h2>
+                </div> -->
+                </a>
+            </div>
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/TwistyBozo.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>Twisty and Bozo</h1>
+                        <p style="display:none">bozo</p>
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>January 09</h2>
+                </div> -->
+                </a>
+            </div>
+        </div>
+        <div class=row-events>
+            <div class="grid-item-events">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/fire_show.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>Fireshow</h1>
+                        <p style="display:none">fireshow</p>
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>December 25</h2>
+                </div> -->
+                </a>
+            </div>
+
+
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/magician.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>Harry Houdini</h1>
+                        <p style="display:none">houdini</p>
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>December 26</h2>
+                </div> -->
+                </a>
+            </div>
+        </div>
+        <div class=row-events>
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
+
+                    <div class="show-image event-image" style="background-image: url('img/alfonso.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+
+                    <div class="small-grid-description event-name">
+                        <h1>Starka Max</h1>
+                        <p style="display:none">starka-max</p>
+
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>January 01</h2>
+                </div> -->
+                </a>
+            </div>
+            <div class="grid-item-events small-grid">
+                <a class='click-event'>
+                    <div class="show-image event-image" style="background-image: url('img/acrobats.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description event-name">
+                        <h1>AcroFamilj</h1>
+                        <p style="display:none">acro-familj</p>
+
+                    </div>
+                    <!-- <div class="small-grid-description event-date">
+                    <h2>January 02</h2>
+                </div> -->
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

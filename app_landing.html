@@ -2,34 +2,962 @@
 <html lang="en">
 
 <head>
+
+
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/fa32db5069.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Buttons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="app_style.css">
 
+    <link rel="stylesheet" href="app_style.css">
+    <script type="text/javascript" src="app_script.js"></script>
+
+
+    <title>Circus Grill</title>
 
 </head>
 
 <body>
-    <div class="overlay"></div>
-    <!--  ----- background image ----- -->
-    <div class='background-image-container'>
-        <div id='background-home-app'>
-            <img src="img/home_acrobat.jpg" alt="acrobat girl">
+    <section id='landing-page'>
+        <div class="overlay"></div>
+        <!--  ----- background image ----- -->
+        <div class='background-image-container'>
+            <div id='background-home-app'>
+                <img src="img/home_acrobat.jpg" alt="acrobat girl">
+            </div>
         </div>
-    </div>
-    <div class='text-container'>
-        <h1>Welcome to <span>Circus Grill</span></h1>
-        <h2>your unique experience to vegan and cruelty-free circus shows and food</h2>
+        <div class='text-container'>
+            <h1>Welcome to <span>Circus Grill</span></h1>
+            <h2>your unique experience to vegan and cruelty-free circus shows and food</h2>
 
-        <div class="btns">
-            <a href="app_home.html" class="btn-menu animated fadeInUp ">Let the show begin</a>
+            <div class="btns">
+                <!-- <a href="app_home.html" class="btn-menu animated fadeInUp">Let the show begin</a> -->
+                <a id='begin-show-btn' class="btn-menu animated fadeInUp">Let the show begin</a>
+
+            </div>
         </div>
-    </div>
+    </section>
 
+    <section id='header'>
+        <header id="header-container" class="fixed-top">
+            <div class="container d-flex align-items-center">
+                <div class="welcome">
+                    <div class="restaurant-name">
+                        <h1>Circus Grill</h1>
+                    </div>
+                    <div class="welcome-guest">
+                        <h2>Welcome August</h2>
+                    </div>
+                </div>
+                <hr>
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li><a id='home-btn'>Home</a></li>
+                        <li><a id='food-btn'>Food</a></li>
+                        <li><a id='drinks-btn'>Drinks</a></li>
+                        <li><a id='events-btn'>Events</a></li>
+                        <!-- <li class="book-a-table text-center"><a href="#book-a-table">Book Now</a></li> -->
+                    </ul>
+                </nav>
+                <!-- .nav-menu -->
+            </div>
+        </header>
+        <!-- End Header -->
+    </section>
+
+    <!--------------------------------------------------------------------------------------------------- 
+----------------------------------------------- HOME PAGE -----------------------------------------------
+-------------------------------------------------------------------------------------------------------->
+
+    <section id='home-page'>
+        <!-- Content Grid -->
+        <div id='home-popup'>
+            <div class='call-waiter-container'>
+                <div class="close-event-button close-event close-popup-home">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp ">x</a>
+                    </div>
+                </div>
+                <div class='waiter-text'>
+                    <div class='name-details'>
+                        <h1>Our pleasure is to help you</h1>
+
+                        <h2>If you would like to talk to one of our staff members click below</h2>
+                    </div>
+                </div>
+                <div class='call-waiter-btn'>
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp ">Call-Waiter</a>
+                    </div>
+                </div>
+            </div>
+            <div class='waiter-confirmation'>
+                <div class="close-event-button close-event close-popup-home">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp ">x</a>
+                    </div>
+                </div>
+                <div class='waiter-text'>
+                    <div class='name-details'>
+                        <h2>One of our acrobat waiters will be at your table in no time.</h2>
+                        <h1>Thank you for your patience</h1>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class='become-member'>
+                <div class="close-event-button close-event close-popup-home">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp ">x</a>
+                    </div>
+                </div>
+                <div class='membership-text'>
+                    <div class='name-details'>
+                        <h1>Membership Benefits</h1>
+
+                        <h2>In addition to earning points for dining experiences, becoming a member of our family puts you in the know with recipes, tips and trends straight from our Chefs to you; sneak previews of new menu additions; invitations to exclusive
+                            events and more. Each of our participating locations follows the same rules and guidelines. Benefits are available at all participating locations.</h2>
+                        <h2>
+                            Submit your email and become a member now
+                        </h2>
+                    </div>
+                </div>
+                <div class='submit-email'>
+                    <form action method="post">
+                        <input type="email" name="email">
+                        <input type="submit" value="Subscribe" onsubmit=false>
+                    </form>
+                </div>
+                <!-- <div class='call-waiter-btn submit-email-btn'>
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp ">Submit Email</a>
+                    </div>
+                </div> -->
+            </div>
+            <div class='member-confirmation'>
+                <div class="close-event-button close-event close-popup-home">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp ">x</a>
+                    </div>
+                </div>
+                <div class='waiter-text'>
+                    <div class='name-details'>
+                        <h2>You are now officially a member of our family. Check your email for confirmation and more information.</h2>
+                        <h1>Thank you for your loyalty</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item grid-top">
+                <div class="show-image" style="background-image: url('img/fire_show.jpg')"></div>
+                <div class="show-description-container">
+                    <h1>Fireshow</h1>
+                    <h2>Saturday 8pm</h2>
+
+                </div>
+            </div>
+            <!-- BOOK TABLE -->
+            <div class="grid-item small-grid">
+                <div class="home-icon" style="background-image: url('img/icon_table.png')"></div>
+
+                <div class="show-image" style="background-image: url('img/book-table.jpg')">
+                    <div class="overlay-color overlay-blue"></div>
+                </div>
+                <div class="small-grid-description">
+                    <h2>Book Table</h2>
+                </div>
+
+            </div>
+            <!-- CALL WAITER -->
+
+            <div class="grid-item small-grid">
+                <a class='call-waiter-box'>
+                    <i class="home-icon" style="background-image: url('img/icon_waiter.png')"></i>
+                    <div class="show-image" style="background-image: url('img/waiter.jpg')">
+                        <div class="overlay-color overlay-grey"></div>
+                    </div>
+                    <div class="small-grid-description">
+                        <h2>Call a Waiter</h2>
+                    </div>
+                </a>
+            </div>
+
+            <!-- TAKE AWAY -->
+            <div class="grid-item small-grid">
+                <a class='take-away-box'>
+                    <i class="home-icon" style="background-image: url('img/icon_takeaway.png')"></i>
+                    <div class="show-image" style="background-image: url('img/takeaway.jpg')">
+                        <div class="overlay-color overlay-green"></div>
+                    </div>
+                    <div class="small-grid-description">
+                        <h2>Take Away</h2>
+                    </div>
+                </a>
+            </div>
+            <!-- BECOME MEMBER -->
+            <div class="grid-item small-grid">
+                <a class='become-member-box'>
+
+                    <i class="home-icon" style="background-image: url('img/icon_member.png')"></i>
+                    <div class="show-image" style="background-image: url('img/member.jpg')">
+                        <div class="overlay-color overlay-black"></div>
+                    </div>
+                    <div class="small-grid-description">
+                        <h2>Become a club member</h2>
+                    </div>
+                </a>
+            </div>
+    </section>
+    <section id='food-page'>
+        <div class="top-container"></div>
+        <div class="takeaway-container">
+            <div class="close-event-button close-event close-takeaway">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">x</a>
+                </div>
+            </div>
+            <div class="take-away-time">
+                <h1>
+                    Take-away is only available at the following times:
+                </h1>
+                <ul class=take-away-list>
+                    <li>Monday to Friday: 4pm to 9pm</li>
+                    <li>Saturday and Sunday: 2pm to 11pm</li>
+                </ul>
+            </div>
+        </div>
+        <!-- popup to order food -->
+        <div id="order-popup">
+            <article>
+                <div class="order-box">
+                    <h1>ORDER</h1>
+                </div>
+                <!-- <p>U+02C4</p> -->
+                <div class="content_w">
+                    <div class="content">
+                        <div class="food-list-price">
+                            <ul class="food-list">
+                                <!-- <li class="list-item-food">
+                                <i class="fas fa-minus-circle"></i>
+                                <p class="unit-quantity">1</p>
+                                <p class="unit-name">Burger</p>
+                                <p class="unit-price">50kr</p>
+                                <i class="fas fa-plus-circle"></i>
+                            </li>-->
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="total-price">
+                            <p class="total">TOTAL</p>
+                            <p id="PriceTotal"></p><span>Kr</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!-- finish of popup -->
+        <!-- Food items -->
+        <div class='food-item-container'>
+            <div class="food-name">
+                <h1>Signature Vegan Burger</h1>
+                <h2></h2>
+            </div>
+            <div class="food-price" value="50">
+                <h1>5</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container gradient">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/veganBurger.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ pizza ----------------->
+        <div class='food-item-container gradient'>
+            <div class="food-name">
+                <h1>Pizza</h1>
+                <h2>Design it yourself</h2>
+            </div>
+            <div class="food-price" value="75">
+                <h1>10</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/pizza.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ burger ----------------->
+        <div class='food-item-container'>
+            <div class="food-name">
+                <h1>Cheese Burger</h1>
+                <h2></h2>
+            </div>
+            <div class="food-price" value="80">
+                <h1>80</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container gradient">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/veganBurger.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ pizza ----------------->
+        <div class='food-item-container gradient'>
+            <div class="food-name">
+                <h1>Napoletana</h1>
+                <h2>Design it yourself</h2>
+            </div>
+            <div class="food-price" value="100">
+                <h1>100</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/pizza.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a hclass="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- finish of food items -->
+    </section>
+    <!--------------------------------------------------------------------------------------------------- 
+----------------------------------------------- DRINKS PAGE -----------------------------------------------
+-------------------------------------------------------------------------------------------------------->
+    <section id='drinks-page'>
+        <div class="top-container"></div>
+        <div class="takeaway-container">
+            <div class="close-event-button close-event close-takeaway">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">x</a>
+                </div>
+            </div>
+            <div class="take-away-time">
+                <h1>
+                    Take-away is only available at the following times:
+                </h1>
+                <ul class=take-away-list>
+                    <li>Monday to Friday: 4pm to 9pm</li>
+                    <li>Saturday and Sunday: 2pm to 11pm</li>
+                </ul>
+            </div>
+        </div>
+        <!-- popup to order food -->
+        <div id="order-popup">
+            <article>
+                <div class="order-box">
+                    <h1>ORDER</h1>
+                </div>
+                <!-- <p>U+02C4</p> -->
+                <div class="content_w">
+                    <div class="content">
+                        <div class="food-list-price">
+                            <ul class="food-list">
+                                <!-- <li class="list-item-food">
+                                <i class="fas fa-minus-circle"></i>
+                                <p class="unit-quantity">1</p>
+                                <p class="unit-name">Burger</p>
+                                <p class="unit-price">50kr</p>
+                                <i class="fas fa-plus-circle"></i>
+                            </li>-->
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="total-price">
+                            <p class="total">TOTAL</p>
+                            <p id="PriceTotal"></p><span>Kr</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!-- finish of popup -->
+        <!------------ new item ----------------->
+
+        <div class='food-item-container'>
+            <div class="food-name">
+                <h1>Blue Lagoon Cocktail</h1>
+                <h2></h2>
+            </div>
+            <div class="food-price">
+                <h1>80Kr</h1>
+            </div>
+            <div class="food-image-container gradient">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/blue_lagoon_cocktail.jpg" alt="food item">
+                </div>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a href="" class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a href="" class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a href="" class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!------------ new item ----------------->
+
+        <div class='food-item-container gradient'>
+            <div class="food-name">
+                <h1>Tea</h1>
+                <h2>Choose from a wide variety</h2>
+            </div>
+            <div class="food-price">
+                <h1>30Kr</h1>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/tea.jpg" alt="food item">
+                </div>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a href="" class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a href="" class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a href="" class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ new item ----------------->
+
+    </section>
+    <!--------------------------------------------------------------------------------------------------- 
+----------------------------------------------- EVENTS PAGE -----------------------------------------------
+-------------------------------------------------------------------------------------------------------->
+
+    <section id='events-page'>
+        <div class="top-container"></div>
+
+        <div class='event-detail'>
+            <div id='fireshow'>
+                <div class="close-event-button close-event">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp ">x</a>
+                    </div>
+                </div>
+                <div class='description-container'>
+                    <div class='name-details'>
+                        <h1>Christmas Special</h1>
+                        <h2>Dave the brave on fire</h2>
+                    </div>
+                    <div class='event-date'>
+                        Friday December 25th
+                    </div>
+                    <div class='event-text-description'>
+                        <p>
+                            A chic and daring 1920's fire show with acrobatics, audacious fire stunts, gangster pizazz and a blast of mojo that will have you screaming!This is an elegant, powerful yet playfully upbeat act with world class fire prop manipulation and unique effects.
+                        </p>
+                        <p>
+                            Dave the brave and his group consists of some of Sweden's most established fire artists who work in close collaboration with professional circus acts from different parts of the world. With precision and feeling, they invite audiences into their sparkling
+                            world, which is magical, beautiful and breathtaking! With over 10 years of experience performing to huge crowds all over the world, the performers offer a range of customised packages for all events and budgets. From intimate
+                            and dynamic solo acts, duo shows and explosive fire productions synchronised with live musicians, lighting effects and a range of circus performers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id='houdini'>
+                <div class="close-event-button close-event">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp">x</a>
+                    </div>
+                </div>
+                <div class='description-container'>
+                    <div class='name-details'>
+                        <h1>The one and only</h1>
+                        <h2>Harry Houdini</h2>
+                    </div>
+                    <div class='event-date'>
+                        Saturday December 26th
+                    </div>
+                    <div class='event-text-description'>
+                        <p>
+                            An exclusive night, a unique experience, a magical event. Meet the one and only Harry Houdini, coming to Sweden for the first time to perform in Cirus Vegan!
+                        </p>
+                        <p>
+                            Do you think he can escape a well-locked safe? Do you think you have the courage to see this breathtaking show? Then join us to find out. </p>
+                    </div>
+                </div>
+            </div>
+            <div id='acro-familj'>
+                <div class="close-event-button close-event">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp">x</a>
+                    </div>
+                </div>
+                <div class='description-container'>
+                    <div class='name-details'>
+                        <h2>AcroFamilj </h2>
+                    </div>
+                    <div class='event-date'>
+                        Satruday December 26th
+                    </div>
+                    <div class='event-text-description'>
+                        <p>
+                            The nation-wide famous AcroFamilj is back to circus Vegan. The highly-trained Andersson family acrobats, known as AcroFamilj will show us their latest life-daring tricks. Action packed with outstanding feats, beautiful choreography, color and excitement
+                            — the show is one of the favorite nightlife performances in Sweden.
+                        </p>
+                        <p>
+                            From contortionist acts to high wire stunts, this performance has it all. Now is your chance to witness the most extreme acrobat skill in China, at the theater known to be the best acrobatic show in Beijing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id='starka-max'>
+                <div class="close-event-button close-event">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp">x</a>
+                    </div>
+                </div>
+                <div class='description-container'>
+                    <div class='name-details'>
+                        <h1>New Year Special</h1>
+                        <h2>The strongest man in Europe </h2>
+                    </div>
+                    <div class='event-date'>
+                        Friday January 1st
+                    </div>
+                    <div class='event-text-description'>
+                        <p>
+                            You asked and we listened. The strongest man in Europe is back to Circus Vegan for this new year's special event. Holding a guiness world-record, Max Starkarson, aka Starka Max, will make the impossible!
+                        </p>
+                        <p>
+                            If you think Pipi Longstocking is strong, then you should think twice </p>
+                    </div>
+                </div>
+            </div>
+            <div id='silent-lili'>
+                <div class="close-event-button close-event">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp">x</a>
+                    </div>
+                </div>
+                <div class='description-container'>
+                    <div class='name-details'>
+                        <h2>Silent Lili</h2>
+                    </div>
+                    <div class='event-date'>
+                        Friday January 8th
+                    </div>
+                    <div class='event-text-description'>
+                        <p>
+                            You asked and we listened. The strongest man in Europe is back to Circus Vegan for this new year's special event. Holding a guiness world-record, Max Starkarson, aka Starka Max, will make the impossible!
+                        </p>
+                        <p>
+                            If you think Pipi Longstocking is strong, then you should think twice </p>
+                    </div>
+                </div>
+            </div>
+            <div id='yoyo'>
+                <div class="close-event-button close-event">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp">x</a>
+                    </div>
+                </div>
+                <div class='description-container'>
+                    <div class='name-details'>
+                        <h1>A night with laughter and fun</h1>
+                        <h2>YoYo The Clown</h2>
+                    </div>
+                    <div class='event-date'>
+                        Saturday January 9th
+                    </div>
+                    <div class='event-text-description'>
+                        <p>
+                            Sweden's funniest clown will come to Circus Vegan on January the 8th. A promise night full of laughter and joy for both kids and grow-ups!
+                        </p>
+                        <p>
+                            Yoyo's show is packed full of rib tickling fun & tricks that will have kids and mums and dads in stitches! Children & families love to see funny business, Unicycles, magical tricks, juggling, colourful hat tricks, balancing rola-rola, lots of ”kiddy Comedy”
+                            party games, the latest pop tunes & balloons of course. </p>
+                    </div>
+                </div>
+            </div>
+            <div id='pippi'>
+                <div class="close-event-button close-event">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp">x</a>
+                    </div>
+                </div>
+                <div class='description-container'>
+                    <div class='name-details'>
+                        <h1>Sweden's Favourite</h1>
+                        <h2>Pippi with a twist</h2>
+                    </div>
+                    <div class='event-date'>
+                        Friday January 15th
+                    </div>
+                    <div class='event-text-description'>
+                        <p>
+                            Sweden's most famous girl and the world's strongest kid. This time, having a circus and an acrobatic twist to the main story.
+                        </p>
+                        <p>
+                            Are you eager to see what Pippi will do to Kling och Klang? Wondering what herr Nielsson and Lilla Gubben will perform in this show? Brin your kids and live your childhood memories with a twist at Vegan Circus on Friday January 15th with Pippi and her
+                            friends. </p>
+                    </div>
+                </div>
+            </div>
+            <div id='bozo'>
+                <div class="close-event-button close-event">
+                    <div class="btns" type="button">
+                        <a class="btn-menu animated fadeInUp">x</a>
+                    </div>
+                </div>
+                <div class='description-container'>
+                    <div class='name-details'>
+                        <h1>Meet the clown couple</h1>
+                        <h2>Twisty and Bozo</h2>
+                    </div>
+                    <div class='event-date'>
+                        Satruday January 16th
+                    </div>
+                    <div class='event-text-description'>
+                        <p>
+                            Coming straight from Malmö, the most hilarious couple of Skåne will be in circus Vegan to make you laugh.
+                        </p>
+                        <p>
+                            What's better than having a stand-up comedy, couple with clown performances, kids shows, balloons and candy-tricks? Enjoy watching this increadibly funny couple while having dinner with your family. A guaranteed fun night for both the kids and the grown-ups
+                            in the family. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------------------------------EVENT LISTING -------------------------------------------- -->
+
+        <div class="grid-container-events">
+            <div class=row-events>
+                <div class="grid-item-events">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/fire_show.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-type">
+                            <h1>Christmas Special</h1>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>Fireshow</h1>
+                            <p style="display:none">fireshow</p>
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>December 25</h2>
+            </div> -->
+                    </a>
+                </div>
+
+
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/magician.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>Harry Houdini</h1>
+                            <p style="display:none">houdini</p>
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>December 26</h2>
+            </div> -->
+                    </a>
+                </div>
+            </div>
+            <div class=row-events>
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+
+                        <div class="show-image event-image" style="background-image: url('img/alfonso.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-type">
+                            <h1>New Year Special</h1>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>Starka Max</h1>
+                            <p style="display:none">starka-max</p>
+
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>January 01</h2>
+            </div> -->
+                    </a>
+                </div>
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/acrobats.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>AcroFamilj</h1>
+                            <p style="display:none">acro-familj</p>
+
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>January 02</h2>
+            </div> -->
+                    </a>
+                </div>
+            </div>
+            <div class=row-events>
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/mimiClown.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>Silent Lili</h1>
+                            <p style="display:none">silent-lili</p>
+
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>January 08</h2>
+            </div> -->
+                    </a>
+                </div>
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/Yoyo.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>YoYo Clown</h1>
+                            <p style="display:none">yoyo</p>
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>January 09</h2>
+            </div> -->
+                    </a>
+                </div>
+            </div>
+            <div class=row-events>
+
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/pippi.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>Pippi Longstockins</h1>
+                            <p style="display:none">pippi</p>
+
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>December 26</h2>
+            </div> -->
+                    </a>
+                </div>
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/TwistyBozo.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>Twisty and Bozo</h1>
+                            <p style="display:none">bozo</p>
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>January 09</h2>
+            </div> -->
+                    </a>
+                </div>
+            </div>
+            <div class=row-events>
+                <div class="grid-item-events">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/fire_show.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>Fireshow</h1>
+                            <p style="display:none">fireshow</p>
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>December 25</h2>
+            </div> -->
+                    </a>
+                </div>
+
+
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/magician.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>Harry Houdini</h1>
+                            <p style="display:none">houdini</p>
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>December 26</h2>
+            </div> -->
+                    </a>
+                </div>
+            </div>
+            <div class=row-events>
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+
+                        <div class="show-image event-image" style="background-image: url('img/alfonso.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+
+                        <div class="small-grid-description event-name">
+                            <h1>Starka Max</h1>
+                            <p style="display:none">starka-max</p>
+
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>January 01</h2>
+            </div> -->
+                    </a>
+                </div>
+                <div class="grid-item-events small-grid">
+                    <a class='click-event'>
+                        <div class="show-image event-image" style="background-image: url('img/acrobats.jpg')">
+                            <div class="overlay-color overlay-grey"></div>
+                        </div>
+                        <div class="small-grid-description event-name">
+                            <h1>AcroFamilj</h1>
+                            <p style="display:none">acro-familj</p>
+
+                        </div>
+                        <!-- <div class="small-grid-description event-date">
+                <h2>January 02</h2>
+            </div> -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

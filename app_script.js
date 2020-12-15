@@ -1,7 +1,100 @@
 $(document).ready(function() {
+
+    // ---------SECTION TRANSITION ---------//
+    $('#begin-show-btn').on('click', function() {
+        $('#landing-page').css('display', 'none');
+        $('#header').css('display', 'block');
+        $('#home-page').css('display', 'block');
+        $('#home-btn').parent().addClass('active');
+    });
+    $('#home-btn').on('click', function() {
+        $('#home-page').css('display', 'block');
+        $('#food-page').css('display', 'none');
+        $('#drinks-page').css('display', 'none');
+        $('#events-page').css('display', 'none');
+        $('#home-btn').parent().addClass('active');
+        $('#food-btn').parent().removeClass('active');
+        $('#events-btn').parent().removeClass('active');
+        $('#drinks-btn').parent().removeClass('active');
+    });
+    $('#food-btn').on('click', function() {
+        $('#home-page').css('display', 'none');
+        $('#food-page').css('display', 'block');
+        $('#drinks-page').css('display', 'none');
+        $('#events-page').css('display', 'none');
+        $('#food-btn').parent().addClass('active');
+        $('#home-btn').parent().removeClass('active');
+        $('#events-btn').parent().removeClass('active');
+        $('#drinks-btn').parent().removeClass('active');
+    });
+    $('#drinks-btn').on('click', function() {
+        $('#home-page').css('display', 'none');
+        $('#food-page').css('display', 'none');
+        $('#drinks-page').css('display', 'block');
+        $('#events-page').css('display', 'none');
+        $('#drinks-btn').parent().addClass('active');
+        $('#home-btn').parent().removeClass('active');
+        $('#food-btn').parent().removeClass('active');
+        $('#events-btn').parent().removeClass('active');
+    });
+    $('#events-btn').on('click', function() {
+        $('#home-page').css('display', 'none');
+        $('#food-page').css('display', 'none');
+        $('#drinks-page').css('display', 'none');
+        $('#events-page').css('display', 'block');
+        $('#events-btn').parent().addClass('active');
+        $('#home-btn').parent().removeClass('active');
+        $('#food-btn').parent().removeClass('active');
+        $('#drinks-btn').parent().removeClass('active');
+    });
+
+    // ---------HOME PAGE ---------//
+
+    //call waiter
+    $('.call-waiter-box').on('click', function() {
+        $('#home-popup').css('display', 'block');
+        $('.call-waiter-container').css('display', 'block');
+    });
+    $('.call-waiter-btn').on('click', function() {
+        $('.call-waiter-container').css('display', 'none');
+        $('.waiter-confirmation').css('display', 'block');
+    });
+    $('.close-popup-home').on('click', function() {
+        $('#home-popup').css('display', 'none');
+        $('.call-waiter-container').css('display', 'none');
+        $('.waiter-confirmation').css('display', 'none');
+        $('.become-member').css('display', 'none');
+    });
+    //become member
+    $('.become-member-box').on('click', function() {
+        $('#home-popup').css('display', 'block');
+        $('.become-member').css('display', 'block');
+    });
+    $('form').on('submit', function(event) {
+        $('.become-member').css('display', 'none');
+        $('.submit-email').css('display', 'block');
+    });
+    //take-away
+    $('.take-away-box').on('click', function() {
+        $('#home-page').css('display', 'none');
+        $('#food-page').css('display', 'block');
+        $('#drinks-page').css('display', 'none');
+        $('#events-page').css('display', 'none');
+        $('#food-btn').parent().addClass('active');
+        $('#home-btn').parent().removeClass('active');
+        $('#events-btn').parent().removeClass('active');
+        $('#drinks-btn').parent().removeClass('active');
+        $('.takeaway-container').css('display', 'block');
+
+
+    });
+
+
+
+    // ---------FOOD PAGE ---------//
+
     //create an empty array and put all orders in it
     var orderList = new Array();
-
     var totalOrderPrice = 0;
 
     $(".add-btns").on('click', function() {
@@ -165,4 +258,25 @@ $(document).ready(function() {
             }
         });
     }
+
+    // ---------EVENT PAGE ---------//
+    // $('.close-event').on("click", function() {
+    //     $('.event-detail').css('display', 'none');
+    // })
+
+    // $('.click-event').on("click", function() {
+    //         let eventName = $(this).children('.event-name').children('h1').text();
+    //         console.log(eventName);
+    //     })
+    $('.click-event').on("click", function() {
+        let eventName = $(this).children('.event-name').children('p').text();
+        $('.event-detail').css('display', 'block');
+        $(`#${eventName}`).css('display', 'block');
+
+    })
+    $('.close-event').on("click", function() {
+        $(this).parent().css('display', 'none');
+        $('.event-detail').css('display', 'none');
+    })
+
 });
