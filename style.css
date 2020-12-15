@@ -972,19 +972,18 @@ font-size: 10px;
   background-color:transparent;
   margin: 10px;
   
-
+}
 
 /* -------------Booking form css ------------*/
 .booking-form {
   position: relative;
-
   width: 100%;
   margin: auto;
   padding: 40px;
   overflow: hidden;
   background-image: linear-gradient(to right, #eee, #61892f);
   background-size: cover;
-  z-index: 20;
+  z-index:20;
 }
 
 #Contact-form::before{
@@ -1239,9 +1238,5 @@ font-size: 10px;
 /*--------------------------------------------------------------
 # Banner  (Added by Daryl 20201215)
 --------------------------------------------------------------*/
-
-#frame-form{
-  
-}
 
 
