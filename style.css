@@ -14,7 +14,7 @@ body {
     text-decoration: none;
   }
 
-
+  
   /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
@@ -836,7 +836,11 @@ font-size: 10px;
     width: 36px;
     height: 36px;
     transition: 0.3s;
-  }
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
   
   #footer .footer-top .social-links a:hover {
     background: #61892f;
@@ -1238,5 +1242,9 @@ font-size: 10px;
 /*--------------------------------------------------------------
 # Banner  (Added by Daryl 20201215)
 --------------------------------------------------------------*/
-
-
+.carouselIndicators i{
+  margin-left: 30%;
+  padding: 30px;
+  
+  
+}
