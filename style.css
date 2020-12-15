@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Poppins', sans-serif;
   background: #000000;
@@ -14,18 +13,34 @@ body {
     text-decoration: none;
   }
 
+/*--------------------------------------------------------------*/
+  .filterDiv {
+    display: none; /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+/*--------------------------------------------------------------*/
+
   /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
-
-
-#topbar {
-    height: 40px;
+  #topbar {
+    height: 30px;
     font-size: 14px;
     transition: all 0.5s;
+    /* background-color: #86C232; */
+    background: hsla(85, 59%, 48%, 0.342);
+    /* border-bottom: 1px solid rgba(12, 11, 9, 0.6); */
+    transition: all 0.5s;
+    z-index: 997;
+    
+    
   }
   
-  #topbar.topbar-scrolled {
+  #topbar .topbar-scrolled {
     top: -40px;
   }
   
@@ -34,7 +49,7 @@ body {
   } 
   
   #topbar .contact-info i {
-    color: #86C232;
+    color: #1a1814;
     padding-right: 4px;
   }
   
@@ -48,7 +63,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    color: #86C232;
+    color: #1a1814;
   }
   /* .languages a:hover, .languages .active > a, .languages ul:hover > a{
     color: white;
@@ -71,22 +86,35 @@ body {
 /*--------------------------------------------------------------
 # Nav Bar 
 --------------------------------------------------------------*/
+.navbar-toggler{
+  width: 57px;
+  height: 34px;
   
+  margin-right: 10px;
+  border:none;
+  
+}
+.navbar-toggler .line{
+  width: 100%;
+  float: left;
+  height: 1px;
+  background-color: #86C232;
+  margin-bottom: 5px;
+}
+
   #header {
-    top: 0;
-    position: -webkit-sticky;
-    position: sticky;
-    display: flex;
-    background: rgba(12, 11, 9, 0.6);
-    border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+    background: rgba(18, 21, 22, 0.397) 21, 22);
+    border-bottom: 1px solid rgba(134, 194, 50, 0.4);
     transition: all 0.5s;
     z-index: 997;
-    padding: 15px 0; 
+    padding: 15px 0;
+    top: 40px;
+    
   }
   
-  #header.header-scrolled {
+  #header .header-scrolled {
     top: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, .85);
     border-bottom: 1px solid #37332a;
   }
   
@@ -105,7 +133,8 @@ body {
   }
   
   #header .logo img {
-    max-height: 40px;
+    max-height: 50px;
+    
   }
   
 
@@ -127,7 +156,8 @@ body {
 .nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
-  padding-left: 28px;
+  padding-left: 18px;
+  margin-right: 20px;
 }
 
 .nav-menu a {
@@ -163,46 +193,32 @@ body {
 
 
   
-    /* Mobile Navigation */
-    /* .navbar-toggler-icon{
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(134,194,50, 01)' stroke-width='2' stroke-linecap='none' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-      right: 15px;
-      top: 15px;
-      z-index: 9998;
-      border: 0;
-      font-size: 24px;
-      transition: all 0.4s;
-    }
-    
-  
-    .navbar-nav {
-      text-align: center;
-  }
-   */
-  
     
       
     
 /* Modal Content/Box */
 .modal-content {
-  background-color:rgba(0,0,0,0.0);
-  margin: 0px auto; /* 0 from the top and centered */
+  background-color:rgba(0,0,0,0.5);
+  margin: 0px auto; /* 0 from the top and centered  */
   padding: 0px;
-  border: 0px solid #888;
-  width: 100%; /* Could be more or less, depending on screen size */
+  border: 0px solid #888; 
+  width: 100%;
+  /* Could be more or less, depending on screen size */
 }
       
       /*--------------------------------------------------------------
       # Hero Section
       --------------------------------------------------------------*/
+      
       #hero {
         width: 100%;
         height: 100vh;
         background: #eee;
-        background: url("img/mint_tea.jpg") top center;
+        background: url("img/hero-bg.jpg") top center;
         background-size: cover;
         position: relative;
         padding: 0;
+        back
       }
       
       #hero:before {
@@ -244,9 +260,7 @@ body {
         font-size: 22px;
       }
       
-      #hero .btns {
-        margin-top: 30px;
-      }
+
       
       #hero .btn-menu, #hero .btn-book {
         font-weight: 500;
@@ -254,12 +268,13 @@ body {
         letter-spacing: 0.5px;
         text-transform: uppercase;
         display: inline-block;
-        padding: 12px 30px;
+        padding: 12px 40px;
         border-radius: 50px;
         transition: 0.3s;
         line-height: 1;
         color: white;
         border: 2px solid #86C232;
+        margin-top: 30px;
       }
       
       #hero .btn-menu:hover, #hero .btn-book:hover {
@@ -396,7 +411,6 @@ body {
           opacity: 0;
         }
       }
-      
       /*--------------------------------------------------------------
       # About
       --------------------------------------------------------------*/
@@ -531,7 +545,7 @@ section {
       # About Us
       --------------------------------------------------------------*/
 
-  #events, .AboutUs .box {
+  #events, .AboutUs .box{
   padding: 50px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
@@ -567,16 +581,17 @@ section {
 }
 
       /*--------------------------------------------------------------
-      # About
+      # Meet the chef 
       --------------------------------------------------------------*/
 
-      .about {
-        background: url("img/cloun-.jpg") center center;
+      .chef {
+        background: url("img/clown.jpg") center center;
         background-size: cover;
         position: relative;
         padding: 80px 0;
-      }
-      .about:before {
+        
+}
+      .chef:before {
         content: "";
         background: rgba(0, 0, 0, 0.7);
         position: absolute;
@@ -586,19 +601,19 @@ section {
         right: 0;
       }
       
-      .about .about-img {
+      .chef .chef-img {
         position: relative;
         transition: .5s;
       }
       
       
-      .about .about-img img {
+      .chef .chef-img img {
         max-width: 100%;
         border: 4px solid #222629;
         position: relative;
       }
       
-      .about .about-img::before {
+      .chef .chef-img::before {
         position: absolute;
         left: 20px;
         top: 20px;
@@ -611,7 +626,7 @@ section {
         transition: .5s;
       }
       
-      .about .about-img::after {
+      .chef .chef-img::after {
         position: absolute;
         right: 20px;
         bottom: 20px;
@@ -622,54 +637,62 @@ section {
         border-right: 5px solid #61892f;
         border-bottom: 5px solid #61892f;
         transition: .5s;
-      }
+        
+}
       
-      .about .about-img:hover {
+      .chef .chef-img:hover {
         transform: scale(1.03);
       }
       
-      .about .about-img:hover::before {
+      .chef .chef-img:hover::before {
         left: 10px;
         top: 10px;
       }
       
-      .about .about-img:hover::after {
+      .chef .chef-img:hover::after {
         right: 10px;
         bottom: 10px;
       }
       
-      .about .content h3 {
-        font-weight: 600;
-        font-size: 26px;
+      .chef .content h3 {
+        font-weight: 300;
+        font-size: 20px;
+        padding-bottom: 22px;
+        margin-top: -30px;
         
       }
       
-      .about .content ul {
+      .chef .content ul {
         list-style: none;
         padding: 0;
       }
       
-      .about .content ul li {
-        padding-bottom: 10px;
+      /* .chef .content ul li {
+        padding-bottom: px;
         
-      }
+      } */
       
-      .about .content ul i {
+      .chef .content ul i {
         font-size: 20px;
         padding-right: 4px;
         color: #61892f;
       }
       
-      .about .content p:last-child {
+      .chef .content p:last-child {
         margin-bottom: 0;
       }
       
       @media (min-width: 1024px) {
-        .about {
+        .chef {
           background-attachment: fixed;
         }
       }
   
+
+
+
+
+
   /*--------------------------------------------------------------
   # Gallery
   --------------------------------------------------------------*/
@@ -692,7 +715,7 @@ section {
   --------------------------------------------------------------*/
   .food-menu-card {
     padding: 30px 20px;
-    background-color: black;
+    background-color: #121516;
     border-radius: 8px;
 }
 .food-menu-card .media {
@@ -715,29 +738,24 @@ position: relative;
 .food-menu-card .media .d-flex:before {
 content: "";
 position: absolute;
-left: auto;
-right: 0;
-width: 100%;
+align-items: center;
+right: 90px;
+width: 50%;
 height: 1px;
 background-color: rgba(255, 255, 255, 0.2);
 top: 50%;
 }
+
 .food-menu-card .media h3 {
 position: relative;
 display: inline-block;
 margin-bottom: 0;
 padding-right: 1.07143rem;
-background-color: #000;
 z-index: 2;
+
 }
 
-.food-menu-card .media strong {
-background-color: #000;
-display: block;
-padding-left: 15px;
-z-index: 2;
-position: relative;
-}
+
 
 .tabs-menu-nav > li > a {
 color: #86C232;
@@ -755,6 +773,14 @@ opacity: 1;
 .media-body, p {
 color: #999;
 } 
+
+
+/* --------------------------
+event slider 
+-----------------------------*/
+.chef-bio{
+font-size: 10px;
+}
 
 
 
@@ -804,7 +830,7 @@ color: #999;
   #footer .footer-top .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #222629;
+    background-color: #61892f;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
@@ -817,8 +843,7 @@ color: #999;
   }
   
   #footer .footer-top .social-links a:hover {
-    background: #61892f;
-    color: #fff;
+    background: #86C232;
     text-decoration: none;
   }
   
@@ -840,7 +865,7 @@ color: #999;
     margin: 0;
   }
   
-  #footer .footer-top .footer-links ul i {
+  #form-contact-icons, #footer .footer-top .footer-links ul i {
     padding-right: 2px;
     color: #61892f;
     font-size: 18px;
@@ -920,10 +945,285 @@ color: #999;
 
 /* Language icon rotation */
   .lang {
-    -webkit-animation:spin 6s linear infinite;
-    -moz-animation:spin 6s linear infinite;
-    animation:spin 6s linear infinite;
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+
+
+#contact-form{
+  padding: 50px 30px;
+  box-shadow: 7px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+  border: 4px solid #222629;
+  background-color:#0f1113;
+}
+
+
+
+#form-email,#form-name, #form-message, #form-subject{
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color:transparent;
+  margin: 10px;
+  
+  
+}
+.map-container {
+  height: 200px;
+  position: relative;
+}
+
+.map-container iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: grayscale();
+  -webkit-filter: grayscale(0.6);
+}
+
+
+
+
+/* -------------Booking form css ------------*/
+.booking-form {
+  position: relative;
+
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #eee, #61892f);
+  background-size: cover;
+  z-index: 20;
+}
+
+#Contact-form::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #000000;
+  z-index: -1;
+}
+
+
+.booking-form::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.booking-form .form-header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.booking-form .form-header h1 {
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 42px;
+  margin: 0px;
+  color: #fff;
+}
+
+.booking-form .form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.booking-form .form-control {
+ background-color: rgba(255, 255, 255, 0.2);
+ height: 60px;
+ padding: 0px 25px;
+ border: none;
+ border-radius: 35px;
+ color: #fff;
+ -webkit-box-shadow: 0px 0px 0px 2px transparent;
+ box-shadow: 0px 0px 0px 2px transparent;
+ -webkit-transition: 0.2s;
+ transition: 0.2s;
+ -webkit-border-radius: 35px;
+ -moz-border-radius: 35px;
+ -ms-border-radius: 35px;
+ -o-border-radius: 35px;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5)
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5)
+}
+
+.booking-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5)
+}
+
+.booking-form .form-control:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #61892f;
+  box-shadow: 0px 0px 0px 2px #61892f;
+}
+
+.booking-form input[type="date"].form-control {
+  padding-top: 16px
+}
+
+.booking-form input[type="date"].form-control:invalid {
+  color: rgba(255, 255, 255, 0.5)
+}
+
+.booking-form input[type="date"].form-control+.form-label {
+  opacity: 1;
+  top: 10px
+}
+
+.booking-form select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+.booking-form select.form-control:invalid {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form select.form-control+.select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 32px;
+  line-height: 32px;
+  height: 32px;
+  text-align: center;
+  pointer-events: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+  content: '\279C';
+  display: block;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+
+.booking-form select.form-control option {
+  color: #000
+}
+
+.booking-form .form-label {
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  opacity: 0;
+  color: #61892f;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  height: 15px;
+  line-height: 15px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all
+}
+
+.booking-form .form-group.input-not-empty .form-control {
+  padding-top: 16px
+}
+
+.booking-form .form-group.input-not-empty .form-label {
+  opacity: 1;
+  top: 10px
+}
+
+.booking-form .submit-btn {
+  background: #86C232;
+  color: #fff;
+  border: 2px solid #86C232;
+    border-radius: 50px;
+    padding: 8px 25px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    height: 60px;
+  padding: 10px 30px;
+  width: 100%;
+    letter-spacing: 1.3px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+  opacity: 0.9;
+  background: #61892f;
+  
+}
+
+#message{
+  padding-top: 16px;
+}
+
+
+
+/*----- social_icon -------- */
+
+.social_icon span{
+  font-size: 60px;
+  margin-left: 10px;
+  color: #61892f;
+  }
+  
+  .social_icon span:hover{
+  color: #86C232;
+  cursor: pointer;
+  }
+  
+  .card-header h3{
+  color: white;
+  }
+  
+  .social_icon{
+  position: absolute;
+  right: 20px;
+  top: -2px;
+  }
+  
+  .input-group-prepend span{
+  width: 50px;
+  background-color: #61892f;
+  color: black;
+  border:0 !important;
+  }
+  
+  input:focus{
+  outline: 0 0 0 0  !important;
+  box-shadow: 0 0 0 0 !important;
+  
+  }
