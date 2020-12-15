@@ -33,11 +33,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
    
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+ <!-- daryl booststrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
      <!-- Internal CSS -->
     <link rel="stylesheet" href="Booking-Form-Style.css">   
     <link rel="stylesheet" href="style.css">
 
+    <script src="/food-menu.js"></script>
     <script src="/Lang/lang_engine.js"></script>
     <script src="/Lang/translation.js"></script>
 
@@ -45,6 +49,7 @@
 </head>
 
 <body>
+    
     <!-- ======= Modified by Daryl 20201208 =======  -->
     <!-- ======= Top Bar ======= -->
     <div id="topbar" class="d-flex align-items-center fixed-top">
@@ -347,6 +352,12 @@
 
                     <!-- Nav tabs -->
                     <ul class="nav  tabs-menu-nav justify-content-center mb30" role="tablist">
+                        <li><a id="allType" class="nav-link" href="#Starters">All</a></li>
+                        <li><a id="starterType" class="nav-link" href="#Starters">Starters</a></li>
+                        <li><a id="mainType" class="nav-link" href="#Mains">Mains</a></li>
+                        <li><a id="dessertType" class="nav-link" href="#Dessert">Dessert</a></li>
+                    </ul>
+                    <!-- <ul class="nav  tabs-menu-nav justify-content-center mb30" role="tablist">
                         <li class="nav-item" role="presentation"><a class="nav-link active show" href="#All"
                                 aria-controls="All" role="tab" data-toggle="tab" aria-selected="true">All</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#Starters"
@@ -358,47 +369,52 @@
                                 aria-controls="Specialty" role="tab" data-toggle="tab" aria-selected="false">Dessert</a>
                         </li>
 
-                    </ul>
+                    </ul> -->
 
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade active show" id="All">
                             <div class="row">
                                 <div class="col-md-6 mb20">
-                                    <article class="media">
+                  
+                                    <Div class="filterDiv starters">  <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">smoked leek</h3>
 
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    smoked leek</h3>
-
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font600">120 kr</strong>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font600">120 kr</strong>
+                                                    </div>
                                                 </div>
+
+                                                <p class="mb-0">Lightly smoked leek, black apples, horseradish</p>
                                             </div>
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>  <!--/filterDiv -->
 
-                                            <p class="mb-0">Lightly smoked leek, black apples, horseradish</p>
-                                        </div>
-                                        <!--/Content -->
-
-                                    </article>
-                                    <!--/Article -->
-                                    <article class="media">
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Urban kale</h3>
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font700">120 kr</strong>
+                                    <Div class="filterDiv starters">  <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Urban kale</h3>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font700">120 kr</strong>
+                                                    </div>
                                                 </div>
+                                                <p class="mb-0">Urban kale, lentils from Gotland, squid, black garlic</p>
                                             </div>
-                                            <p class="mb-0">Urban kale, lentils from Gotland, squid, black garlic</p>
-                                        </div>
-                                        <!--/Content -->
-                                    </article>
-                                    <!--/Article -->
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>  <!--/filterDiv -->
+
+                                <Div class="filterDiv mains">  <!--/filterDiv is needed for food menu sorting -->
                                     <article class="media">
                                         <!--Content -->
                                         <div class="media-body align-self-center g-pl-10">
@@ -415,6 +431,9 @@
                                         <!--/Content -->
                                     </article>
                                     <!--/Article -->
+                                </Div>  <!--/filterDiv -->
+
+                                <Div class="filterDiv mains">  <!--/filterDiv is needed for food menu sorting -->
                                     <article class="media">
                                         <!--Content -->
                                         <div class="media-body align-self-center g-pl-10">
@@ -429,10 +448,11 @@
                                                 Caesar's mushroom</p>
                                         </div>
                                         <!--/Content -->
-
-
                                     </article>
                                     <!--/Article -->
+                                </Div>  <!--/filterDiv -->
+
+                                <Div class="filterDiv dessert">  <!--/filterDiv is needed for food menu sorting -->
                                     <article class="media">
                                         <!--Content -->
                                         <div class="media-body align-self-center g-pl-10">
@@ -449,11 +469,12 @@
                                         <!--/Content -->
                                     </article>
                                     <!--/Article -->
-
+                                </Div>  <!--/filterDiv -->
                                 </div>
-                                <div class="col-md-6 mb20">
-                                    <article class="media">
 
+                                <div class="col-md-6 mb20">
+                                    <Div class="filterDiv dessert">  <!--/filterDiv is needed for food menu sorting -->
+                                    <article class="media">
                                         <!--Content -->
                                         <div class="media-body align-self-center g-pl-10">
                                             <div class="d-flex justify-content-between mb10">
@@ -464,16 +485,15 @@
                                                     <strong class="text-white font700">220 kr</strong>
                                                 </div>
                                             </div>
-
                                             <p class="mb-0">Poached potatoes and leek, crispy kale, velouté sauce</p>
                                         </div>
                                         <!--/Content -->
-
-
                                     </article>
                                     <!--/Article -->
-                                    <article class="media">
+                                </Div>  <!--/filterDiv -->
 
+                                <Div class="filterDiv dessert">  <!--/filterDiv is needed for food menu sorting -->
+                                    <article class="media">
                                         <!--Content -->
                                         <div class="media-body align-self-center g-pl-10">
                                             <div class="d-flex justify-content-between mb10">
@@ -488,10 +508,10 @@
                                                 dressing</p>
                                         </div>
                                         <!--/Content -->
-
-
-
                                     </article>
+                                </Div>  <!--/filterDiv -->
+
+                                <Div class="filterDiv starters">  <!--/filterDiv is needed for food menu sorting -->
                                     <!--/Article -->
                                     <article class="media">
                                         <!--Content -->
@@ -509,12 +529,12 @@
                                                 Walnut, Lovage Jus</p>
                                         </div>
                                         <!--/Content -->
-
-
                                     </article>
                                     <!--/Article -->
-                                    <article class="media">
+                                </Div>  <!--/filterDiv -->
 
+                                <Div class="filterDiv mains">  <!--/filterDiv is needed for food menu sorting -->
+                                    <article class="media">
                                         <!--Content -->
                                         <div class="media-body align-self-center g-pl-10">
                                             <div class="d-flex justify-content-between mb10">
@@ -530,12 +550,12 @@
                                                 Sultanas Grapes & Harissa Concassé</p>
                                         </div>
                                         <!--/Content -->
-
-
                                     </article>
                                     <!--/Article -->
-                                    <article class="media">
+                                </Div>  <!--/filterDiv -->
 
+                                <Div class="filterDiv mains">  <!--/filterDiv is needed for food menu sorting -->
+                                    <article class="media">
                                         <!--Content -->
                                         <div class="media-body align-self-center g-pl-10">
                                             <div class="d-flex justify-content-between mb10">
@@ -553,6 +573,7 @@
                                         <!--/Content -->
                                     </article>
                                     <!--/Article -->
+                                </Div>  <!--/filterDiv -->
 
                                 </div>
                             </div>
@@ -1105,6 +1126,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
