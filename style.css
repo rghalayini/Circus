@@ -77,29 +77,14 @@ body {
 /*--------------------------------------------------------------
 # Nav Bar 
 --------------------------------------------------------------*/
-.navbar-toggler{
-  width: 57px;
-  height: 34px;
-  outline: none !important;
-  margin-right: 10px;
-  border:none;
-  
-}
-.navbar-toggler .line{
-  width: 100%;
-  float: left;
-  height: 1px;
-  background-color: #86C232;
-  margin-bottom: 5px;
-}
+
 
   #header {
-    background: rgba(18, 21, 22, 0.397) 21, 22);
+    background: rgba(18, 21, 22, 0.863);
     border-bottom: 1px solid rgba(134, 194, 50, 0.4);
     transition: all 0.5s;
     z-index: 997;
-    padding: 15px 0;
-    top: 40px;
+    top: 30px;
     
   }
   
