@@ -1,54 +1,65 @@
-$(document).ready(function () {
+$(document).ready(function() {
     var count = 0;
-    var total = 0;
-    var markup = "";
 
-    var name = document.getElementById("unitName").textContent;
-    var quantity = document.getElementById("unitQuantity").textContent;
-    var price = document.getElementById("unitPrice").textContent;
+
+
+    $(".btn-menu").on('click', function() {
+        document.getElementById("myDropdown").classList.toggle("show");
+       
+      });
+       
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.btn-menu')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
 
     //Add items for the first time to make the popup appear
-    $(".add-btns").on('click', function () {
+    $(".add-btns").on('click', function() {
         $("#order-popup").css("display", "block");
         $("#order-popup").css("opacity", "1");
         $(".remove-btns").css("visibility", "visible");
         $(".remove-btns").css("opacity", "1");
-
         count++;
-        AddQuantity();
 
+        // document.write($(this).parent());
+
+        $(".food-list").append($('<li>')
+            .addClass("list-item-food")
+            .append($('<i>')
+                .addClass('fas fa-minus-circle')
+                .on("click", RemoveQuantity))
+            .append($('<p>')
+                .addClass("unit-quantity")
+                .text('1'))
+            .append($('<p>')
+                .addClass('unit-name'))
+            .append($('<p>')
+                .addClass("unit-price"))
+            .append($('<i>')
+                .addClass("fas fa-plus-circle")
+                .on("click", AddQuantity)));
     });
 
-
+    //Add items inside the popup --> this should  be working, not sure why it is not
     function AddQuantity() {
-        total = total + parseFloat(price);
-        var trId = 'tr_' + count;
-        var _trId = "#" + trId;
-        markup = "<tr><td>" + name + "</td><td>" + quantity + "</td><td>" + price + "</td>";
-        //--->add and delete options > start
-        markup += '<td>';
-        markup += '<span  class="btn_delete" > <a href="#" class="btn btn-link " row_id="' + _trId + '" > remove</a> </span>';
-        markup += '<span  class="btn_add" > <a href="#" class="btn btn-link " row_id="' + _trId + '" > add</a> </span>';
-        markup += '<span  class="btn_edit" > <a href="#" class="btn btn-link " row_id="' + _trId + '" > customize</a> </span>';
-        markup += '</td></tr>';
-        //--->Add options > end
-        $("table tbody").append(markup);
-        $("#subtotal").text(total);
-    }
+        var newCount = parseInt($('.unit-quantity').text()) + 1;
+        $('.unit-quantity').text(newCount);
+    };
 
-    $(document).on('click', '.btn_delete', function (event) {
-        $(this).parents("tr").remove();
-        total = total - parseFloat(price);
-        $("#subtotal").text(total);
-
-    });
-    $(document).on('click', '.btn_add', function (event) {
-
-        $("table tbody").append(markup);
-        total = total + parseFloat(price);
-        $("#subtotal").text(total);
-    });
-   
+    function RemoveQuantity() {
+        var newCount = parseInt($('.unit-quantity').text()) - 1;
+        $('.unit-quantity').text(newCount);
+    };
 
     if (count == 0) {
         $("#order-popup").css("display", "none");
@@ -58,7 +69,7 @@ $(document).ready(function () {
     }
 
     //open the order popup
-    $('.order-box').on('click', function () {
+    $('.order-box').on('click', function() {
         slide($('.content'));
     });
 
@@ -69,18 +80,18 @@ $(document).ready(function () {
 
         wrapper.toggleClass('open');
         if (wrapper.hasClass('open')) {
-            setTimeout(function () {
+            setTimeout(function() {
                 wrapper.addClass('transition').css('height', '100vh'); //repace 100vh with contentHeight
             }, 10);
         } else {
-            setTimeout(function () {
+            setTimeout(function() {
                 wrapper.css('height', wrapperHeight);
-                setTimeout(function () {
+                setTimeout(function() {
                     wrapper.addClass('transition').css('height', 0);
                 }, 10);
             }, 10);
         }
-        wrapper.one('transitionEnd webkitTransitionEnd transitionend oTransitionEnd msTransitionEnd', function () {
+        wrapper.one('transitionEnd webkitTransitionEnd transitionend oTransitionEnd msTransitionEnd', function() {
             if (wrapper.hasClass('open')) {
                 wrapper.removeClass('transition').css('height', '100vh');
             }

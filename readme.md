@@ -16,3 +16,7 @@ The customer wants your help building a website for his new Circus restaurant.
 
 ### Tools used
 The design of the website is done in Balsamiq. 
+
+### online image endoder:
+https://www.base64-image.de/
+

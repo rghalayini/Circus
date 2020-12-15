@@ -31,8 +31,7 @@ window.onload = function () {
         }
         if (validateEmail(email)) {
           return;
-          //$result.text(email + " is valid :)");
-         // $result.css("color", "green");
+          
         } else {
           $result.text("email is not valid");
           $result.css("color", "red");
@@ -56,7 +55,7 @@ window.onload = function () {
   function JSalert(reservation){
 
     Swal.fire({
-        title: 'You made a reservation',
+      title:'Your are About to make a Reservation',
         text:reservation._date +" "+ reservation._time +" for you and "+reservation._no_Companions +" Persons", 
         showDenyButton: true,
         showCancelButton: true,
@@ -64,7 +63,7 @@ window.onload = function () {
         denyButtonText: `Don't save`,
       }).then((result) => {
         
-        Swal.fire('Saved!', 'The information has been sent to your email', 'success')
+        Swal.fire('Booked!', 'The information has been sent to your email', 'success')
         sendMail(reservation);
         tableNo--;
         clearForm();
@@ -138,21 +137,24 @@ window.onload = function () {
             Password : "AwSeDr@!220",
             To : reservation._email,
             From : "noreply@ahoora.se",
-            Subject : "Circus Restaurant Reservation for " + reservation._date,
-           Body: "<html><h2> Dear "
+            Subject : "Circus Grill Reservation for " + reservation._date,
+           Body: "<html><h1> Congratulations!!  "
            +reservation._name 
-           +"</h2><b>You made a reservation on </b><h2>" 
+           +"</h2>And thank you for making a reservation At The Circus Grill.<h2>"
+           +" <br/> We are expecting you on The"
             + reservation._date 
-            +" "
+            +" / "
             +reservation._time 
-            +" O'Clock</h2><br/> <b>for"
-            + " You and <b> "
-            + reservation._no_Companions 
-            +"</b> Companions.<br/> Also you mentiontion <b>"
-            
+            +" O'Clock.</h2><br/> We look forward to your visit and hope we will be enjoying your meal and the Circus experience at Circus Grill as much as we will be enjoying your company."
+            + "<br/>See you very soon / [or day of reservation],"
+            // + reservation._no_Companions 
+            +" <br/>sincerely Tony Montana, Restaurant manager"
         });
     }
 
     
 
 }
+
+
+
