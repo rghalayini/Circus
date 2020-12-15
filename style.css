@@ -807,11 +807,14 @@ font-size: 10px;
     margin-bottom: 0;
     color: #fff;
   }
-  
+
+  .social-links{
+    margin-left: 30%;
+  }
   #footer .footer-top .social-links a {
     font-size: 18px;
     display: inline-block;
-    background-color: #61892f;
+    background-color: #86C232;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
@@ -824,7 +827,7 @@ font-size: 10px;
   }
   
   #footer .footer-top .social-links a:hover {
-    background: #86C232;
+    background: #61892f;
     text-decoration: none;
   }
   
@@ -921,7 +924,7 @@ font-size: 10px;
     font-size: 13px;
     color: #fff;
   }
-  
+
   
 
 /* Language icon rotation */
@@ -957,26 +960,6 @@ font-size: 10px;
   background-color:transparent;
   margin: 10px;
   
-  
-
-  /* Map */
-}
-.map-container {
-  height: 200px;
-  position: relative;
-}
-
-.map-container iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  filter: grayscale();
-  -webkit-filter: grayscale(0.6);
-}
-
-
 
 
 /* -------------Booking form css ------------*/
