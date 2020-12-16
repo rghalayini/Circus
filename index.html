@@ -109,6 +109,8 @@
     <!-- <a href="#" type="button" id="bannerBookButton" data-toggle="modal" data-target="#Modal-Book-A-table"></a> -->
     <a href="#"  type="button" id="bannerBookButton" onclick="BookSpecialEvent()"></a>
 </div>
+
+
 <!--  ======= Ends Banner  Section ======= -->
 
 <script>
@@ -116,6 +118,16 @@
      $('#Modal-Book-A-table').modal('show');
      $('#date').val("12-24-2020");
     }
+
+    setTimeout(function(){$('#promotionBanner02').css("display", "none")}, 10000);
+    setTimeout(function(){removeElement("#promotionBanner")}, 10000);
+ 
+        function removeElement(elementId) {
+            // Removes an element from the document
+            var element = document.getElementById(elementId);
+            element.parentNode.removeChild(element);
+        }   
+
 </script>
 
 
