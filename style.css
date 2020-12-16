@@ -225,47 +225,54 @@ body {
 # Banner  (Added by Daryl 20201215)
 --------------------------------------------------------------*/
 
-@font-face {
+/* @font-face {
   font-family: 'christmasFont';
   font-style: normal;
   font-weight: normal;
   src: url('fonts/Christmas-Bell.otf')  format('opentype');
-}
+} */
+
 
 .banner {
-  background-color: red; 
   position: absolute;
   background-size: cover;
   width: 100%;
   color: white;
   text-align: center;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: auto;
   display: inline-block;
   letter-spacing: 5px;
-  top: 108px;
+  top: 300px;
 }
 
-#promotionBanner01 {
-  background: red;
+.banner h1{
+  font-weight: 900;
+  background-color: #1a18147d;
+  text-transform: uppercase;
+}
+/* #promotionBanner01 {
+  background: blue;
   color: whilte;
   border-bottom: 1px solid rgba(134, 194, 50, 0.4);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-}
+} */
 
 #promotionBanner02 {
-  background: rgba(18, 21, 22, 0.397);
-  color: red;
+  background-image: url(/img/solil.jpg);
   border-bottom: 1px solid rgba(134, 194, 50, 0.4);
   transition: all 0.5s;
-  z-index: 100;
+  z-index: 500;
   padding: 15px 0;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position-y: 65%;
 }
 
 .banner h1 {
-  font-family: 'christmasFont', sans-serif;
+  
   margin: 0;
   font-size: 4vw;
   line-height: 1.5;
@@ -289,6 +296,7 @@ body {
   .bannerAnimations {
     animation-name: fadeInLeft;
     -webkit-animation-name: fadeInLeft;
+    
     /*
     you can set different proporties to different animations too:
     1s to bounce
@@ -314,11 +322,8 @@ body {
     outline:none;
     margin-left: auto;
     margin-right: auto;
+    
   }
-
-
-
-
 
 
 
@@ -802,13 +807,17 @@ section {
       @media (min-width: 1024px) {
         .chef {
           background-attachment: fixed;
+          
         }
       }
   
-
-
-
-
+      @media (min-width: 992px){
+       .order-lg-2 {
+         -ms-flex-order: 2;
+          order: 2;
+         padding-top: 80px;
+}
+      }
 
   /*--------------------------------------------------------------
   # Gallery
@@ -909,22 +918,26 @@ event slider
   
 }
 
-card::before {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  
-}
+
 .card p {
   color:#fff;
   background: rgba(0, 0, 0, 0.5);
   
   
 }
+
+@media (min-width: 992px){
+  .carouselIndicators i{
+    margin-left: 30%;
+    padding: 30px;
+    
+  }
+}
+ 
+
+
+
+
 
 .chef-bio{
 font-size: 10px;
