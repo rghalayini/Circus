@@ -1,7 +1,12 @@
-
+.red{
+    background-image: url("/img/clown.jpg");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 .section {
     position: relative;
-    height: 100vh
+    height: 100vh;
 }
 
 .section .section-center {
@@ -24,7 +29,7 @@
     margin: auto;
     padding: 40px;
     overflow: hidden;
-    background: #61892f;
+    background: #40a540;
     background-size: cover;
     
     z-index: 20;
@@ -38,7 +43,7 @@
     right: 0;
     bottom: 0;
     top: 0;
-    background: #000;
+    background: rgb(161, 158, 158);
     z-index: -1;
 }
 

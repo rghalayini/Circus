@@ -36,11 +36,12 @@
  <!-- daryl booststrap -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
      <!-- Internal CSS -->
       
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="main.css">
+<!-- <link rel="stylesheet" href="main.css"> -->
     <script src="/Forms/booking.js"></script>
     <script src="/food-menu.js"></script>
 
@@ -74,45 +75,37 @@
 
     <!-- ======= Added by Daryl 20201208 =======  -->
     <!-- ======= Header ======= -->
-<header id="header" class="navbar navbar-expand-lg fixed-top ">
-        <div class="container-fluid  d-flex align-items-center">
-             <!-- <a href="index.html" class="logo mr-auto"><img src="/img/circus-tent.png" alt="" class="img-fluid"></a> -->
-            <div class="top">
-             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  
-        <!-- <span class="line"></span> 
-        <span class="line"></span> 
-        <span class="line"></span>
-          -->
-   </button> 
-</div>
-  <!-- <div lang="en">
- <nav class="navbar navbar-expand-lg navbar-dark nav-menu">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" lang-key="home" href="index.html">Home</a><span class="sr-only">(current)</span>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" lang-key="about" href="/AboutUs.html">About</a></li>
-        <li class="nav-item">
-            <a class="nav-link" lang-key="menu" href="#FoodMenu">Menu</a></li>
-        <li class="nav-item">
-            <a class="nav-link" lang-key="events" href="#event-slider">Events</a></li>
-        <li class="nav-item">
-            <a class="nav-link" lang-key="contact" id="modalActivate" data-toggle="modal" data-target="#ModalContact" href="#">Contact Us</a></li>
-            <li class="nav-item">
-        <button id="modalActivate" lang-key="booking" type="button" class="btn book-a-table text-center" data-toggle="modal" data-target="#Modal-Book-A-table">BOOK NOW</button>
-             </li> -->
-        <!-- <li class="book-a-table text-center"><a lang-key="booking" href="Form.html">BOOK NOW</a></li> -->
-    <!-- </ul>
-    </div>
-  </nav>
-  </div>   -->
-        <div lang="en">
+    <header id="header" class="navbar navbar-expand-lg fixed-top">
+        <div class="container d-flex align-items-center">
+            <a href="index.html" class="logo mr-auto"><img src="/img/circus-tent.png" alt="" class="img-fluid"></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="line"></span> 
+            <span class="line"></span> 
+            <span class="line"></span> 
+            </button>
+            
+                <nav class="collapse navbar-collapse nav-menu " id="navbarToggler" id="navbarNavAltMarkup">
+                    
+                    <ul  class=" navbar-nav ml-auto">
+                        <div lang="en"></div>
+                        <li class="active"><a lang-key="home" href="index.html">Home</a></li>
+                        <li><a lang-key="about" href="/AboutUs.html">About</a></li>
+                        <li><a lang-key="menu" href="#FoodMenu">Menu</a></li>
+                        <li><a lang-key="events" href="#event-slider">Events</a></li>
+                        <li><a lang-key="contact" id="modalActivate" data-toggle="modal" data-target="#ModalContact" href="#">Contact Us</a></li>
+                        <button id="modalActivate" lang-key="booking" type="button" class="btn book-a-table text-center" data-toggle="modal" data-target="#Modal-Book-A-table">BOOK NOW</button>
+                    </div>
+                    </ul>
+                </nav>
+        </div>
+    </header> 
+
+
+
+
+
+        <!-- <div lang="en">
                 <nav class="collapse navbar-collapse nav-menu " id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="dropdown  active">
@@ -127,13 +120,32 @@
                         <li class="nav-item">
                             <a class="nav-link" lang-key="contact" id="modalActivate" data-toggle="modal" data-target="#ModalContact" href="#">Contact Us</a></li>
                         <button id="modalActivate" lang-key="booking" type="button" class="btn book-a-table text-center" data-toggle="modal" data-target="#Modal-Book-A-table">BOOK NOW</button>
-                        <!-- <li class="book-a-table text-center"><a lang-key="booking" href="Form.html">BOOK NOW</a></li> -->
                      </ul> 
                 </nav>
             </div>
         </div>
-    </header>  
+    </header>   -->
     <!-- End Header -->
+<!-- ======= Begins Banner Section ======= (Added by Daryl 20201215)  -->
+
+
+<div id="promotionBanner02" class="banner bannerAnimations">
+    <h1>( Magic show on this Christmas Eve )</h1>
+    
+    <!-- <a href="#" type="button" id="bannerBookButton" data-toggle="modal" data-target="#Modal-Book-A-table"></a> -->
+    <a href="#"  type="button" id="bannerBookButton" onclick="BookSpecialEvent()"></a>
+</div>
+<!--  ======= Ends Banner  Section ======= -->
+
+<script>
+    function BookSpecialEvent () { 
+     $('#Modal-Book-A-table').modal('show');
+     $('#date').val("12-24-2020");
+    }
+</script>
+
+
+
 
 
     <!-- ======= Hero Section ======= -->
@@ -177,12 +189,12 @@
         </div>
     </section>
     <!-- ======= Meet The chef Section =======  -->
-<div class="container flex-center">
+ <div class="container flex-center">
         <section id="chef" class="chef">
             <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="chef-img">
-                        <img src="img/clown.jpg" alt="">
+                        <img src="img/chef3.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -1185,7 +1197,7 @@
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="#" data-gall="gallery-item">
-                            <img src="img/acrobats2.jpg" alt="" class="img-fluid">
+                            <img src="img/acrobat.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
@@ -1206,14 +1218,14 @@
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="hero-bg.jpg" data-gall="gallery-item">
-                            <img src="img/blue_lagoon_cocktail.jpg" alt="" class="img-fluid">
+                            <img src="img/rootfriuts.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="#" data-gall="gallery-item">
-                            <img src="img/rootfriuts.jpg" alt="" class="img-fluid">
+                            <img src="img/circus.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>

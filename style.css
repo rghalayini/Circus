@@ -77,7 +77,14 @@ body {
 /*--------------------------------------------------------------
 # Nav Bar 
 --------------------------------------------------------------*/
-
+@media only screen and (max-width : 768px) {
+  .navbar-collapse {
+  margin: 15px;
+  padding: 30px;
+  background-color: #333;
+  line-height:200%;
+}
+}
 
   #header {
     background: rgba(18, 21, 22, 0.863);
@@ -197,7 +204,7 @@ body {
         width: 100%;
         height: 100vh; 
         background: #eee;
-        background: url("img/brussel-sprouts.jpg") no-repeat 50% 50%;
+        background: url("img/hero-bg.jpg") no-repeat 50% 50%;
         background-size: cover;
         /* position: relative;
         padding: 0;  */
@@ -587,6 +594,7 @@ section {
       .chef .chef-img {
         position: relative;
         transition: .5s;
+        
       }
       
       
@@ -681,9 +689,7 @@ section {
   --------------------------------------------------------------*/
   .gallery .gallery-item {
     overflow: hidden;
-    /* border-right: 1px solid #61892f;
-    border-bottom: 1px solid #61892f; */
-    border: 1px solid #61892f;
+    border: 1px solid #61892f;;
 }
   
   .gallery .gallery-item img {
@@ -762,6 +768,38 @@ color: #999;
 /* --------------------------
 event slider 
 -----------------------------*/
+
+.carouselIndicators i{
+  margin-left: 30%;
+  padding: 30px;
+  
+}
+
+.card {
+  background-color: black; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  
+}
+
+card::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+}
+.card p {
+  color:#fff;
+  background: rgba(0, 0, 0, 0.5);
+  
+  
+}
+
 .chef-bio{
 font-size: 10px;
 }
@@ -1224,12 +1262,99 @@ font-size: 10px;
 
 
 
+
 /*--------------------------------------------------------------
 # Banner  (Added by Daryl 20201215)
 --------------------------------------------------------------*/
-.carouselIndicators i{
-  margin-left: 30%;
-  padding: 30px;
+ 
+@font-face {​​​​​​​​
+  font-family: 'christmasFont';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/Christmas-Bell.otf')  format('opentype');
+  }​​​​​​​​
+   
+  .banner {​​​​​​​​
+  background-color: red; 
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+  letter-spacing: 5px;
+  top: 108px;
+  }​​​​​​​​
+   
+  #promotionBanner01 {​​​​​​​​
+  background: red;
+  color: whilte;
+  border-bottom: 1pxsolidrgba(134, 194, 50, 0.4);
+  transition: all0.5s;
+  z-index: 997;
+  padding: 15px0;
+  }​​​​​​​​
+   
+  #promotionBanner02 {​​​​​​​​
+  background: rgba(18, 21, 22, 0.397);
+  color: red;
+  border-bottom: 1pxsolidrgba(134, 194, 50, 0.4);
+  transition: all0.5s;
+  z-index: 100;
+  padding: 15px0;
+  }​​​​​​​​
+   
+  .bannerh1 {​​​​​​​​
+  font-family: 'christmasFont', sans-serif;
+  margin: 0;
+  font-size: 4vw;
+  line-height: 1.5;
+  }​​​​​​​​
+   
+  .bannera {​​​​​​​​
+  display: inline-block;
+  padding: 10px22px;
+  background: white;
+  color: #333;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  }​​​​​​​​
+   
+  .bannera:hover{​​​​​​​​
+  background: none;
+  color: white;
+  }​​​​​​​​
+   
+  .bannerAnimations {​​​​​​​​
+  animation-name: fadeInLeft;
+  -webkit-animation-name: fadeInLeft;
+  /*
+      you can set different proporties to different animations too:
+      1s to bounce
+      2s to flash
+      3s to pulse
+      */
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+    }​​​​​​​​
+   
+  #bannerBookButton {​​​​​​​​
+  background:url('img/bookNow01.png');
+  background-size: contain;
+  width: 8vw; 
+  height: 8vw; 
+  max-height: 120px;
+  max-width: 120px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  margin-left: auto;
+  margin-right: auto;
+    }​​​​​​​​
   
-  
-}
