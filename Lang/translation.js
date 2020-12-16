@@ -3,22 +3,22 @@ let langdata = {
   "languages": {
     "en": {
       "strings": {
-        "home": "HOME",
-        "about": "ABOUT",
-        "menu": "MENU",
-        "events": "EVENTS",
-        "contact": "CONTACT",
-        "booking": "BOOK Now"
+        "Home": "Home",
+        "About us": "About us",
+        "Menu": "Menu",
+        "Events": "Events",
+        "Contact us": "Contact us",
+        "Book Now": "BOOK NOw"
       }
    },
    "sv": {
       "strings": {
-        "home": "HEM",
-        "about": "OM OSS",
-        "menu": "MENY",
-        "events": "EVENT",
-        "contact": "KOTAKTA OSS",
-        "booking": "BOKA NU"
+        "Home": "Hem",
+        "About us": "Om oss",
+        "Menu": "Meny",
+        "Events": "Event",
+        "Contact us": "Kontakta oss",
+        "Book Now": "BOKA NU"
       }
     }
   }
