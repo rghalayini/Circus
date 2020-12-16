@@ -32,10 +32,12 @@
         <div class="container d-flex align-items-center">
             <div class="welcome">
                 <div class="restaurant-name">
-                    <h1>Circus Grill</h1>
+                    <div class='logo-image'>
+                        <img src="img/logo.png" alt="circus vegan">
+                    </div>
                 </div>
                 <div class="welcome-guest">
-                    <h2>Welcome August</h2>
+                    <h1>Circus Grill</h1>
                 </div>
             </div>
             <hr>
@@ -60,8 +62,9 @@
         <article>
             <div class="order-box">
                 <h1>ORDER</h1>
+                <i class="fa fa-arrow-circle-up order-symbol" aria-hidden="true" style="display:none"></i>
+                <i class="fa fa-arrow-circle-down order-symbol" aria-hidden="true"></i>
             </div>
-            <!-- <p>U+02C4</p> -->
             <div class="content_w">
                 <div class="content">
                     <div class="food-list-price">
@@ -78,7 +81,10 @@
                     <hr>
                     <div class="total-price">
                         <p class="total">TOTAL</p>
-                        <p id="PriceTotal"></p><span>Kr</span>
+                        <div class="price-container">
+                            <p id="PriceTotal"></p><span>&nbsp;Kr</span>
+                        </div>
+
                     </div>
                 </div>
             </div>

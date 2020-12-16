@@ -57,9 +57,12 @@
                     <div class="restaurant-name">
                         <h1>Circus Grill</h1>
                     </div>
-                    <div class="welcome-guest">
-                        <h2>Welcome August</h2>
+                    <div class='logo-image'>
+                        <img src="img/logo3.png" alt="circus vegan">
                     </div>
+                    <!-- <div class="welcome-guest">
+                        <h2>Welcome August</h2>
+                    </div> -->
                 </div>
                 <hr>
                 <nav class="nav-menu d-none d-lg-block">
@@ -74,7 +77,95 @@
                 <!-- .nav-menu -->
             </div>
         </header>
+        <div class="top-container"></div>
         <!-- End Header -->
+        <div class="takeaway-container">
+            <div class="close-event-button close-event close-takeaway">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">x</a>
+                </div>
+            </div>
+            <div class="take-away-time">
+                <h1>
+                    Take-away is only available at the following times:
+                </h1>
+                <ul class=take-away-list>
+                    <li>Monday to Friday: 4pm to 9pm</li>
+                    <li>Saturday and Sunday: 2pm to 11pm</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div id="allergy-container">
+        <div class="allergy-box" id='allergy-box'>
+            <h1>Allergies</h1>
+            <i class="fa fa-arrow-circle-up order-symbol" aria-hidden="true" style="display:none"></i>
+            <i class="fa fa-arrow-circle-down order-symbol" aria-hidden="true"></i>
+        </div>
+        <div class="content_w">
+            <div class="content-allergy">
+                <div class="diet-list-container">
+                    <h1>Click on the diet you wish to eat:</h1>
+                    <ul class="diet-list">
+                        <li>Gluten Free &nbsp;
+                            <label class="switch">
+                            <input type="checkbox" unchecked id='glutenfree'>
+                            <span class="slider round"></span>
+                          </label>
+                            <p style='display:none'>glutenfree</p>
+                        </li>
+                        <li>Low Sugar &nbsp;
+                            <label class="switch">
+                            <input type="checkbox" unchecked id='lowsugar'>
+                            <span class="slider round"></span>
+                          </label>
+                            <p style='display:none'>lowsugar</p>
+
+                        </li>
+                        <li>Low Carbs &nbsp;
+                            <label class="switch">
+                            <input type="checkbox" unchecked id='lowcarbs'>
+                            <span class="slider round"></span>
+                          </label>
+                            <p style='display:none'>lowcarbs</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popup to order food -->
+    <section id="order-popup">
+        <article>
+            <div id="order-click" class="order-box">
+                <h1>ORDER</h1>
+                <i class="fa fa-arrow-circle-up order-symbol" aria-hidden="true" style="display:none"></i>
+                <i class="fa fa-arrow-circle-down order-symbol" aria-hidden="true"></i>
+            </div>
+            <div class="content_w">
+                <div class="content-order">
+                    <div class="food-list-price">
+                        <ul class="food-list">
+                            <!-- <li class="list-item-food">
+                                <i class="fas fa-minus-circle"></i>
+                                <p class="unit-quantity">1</p>
+                                <p class="unit-name">Burger</p>
+                                <p class="unit-price">50kr</p>
+                                <i class="fas fa-plus-circle"></i>
+                            </li>-->
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="total-price">
+                        <p class="total">TOTAL</p>
+                        <div class="price-container">
+                            <p id="PriceTotal"></p><span>&nbsp;Kr</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
     </section>
 
     <!--------------------------------------------------------------------------------------------------- 
@@ -174,15 +265,16 @@
             </div>
             <!-- BOOK TABLE -->
             <div class="grid-item small-grid">
-                <div class="home-icon" style="background-image: url('img/icon_table.png')"></div>
+                <a class='upcoming-events-box'>
+                    <div class="home-icon" style="background-image: url('img/icon_table.png')"></div>
 
-                <div class="show-image" style="background-image: url('img/book-table.jpg')">
-                    <div class="overlay-color overlay-blue"></div>
-                </div>
-                <div class="small-grid-description">
-                    <h2>Book Table</h2>
-                </div>
-
+                    <div class="show-image" style="background-image: url('img/book-table.jpg')">
+                        <div class="overlay-color overlay-blue"></div>
+                    </div>
+                    <div class="small-grid-description">
+                        <h2>Upcoming Events</h2>
+                    </div>
+                </a>
             </div>
             <!-- CALL WAITER -->
 
@@ -224,67 +316,97 @@
                 </a>
             </div>
     </section>
+
+    <!--------------------------------------------------------------------------------------------------- 
+----------------------------------------------- FOOD PAGE -----------------------------------------------
+-------------------------------------------------------------------------------------------------------->
+
     <section id='food-page'>
-        <div class="top-container"></div>
-        <div class="takeaway-container">
-            <div class="close-event-button close-event close-takeaway">
-                <div class="btns" type="button">
-                    <a class="btn-menu animated fadeInUp ">x</a>
-                </div>
-            </div>
-            <div class="take-away-time">
-                <h1>
-                    Take-away is only available at the following times:
-                </h1>
-                <ul class=take-away-list>
-                    <li>Monday to Friday: 4pm to 9pm</li>
-                    <li>Saturday and Sunday: 2pm to 11pm</li>
-                </ul>
-            </div>
-        </div>
-        <!-- popup to order food -->
-        <div id="order-popup">
-            <article>
-                <div class="order-box">
-                    <h1>ORDER</h1>
-                </div>
-                <!-- <p>U+02C4</p> -->
-                <div class="content_w">
-                    <div class="content">
-                        <div class="food-list-price">
-                            <ul class="food-list">
-                                <!-- <li class="list-item-food">
-                                <i class="fas fa-minus-circle"></i>
-                                <p class="unit-quantity">1</p>
-                                <p class="unit-name">Burger</p>
-                                <p class="unit-price">50kr</p>
-                                <i class="fas fa-plus-circle"></i>
-                            </li>-->
-                            </ul>
+        <div class='food-item-container starters glutenfree lowsugar'>
+            <div class='customize-popup'>
+                <div class='customize-food-container'>
+                    <div class="close-event-button close-event close-popup-home close-custom-order">
+                        <div class="btns" type="button">
+                            <a class="btn-menu animated fadeInUp ">x</a>
                         </div>
-                        <hr>
-                        <div class="total-price">
-                            <p class="total">TOTAL</p>
-                            <p id="PriceTotal"></p><span>Kr</span>
+                    </div>
+                    <div class='customize-text'>
+                        <div class='name-details'>
+                            <h1>At Vegan Circus you can choose the ingredients yourself</h1>
+                            <h2>We are happy to adjust your order as much as we can</h2>
+                            <!-- <h2>Choose your ingredients below</h2> -->
+                        </div>
+                    </div>
+                    <div class='ingredients-list'>
+                        <ul>
+                            <li>Gluten Free Bread
+                                <label class="switch">
+                            <input type="checkbox" unchecked class='customized-option'>
+                            <span class="slider round"></span>
+                          </label>
+                                <p style='display:none'>glutenfree</p>
+                            </li>
+                            <li>Olive Oil
+                                <label class="switch">
+                            <input type="checkbox" unchecked class='customized-option'>
+                            <span class="slider round"></span>
+                          </label>
+                                <p style='display:none'>lowsugar</p>
+
+                            </li>
+                            <li>Vegan cheese
+                                <label class="switch">
+                            <input type="checkbox" unchecked class='customized-option'>
+                            <span class="slider round"></span>
+                          </label>
+                                <p style='display:none'>lowcarbs</p>
+                            </li>
+                            <li>Greek Olives
+                                <label class="switch">
+                            <input type="checkbox" unchecked class='customized-option'>
+                            <span class="slider round"></span>
+                          </label>
+                                <p style='display:none'>lowcarbs</p>
+                            </li>
+                            <li>Extra spicy
+                                <label class="switch">
+                            <input type="checkbox" unchecked class='customized-option'>
+                            <span class="slider round"></span>
+                          </label>
+                                <p style='display:none'>lowcarbs</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='call-waiter-btn'>
+                        <div class="btns" type="button">
+                            <a class="btn-menu animated fadeInUp submit-custom-btn">Submit Customized Order</a>
                         </div>
                     </div>
                 </div>
-            </article>
-        </div>
-        <!-- finish of popup -->
-        <!-- Food items -->
-        <div class='food-item-container'>
+                <div class='customize-confirmation'>
+                    <div class="close-event-button close-event close-popup-home close-custom-order">
+                        <div class="btns" type="button">
+                            <a class="btn-menu animated fadeInUp ">x</a>
+                        </div>
+                    </div>
+                    <div class='waiter-text'>
+                        <div class='name-details'>
+                            <h2>Your custom order has been added to the list</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="food-name">
-                <h1>Signature Vegan Burger</h1>
+                <h1>Smoked Leek</h1>
                 <h2></h2>
             </div>
             <div class="food-price" value="50">
-                <h1>5</h1><span>Kr</span>
+                <h1>120</h1><span>Kr</span>
             </div>
             <div class="food-image-container gradient">
                 <div class="overlay-food"></div>
                 <div class='food-image'>
-                    <img src="img/veganBurger.jpg" alt="food item">
+                    <img src="img/smokedleek.jpg" alt="food item">
                 </div>
             </div>
             <div class='item-quantity-big-container'>
@@ -310,19 +432,649 @@
                 </div>
             </div>
         </div>
-        <!------------ pizza ----------------->
-        <div class='food-item-container gradient'>
+        <!------------ urban kale ----------------->
+        <div class='food-item-container gradient starters glutenfree lowsugar lowcarbs'>
             <div class="food-name">
-                <h1>Pizza</h1>
-                <h2>Design it yourself</h2>
+                <h1>Urban Kale</h1>
+
             </div>
             <div class="food-price" value="75">
-                <h1>10</h1><span>Kr</span>
+                <h1>120</h1><span>Kr</span>
             </div>
             <div class="food-image-container">
                 <div class="overlay-food"></div>
                 <div class='food-image'>
-                    <img src="img/pizza.jpg" alt="food item">
+                    <img src="img/urbankale.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ beet rossini ----------------->
+        <div class='food-item-container main lowcarbs'>
+            <div class="food-name">
+                <h1>Beet Rossini</h1>
+                <h2></h2>
+            </div>
+            <div class="food-price" value="80">
+                <h1>220</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container gradient">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/beetrossini.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ ravioli ----------------->
+        <div class='food-item-container gradient main lowsugar'>
+            <div class="food-name">
+                <h1>Ravioli</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>120</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/ravioli.jfif" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ baked onnion ----------------->
+        <div class='food-item-container gradient starters glutenfree lowcarbs'>
+            <div class="food-name">
+                <h1>Baked onion</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>120</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/bakedonion.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ Paoched potatoes ----------------->
+        <div class='food-item-container gradient main glutenfree'>
+            <div class="food-name">
+                <h1>Paoched potatoes</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>220</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/poachedpotatoe.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ shawarma ----------------->
+        <div class='food-item-container gradient main glutenfree lowsugar'>
+            <div class="food-name">
+                <h1>Chickpea Shawarma Salad</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>98</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/chickpeaShawarma.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ fennel boulangere ----------------->
+        <div class='food-item-container gradient starters lowcarbs lowsugar'>
+            <div class="food-name">
+                <h1>Golden Fennel Boulangère</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>129</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/fennelboulangere.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ Harissa cauliflower ----------------->
+        <div class='food-item-container gradient starters glutenfree'>
+            <div class="food-name">
+                <h1>Harissa Cauliflower</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>129</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/harissacauliflower.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ harissa broccoli ----------------->
+        <div class='food-item-container gradient starters glutenfree lowcarbs'>
+            <div class="food-name">
+                <h1>Harissa Broccoli</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>80</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/harissabroccoli.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ almond mousse ----------------->
+        <div class='food-item-container gradient starters glutenfree'>
+            <div class="food-name">
+                <h1>Almond Mousse</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>75</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/almondmousse.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ fried polenta  ----------------->
+        <div class='food-item-container gradient starters'>
+            <div class="food-name">
+                <h1>Fried Polenta</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>80</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/friedpolenta.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ med vegetables----------------->
+        <div class='food-item-container gradient starters glutenfree lowcarbs lowsugar'>
+            <div class="food-name">
+                <h1>Mediterranean Vegetables</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>65</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/mediterraneanvegetables.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ stuffed tomato ----------------->
+        <div class='food-item-container gradient starters glutenfree lowsugar'>
+            <div class="food-name">
+                <h1>Stuffed Confit Tomato</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>85</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/stuffedtomato.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ brocoli potatoe salad ----------------->
+        <div class='food-item-container gradient starters glutenfree lowsugar'>
+            <div class="food-name">
+                <h1>Broccoli and potato salad</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>65</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/broccolipotatoesalad.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ wild mushroom ravioli ----------------->
+        <div class='food-item-container gradient starters'>
+            <div class="food-name">
+                <h1>Wild mushroom ravioli</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>90</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/mushroomravioli.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ Spiced carrot falafel ----------------->
+        <div class='food-item-container gradient starters'>
+            <div class="food-name">
+                <h1>Spiced carrot falafel</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>55</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/falafel.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ baby vegetable Fricassee ----------------->
+        <div class='food-item-container gradient starters glutenfree lowcarbs lowsugar'>
+            <div class="food-name">
+                <h1>Baby vegetable fricassee</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>70</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/vegetablefricasse.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ cauliflower couscous ----------------->
+        <div class='food-item-container gradient starters lowsugar'>
+            <div class="food-name">
+                <h1>Cauliflower couscous</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>75</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/couscous.jpg" alt="food item">
                 </div>
             </div>
             <div class='item-quantity-big-container'>
@@ -349,15 +1101,14 @@
             </div>
         </div>
         <!------------ burger ----------------->
-        <div class='food-item-container'>
+        <div class='food-item-container gradient main glutenfree'>
             <div class="food-name">
-                <h1>Cheese Burger</h1>
-                <h2></h2>
+                <h1>Signature vegan burger</h1>
             </div>
-            <div class="food-price" value="80">
-                <h1>80</h1><span>Kr</span>
+            <div class="food-price" value="100">
+                <h1>120</h1><span>Kr</span>
             </div>
-            <div class="food-image-container gradient">
+            <div class="food-image-container">
                 <div class="overlay-food"></div>
                 <div class='food-image'>
                     <img src="img/veganBurger.jpg" alt="food item">
@@ -386,14 +1137,13 @@
                 </div>
             </div>
         </div>
-        <!------------ pizza ----------------->
-        <div class='food-item-container gradient'>
+        <!------------ Pizza ----------------->
+        <div class='food-item-container gradient main glutenfree'>
             <div class="food-name">
-                <h1>Napoletana</h1>
-                <h2>Design it yourself</h2>
+                <h1>Pizza</h1>
             </div>
             <div class="food-price" value="100">
-                <h1>100</h1><span>Kr</span>
+                <h1>130</h1><span>Kr</span>
             </div>
             <div class="food-image-container">
                 <div class="overlay-food"></div>
@@ -406,7 +1156,192 @@
             </div>
             <div class="customize-button">
                 <div class="btns" type="button">
-                    <a hclass="btn-menu animated fadeInUp ">Customize</a>
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ raspberry pate de fruit ----------------->
+        <div class='food-item-container gradient dessert glutenfree'>
+            <div class="food-name">
+                <h1>Raspberry Pâte de Fruit</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>55</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/patedefruit.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ chocolate mousse ----------------->
+        <div class='food-item-container gradient dessert glutenfree'>
+            <div class="food-name">
+                <h1>100% chocolate Mousse</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>60</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/chocolatemousse.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ Meringue----------------->
+        <div class='food-item-container gradient dessert glutenfree'>
+            <div class="food-name">
+                <h1>Meringue of Black Provence Figs</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>110</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/meringuefigs.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ tarte ----------------->
+        <div class='food-item-container gradient dessert'>
+            <div class="food-name">
+                <h1>Chocolate tarte</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>80</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/chocolatetarte.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ sorbet ----------------->
+        <div class='food-item-container gradient dessert glutenfree'>
+            <div class="food-name">
+                <h1>sorbet</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>55</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/sorbet.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
                 </div>
             </div>
             <div class="add-btns">
@@ -430,84 +1365,75 @@
 ----------------------------------------------- DRINKS PAGE -----------------------------------------------
 -------------------------------------------------------------------------------------------------------->
     <section id='drinks-page'>
-        <div class="top-container"></div>
-        <div class="takeaway-container">
-            <div class="close-event-button close-event close-takeaway">
-                <div class="btns" type="button">
-                    <a class="btn-menu animated fadeInUp ">x</a>
-                </div>
-            </div>
-            <div class="take-away-time">
-                <h1>
-                    Take-away is only available at the following times:
-                </h1>
-                <ul class=take-away-list>
-                    <li>Monday to Friday: 4pm to 9pm</li>
-                    <li>Saturday and Sunday: 2pm to 11pm</li>
-                </ul>
-            </div>
-        </div>
-        <!-- popup to order food -->
-        <div id="order-popup">
-            <article>
-                <div class="order-box">
-                    <h1>ORDER</h1>
-                </div>
-                <!-- <p>U+02C4</p> -->
-                <div class="content_w">
-                    <div class="content">
-                        <div class="food-list-price">
-                            <ul class="food-list">
-                                <!-- <li class="list-item-food">
-                                <i class="fas fa-minus-circle"></i>
-                                <p class="unit-quantity">1</p>
-                                <p class="unit-name">Burger</p>
-                                <p class="unit-price">50kr</p>
-                                <i class="fas fa-plus-circle"></i>
-                            </li>-->
-                            </ul>
-                        </div>
-                        <hr>
-                        <div class="total-price">
-                            <p class="total">TOTAL</p>
-                            <p id="PriceTotal"></p><span>Kr</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
-        <!-- finish of popup -->
-        <!------------ new item ----------------->
-
-        <div class='food-item-container'>
+        <!------------ milk chocolate ----------------->
+        <div class='food-item-container gradient'>
             <div class="food-name">
-                <h1>Blue Lagoon Cocktail</h1>
-                <h2></h2>
+                <h1>Blue Lagoon</h1>
             </div>
-            <div class="food-price">
-                <h1>80Kr</h1>
+            <div class="food-price" value="100">
+                <h1>110</h1><span>Kr</span>
             </div>
-            <div class="food-image-container gradient">
+            <div class="food-image-container">
                 <div class="overlay-food"></div>
                 <div class='food-image'>
                     <img src="img/blue_lagoon_cocktail.jpg" alt="food item">
                 </div>
             </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
             <div class="customize-button">
                 <div class="btns" type="button">
-                    <a href="" class="btn-menu animated fadeInUp ">Customize</a>
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
                 </div>
             </div>
             <div class="add-btns">
                 <div class="btns" type="button">
-                    <a href="" class="btn-menu animated fadeInUp AddFood-item">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
                         <i class="fa fa-plus" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
             <div class="remove-btns">
                 <div class="btns" type="button">
-                    <a href="" class="btn-menu animated fadeInUp RemoveFood-item">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ milk chocolate ----------------->
+        <div class='food-item-container gradient'>
+            <div class="food-name">
+                <h1>Soy Milk Chocolate</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>35</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/syomilk.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -519,10 +1445,9 @@
         <div class='food-item-container gradient'>
             <div class="food-name">
                 <h1>Tea</h1>
-                <h2>Choose from a wide variety</h2>
             </div>
-            <div class="food-price">
-                <h1>30Kr</h1>
+            <div class="food-price" value="100">
+                <h1>35</h1><span>Kr</span>
             </div>
             <div class="food-image-container">
                 <div class="overlay-food"></div>
@@ -530,21 +1455,24 @@
                     <img src="img/tea.jpg" alt="food item">
                 </div>
             </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
             <div class="customize-button">
                 <div class="btns" type="button">
-                    <a href="" class="btn-menu animated fadeInUp ">Customize</a>
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
                 </div>
             </div>
             <div class="add-btns">
                 <div class="btns" type="button">
-                    <a href="" class="btn-menu animated fadeInUp AddFood-item">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
                         <i class="fa fa-plus" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
             <div class="remove-btns">
                 <div class="btns" type="button">
-                    <a href="" class="btn-menu animated fadeInUp RemoveFood-item">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -552,13 +1480,124 @@
         </div>
         <!------------ new item ----------------->
 
+        <div class='food-item-container gradient'>
+            <div class="food-name">
+                <h1>Ginger Beer</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>45</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/gingerbeer.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ new item ----------------->
+        <div class='food-item-container gradient'>
+            <div class="food-name">
+                <h1>Water</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>20</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/water.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------ new item ----------------->
+        <div class='food-item-container gradient'>
+            <div class="food-name">
+                <h1>Coffee</h1>
+            </div>
+            <div class="food-price" value="100">
+                <h1>35</h1><span>Kr</span>
+            </div>
+            <div class="food-image-container">
+                <div class="overlay-food"></div>
+                <div class='food-image'>
+                    <img src="img/coffee.jpg" alt="food item">
+                </div>
+            </div>
+            <div class='item-quantity-big-container'>
+                <p></p>
+            </div>
+            <div class="customize-button">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp ">Customize</a>
+                </div>
+            </div>
+            <div class="add-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp AddFood-item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="remove-btns">
+                <div class="btns" type="button">
+                    <a class="btn-menu animated fadeInUp RemoveFood-item">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </section>
     <!--------------------------------------------------------------------------------------------------- 
 ----------------------------------------------- EVENTS PAGE -----------------------------------------------
 -------------------------------------------------------------------------------------------------------->
 
     <section id='events-page'>
-        <div class="top-container"></div>
+        <!-- <div class="top-container"></div> -->
 
         <div class='event-detail'>
             <div id='fireshow'>

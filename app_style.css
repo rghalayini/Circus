@@ -160,8 +160,8 @@ a:link {
 =================================================================*/
 
 .grid-container {
-    /* margin-top: 100px; */
-    padding-top: 100px;
+    margin-top: -140px;
+    /* padding-top: 100px; */
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -176,6 +176,11 @@ a:link {
     text-align: center;
     position: relative;
     overflow: hidden;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: white;
 }
 
 .grid-top {
@@ -292,6 +297,75 @@ a:link {
     background-size: cover;
     position: absolute;
     z-index: 10;
+}
+
+
+/* -----Customize food -------- */
+
+.customize-popup {
+    margin-top: 100px;
+    height: 50vh;
+    width: 90vw;
+    background-color: rgb(184, 214, 231);
+    position: fixed;
+    left: 5%;
+    border-radius: 40px;
+    border: rgb(189, 190, 120);
+    border-style: solid;
+    border-width: 2px;
+    z-index: 20;
+    display: none;
+}
+
+.customized-food-container {
+    margin-left: 5%;
+}
+
+.customize-text {
+    margin-top: 10%;
+    margin-top: 10%;
+    text-align: center;
+    line-height: 60px;
+}
+
+.customize-text h1 {
+    color: black;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.customize-text h2 {
+    padding-top: 5%;
+    line-height: 20px;
+    color: black;
+    font-size: 16px;
+}
+
+.customize-confirmation {
+    display: none;
+}
+
+.customize-confirmation h2 {
+    line-height: 60px;
+}
+
+.customize-confirmation h1 {
+    line-height: 60px;
+    padding-top: 20%;
+}
+
+.customize-food-container {
+    display: none;
+}
+
+#food-page .call-waiter-btn .btns {
+    bottom: 8%;
+}
+
+.ingredients-list ul li {
+    list-style-type: none;
+    color: black;
 }
 
 
@@ -468,7 +542,7 @@ form input[type="submit"]:hover {
 }
 
 .restaurant-name {
-    float: left;
+    float: right;
     width: 50%;
 }
 
@@ -478,23 +552,25 @@ form input[type="submit"]:hover {
     font-weight: bold;
 }
 
-.welcome-guest {
-    text-align: right;
+.logo-image {
+    position: absolute;
+    top: 5%;
+    right: 3%;
     float: right;
-    width: 50%;
+    object-fit: contain;
+    z-index: 5;
 }
 
-.welcome-guest h2 {
-    font-size: 24px;
-    color: rgb(187, 48, 48);
+.logo-image img {
+    width: 65px;
 }
 
 hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
+    border-top: 0.5px solid #ccc;
+    /* margin: 1em 0; */
     padding: 0;
 }
 
@@ -601,6 +677,7 @@ hr {
 .food-item-container {
     /* margin-top: 100px; */
     position: relative;
+    height: 500px;
 }
 
 .food-item-container h1 {
@@ -895,11 +972,20 @@ span {
 .order-box {
     background-color: #86C232;
     width: 100%;
+    display: flex;
+    position: relative;
 }
 
-#order-popup h1 {
+.order-symbol {
+    position: absolute;
+    right: 5%;
+    top: 15%;
+}
+
+#order-popup h1,
+#allergy-container h1 {
     font-size: 16px;
-    margin-left: 30px;
+    margin-left: 31px;
 }
 
 #order-popup .content_w {
@@ -915,18 +1001,19 @@ span {
     transition: height 0.5s;
 }
 
-section.entries .content {
+section.entries .content-order {
     padding-top: 1em;
     line-height: 1.3;
 }
 
-.content {
+.content-order {
     margin-left: 5%;
     margin-right: 5%;
     padding-top: 2%;
 }
 
-#order-popup ul {
+#order-popup ul,
+#allergy-container ul {
     color: black;
     list-style-type: none;
     margin: 0;
@@ -979,9 +1066,16 @@ section.entries .content {
     width: 70%;
 }
 
-#PriceTotal {
+.price-container {
     float: right;
+    display: flex;
+    color: black;
 }
+
+
+/* #PriceTotal {
+    float: right;
+} */
 
 .fa-plus-circle {
     font-size: 20px;
@@ -997,6 +1091,128 @@ section.entries .content {
     position: absolute;
     top: 30%;
     bottom: 5%;
+}
+
+
+/* allergies container */
+
+#allergy-container {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(184, 93, 93);
+    z-index: 20;
+    height: auto;
+}
+
+.allergy-box {
+    /* height: auto; */
+    background-color: rgb(145, 61, 61);
+    display: flex;
+    position: relative;
+}
+
+#allergy-container .content_w {
+    overflow: hidden;
+    height: 0;
+}
+
+#allergy-container .content_w.transition {
+    transition: height 0.5s;
+}
+
+#allergy-container .content-allergy {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#allergy-container .content-allergy h1 {
+    margin-left: 0;
+}
+
+.diet-list-container {
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
+.diet-list-container h1 {
+    font-size: 18px;
+}
+
+.diet-list li {
+    font-size: 14px;
+    color: white;
+    padding-left: 30px;
+}
+
+
+/* slider in allergies */
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    left: 70%;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 7px;
+    left: 0;
+    right: 8px;
+    bottom: -7px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #149940;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #149940;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 
