@@ -105,11 +105,6 @@ body {
 
 
 
-
-
-
-
-
   #header {
     background: rgba(18, 21, 22, 0.863);
     border-bottom: 1px solid rgba(134, 194, 50, 0.4);
@@ -220,108 +215,6 @@ body {
   /* Could be more or less, depending on screen size */
 }
       
-
-/*--------------------------------------------------------------
-# Banner  (Added by Daryl 20201215)
---------------------------------------------------------------*/
-
-@font-face {
-  font-family: 'christmasFont';
-  font-style: normal;
-  font-weight: normal;
-  src: url('fonts/Christmas-Bell.otf')  format('opentype');
-}
-
-.banner {
-  background-color: red; 
-  position: absolute;
-  background-size: cover;
-  width: 100%;
-  color: white;
-  text-align: center;
-  padding: 0px;
-  margin: 0px;
-  display: inline-block;
-  letter-spacing: 5px;
-  top: 108px;
-}
-
-#promotionBanner01 {
-  background: red;
-  color: whilte;
-  border-bottom: 1px solid rgba(134, 194, 50, 0.4);
-  transition: all 0.5s;
-  z-index: 997;
-  padding: 15px 0;
-}
-
-#promotionBanner02 {
-  background: rgba(18, 21, 22, 0.397);
-  color: red;
-  border-bottom: 1px solid rgba(134, 194, 50, 0.4);
-  transition: all 0.5s;
-  z-index: 100;
-  padding: 15px 0;
-}
-
-.banner h1 {
-  font-family: 'christmasFont', sans-serif;
-  margin: 0;
-  font-size: 4vw;
-  line-height: 1.5;
-}
-
-.banner a {
-  display: inline-block;
-  padding: 10px 22px;
-  background: white;
-  color: #333;
-  font-size: 30px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.banner a:hover{
-  background: none;
-  color: white;
-}
-
-  .bannerAnimations {
-    animation-name: fadeInLeft;
-    -webkit-animation-name: fadeInLeft;
-    /*
-    you can set different proporties to different animations too:
-    1s to bounce
-    2s to flash
-    3s to pulse
-    */
-    animation-duration: 3s;
-    -webkit-animation-duration: 3s;
-  }
-
-  #bannerBookButton {
-    background:url('img/bookNow01.png');
-    background-size: contain;
-    width: 8vw; 
-    height: 8vw; 
-    max-height: 120px;
-    max-width: 120px;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-
-
-
-
-
       /*--------------------------------------------------------------
       # Hero Section
       --------------------------------------------------------------*/
@@ -1382,3 +1275,105 @@ font-size: 10px;
   margin: 2px;
   
 }
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Banner  (Added by Daryl 20201215)
+--------------------------------------------------------------*/
+ 
+@font-face {​​​​​​​​
+  font-family: 'christmasFont';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/Christmas-Bell.otf')  format('opentype');
+  }​​​​​​​​
+   
+  .banner {​​​​​​​​
+  background-color: red; 
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+  letter-spacing: 5px;
+  top: 108px;
+  }​​​​​​​​
+   
+  #promotionBanner01 {​​​​​​​​
+  background: red;
+  color: whilte;
+  border-bottom: 1pxsolidrgba(134, 194, 50, 0.4);
+  transition: all0.5s;
+  z-index: 997;
+  padding: 15px0;
+  }​​​​​​​​
+   
+  #promotionBanner02 {​​​​​​​​
+  background: rgba(18, 21, 22, 0.397);
+  color: red;
+  border-bottom: 1pxsolidrgba(134, 194, 50, 0.4);
+  transition: all0.5s;
+  z-index: 100;
+  padding: 15px0;
+  }​​​​​​​​
+   
+  .bannerh1 {​​​​​​​​
+  font-family: 'christmasFont', sans-serif;
+  margin: 0;
+  font-size: 4vw;
+  line-height: 1.5;
+  }​​​​​​​​
+   
+  .bannera {​​​​​​​​
+  display: inline-block;
+  padding: 10px22px;
+  background: white;
+  color: #333;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  }​​​​​​​​
+   
+  .bannera:hover{​​​​​​​​
+  background: none;
+  color: white;
+  }​​​​​​​​
+   
+  .bannerAnimations {​​​​​​​​
+  animation-name: fadeInLeft;
+  -webkit-animation-name: fadeInLeft;
+  /*
+      you can set different proporties to different animations too:
+      1s to bounce
+      2s to flash
+      3s to pulse
+      */
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+    }​​​​​​​​
+   
+  #bannerBookButton {​​​​​​​​
+  background:url('img/bookNow01.png');
+  background-size: contain;
+  width: 8vw; 
+  height: 8vw; 
+  max-height: 120px;
+  max-width: 120px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  margin-left: auto;
+  margin-right: auto;
+    }​​​​​​​​
+  
