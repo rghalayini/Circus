@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/fa32db5069.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
@@ -14,20 +14,45 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/redmond/jquery-ui.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- SweetAlert2 -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <!-- daryl booststrap -->Circus\index.html
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
+    <!-- Internal CSS -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="main.css"> 
+    <script src="/food-menu.js"></script>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
-
-
-
+    <script src="/Lang/lang_engine.js"></script>
+    <script src="/Lang/translation.js"></script> -->
 
     <title>Circus Grill</title>
 </head>
 
 <body>
+
     <!-- ======= Modified by Daryl 20201208 =======  -->
     <!-- ======= Top Bar ======= -->
     <div id="topbar" class="d-flex align-items-center fixed-top">
@@ -49,38 +74,70 @@
     <!-- nav-menu -->
 
     <!-- ======= Added by Daryl 20201208 =======  -->
-    <!-- ======= Header ======= -->
-
-    <header id="header" class="navbar navbar-expand-lg fixed-top ">
+    <!-- ======= Header Navbar ======= -->
+    <header id="header" class="navbar navbar-expand-lg fixed-top">
         <div class="container d-flex align-items-center">
             <a href="index.html" class="logo mr-auto"><img src="/img/circus-tent.png" alt="" class="img-fluid"></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
                 aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
-
             </button>
-            <div lang="en">
-                <nav class="collapse navbar-collapse nav-menu " id="navbarToggler">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="active"><a lang-key="home" href="index.html">Home</a></li>
-                        <li><a lang-key="about" href="/AboutUs.html">About</a></li>
-                        <li><a lang-key="menu" href="#FoodMenu">Menu</a></li>
-                        <li><a lang-key="events" href="#event-slider">Events</a></li>
-                        <li><a lang-key="contact" id="modalActivate" data-toggle="modal" data-target="#ModalContact"
-                                href="#">Contact Us</a></li>
-                        <button id="modalActivate" lang-key="booking" type="button" class="btn book-a-table text-center"
-                            data-toggle="modal" data-target="#Modal-Book-A-table">BOOK NOW</button>
-                        <!-- <li class="book-a-table text-center"><a lang-key="booking" href="booking-Form.html">BOOK NOW</a></li> -->-->
-                    </ul>
-                </nav>
-            </div>
+
+            <nav class="collapse navbar-collapse nav-menu " id="navbarToggler" id="navbarNavAltMarkup">
+
+                <ul class=" navbar-nav ml-auto">
+                    <div lang="en"></div>
+                    <li class="active"><a lang-key="Home" href="index.html">Home</a></li>
+                    <li><a lang-key="About us" href="/AboutUs.html">About</a></li>
+                    <li><a lang-key="Menu" href="#FoodMenu">Menu</a></li>
+                    <li><a lang-key="Events" href="#event-slider">Events</a></li>
+                    <li><a lang-key="Contact us" id="modalActivate" data-toggle="modal" data-target="#ModalContact"
+                            href="#">Contact Us</a></li>
+                    <button id="modalActivate" lang-key="Book Now" type="button" class="btn book-a-table text-center"
+                        data-toggle="modal" data-target="#Modal-Book-A-table">BOOK NOW</button>
+        </div>
+        </ul>
+        </nav>
         </div>
     </header>
-    <!-- End Header -->
+    <!-- End Header Navbar -->
+
+    <!-- ======= Begins Banner Section ======= (Added by Daryl 20201215)  -->
+    <div id="promotionBanner02" class="banner bannerAnimations">
+        <h1>Magic show on this Christmas Eve</h1>
+
+        <!-- <a href="#" type="button" id="bannerBookButton" data-toggle="modal" data-target="#Modal-Book-A-table"></a> -->
+        <a href="#" type="button" id="bannerBookButton" onclick="BookSpecialEvent()"></a>
+    </div>
+
+
+    <!--  ======= Ends Banner  Section ======= -->
+
+    <script>
+        function BookSpecialEvent() {
+            $('#Modal-Book-A-table').modal('show');
+            $('#date').val("12-24-2020");
+        }
+
+        setTimeout(function () {
+            $('#promotionBanner02').css("display", "none")
+        }, 10000);
+        setTimeout(function () {
+            removeElement("#promotionBanner")
+        }, 10000);
+
+        function removeElement(elementId) {
+            // Removes an element from the document
+            var element = document.getElementById(elementId);
+            element.parentNode.removeChild(element);
+        }
+    </script>
+
+
+
 
 
     <!-- ======= Hero Section ======= -->
@@ -88,16 +145,16 @@
         <div class="container position-relative text-center text-lg-left">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1>Welcome to <span>Circus Grill</span></h1>
-                    <h2>Vegan Grill and Circus</h2>
+                    <h1 lang-key="welcome">Welcome to <span translate="no">Circus Grill</span></h1>
+                    <h2 lang-key="slogan">Vegan Grill and Circus</h2>
 
                     <div class="btns">
                         <!-- <a href="#" class="btn">Our Menu</a> -->
-                        <a class="btn btn-menu" href="#FoodMenu" role="button">Our Menu</a>
-                        <button id="modalActivate" type="button" class="btn btn-book" data-toggle="modal"
-                            data-target="#exampleModalPreview">
+                        <a lang-key="orderButton" class="btn btn-menu" href="#" role="button">ORDER AND PAY IN THE
+                            APP</a>
+                        <!-- <button id="modalActivate" type="button" class="btn btn-book" data-toggle="modal" data-target="#exampleModalPreview">
                             Book a Table
-                        </button>
+                          </button> -->
                     </div>
                 </div>
                 <div class="col-lg-4 d-flex align-items-center justify-content-center">
@@ -129,31 +186,35 @@
             <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="chef-img">
-                        <img src="img/clown.jpg" alt="">
+                        <img src="img/chef3.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                     <div class="section-title">
-                        <h2> Meet The Chef</h2>
-                        <p>Circus Grill Executive Chef</p>
+                        <h2 lang-key="Meet"> Meet The Chef</h2>
+                        <p lang-key="chefSlogan">Circus Grill Executive Chef</p>
                     </div>
-                    <h3 class="chef-bio">Haithem took a liking to cooking already as a young boy. The decision was
-                        triggered by a mere
+                    <h3 lang-key="chef-bio" class="chef-bio">Haithem took a liking to cooking already as a young boy.
+                        The decision was triggered by a mere
                         serendipity – his mother found an ad for a restaurant school in the newspaper.
                         Haithem applied, and the rest is history.</h3>
-                    <p class="font-italic">
+                    <p lang-key="chef-quest" class="font-italic">
                         What does it take to become a good cook?
                     </p>
                     <ul>
-                        <li><i class="fas fa-cocktail"></i> Listen to trends, but don’t necessarily follow them.</li>
-                        <li><i class="fas fa-cocktail"></i> You have to taste your own food while cooking.</li>
+                        <li lang-key="chef-answer"><i class="fas fa-cocktail"></i> Listen to trends, but don’t
+                            necessarily follow them.</li>
+                        <li lang-key="chef-answer1"><i class="fas fa-cocktail"></i> You have to taste your own food
+                            while cooking.</li>
                         </li>
                     </ul>
-                    <p class="font-italic">
+                    <p lang-key="chef-quest1" class="font-italic">
                         This is the kitchen that never sleeps. How do you do it? </p>
                     <ul>
-                        <li><i class="fas fa-cocktail"></i> That’s true – we are open all day and all night.</li>
-                        <li><i class="fas fa-cocktail"></i> Every person in this kitchen has their own unique position.
+                        <li lang-key="chef-answer3"><i class="fas fa-cocktail"></i> That’s true – we are open all day
+                            and all night.</li>
+                        <li lang-key="chef-answer4"><i class="fas fa-cocktail"></i> Every person in this kitchen has
+                            their own unique position.
                         </li>
                         </li>
                     </ul>
@@ -171,7 +232,17 @@
                         <p>Check out our events</p>
                     </div>
 
+
                     <div class="col-12">
+                        <a class=" carouselIndicators " href="#carouselIndicators" role="button" data-slide="prev">
+                            <i class="fa fa-arrow-left"></i>
+                        </a>
+                        <a class=" carouselIndicators  " href="#carouselIndicators" role="button" data-slide="next">
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                        <div class="col-6">
+
+                        </div>
                         <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -241,7 +312,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -291,7 +361,8 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-3">
-                                            <div class="card card-image" style="background-image: url(img/circus.jpg);">
+                                            <div class="card card-image"
+                                                style="background-image: url(img/red-pizza.jpg);">
                                                 <div
                                                     class="text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                                                     <div>
@@ -334,6 +405,12 @@
 
                     <!-- Nav tabs -->
                     <ul class="nav  tabs-menu-nav justify-content-center mb30" role="tablist">
+                        <li><a id="allType" class="nav-link" href="#Starters">All</a></li>
+                        <li><a id="starterType" class="nav-link" href="#Starters">Starters</a></li>
+                        <li><a id="mainType" class="nav-link" href="#Mains">Mains</a></li>
+                        <li><a id="dessertType" class="nav-link" href="#Dessert">Dessert</a></li>
+                    </ul>
+                    <!-- <ul class="nav  tabs-menu-nav justify-content-center mb30" role="tablist">
                         <li class="nav-item" role="presentation"><a class="nav-link active show" href="#All"
                                 aria-controls="All" role="tab" data-toggle="tab" aria-selected="true">All</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#Starters"
@@ -344,202 +421,248 @@
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#Dessert"
                                 aria-controls="Specialty" role="tab" data-toggle="tab" aria-selected="false">Dessert</a>
                         </li>
-
-                    </ul>
+                    </ul> -->
 
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade active show" id="All">
                             <div class="row">
                                 <div class="col-md-6 mb20">
-                                    <article class="media">
 
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    smoked leek</h3>
+                                    <Div class="filterDiv starters">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        smoked leek</h3>
 
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font600">120 kr</strong>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font600">120 kr</strong>
+                                                    </div>
                                                 </div>
+
+                                                <p class="mb-0">Lightly smoked leek, black apples, horseradish</p>
                                             </div>
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>
+                                    <!--/filterDiv -->
 
-                                            <p class="mb-0">Lightly smoked leek, black apples, horseradish</p>
-                                        </div>
-                                        <!--/Content -->
-
-                                    </article>
-                                    <!--/Article -->
-                                    <article class="media">
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Urban kale</h3>
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font700">120 kr</strong>
+                                    <Div class="filterDiv starters">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Urban kale</h3>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font700">120 kr</strong>
+                                                    </div>
                                                 </div>
+                                                <p class="mb-0">Urban kale, lentils from Gotland, squid, black garlic
+                                                </p>
                                             </div>
-                                            <p class="mb-0">Urban kale, lentils from Gotland, squid, black garlic</p>
-                                        </div>
-                                        <!--/Content -->
-                                    </article>
-                                    <!--/Article -->
-                                    <article class="media">
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Beet Rossini</h3>
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font500">220 kr</strong>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0">Beet Rossini" false foie gras, Madeira gravy, truffle and
-                                                retired dairy cow from Haghult</p>
-                                        </div>
-                                        <!--/Content -->
-                                    </article>
-                                    <!--/Article -->
-                                    <article class="media">
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Ravioli</h3>
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font700">120 kr</strong>
-                                                </div>
-                                            </div>
-                                            <p class="mb-0">200% ravioli, fermented mushrooms, spruce shoots and
-                                                Caesar's mushroom</p>
-                                        </div>
-                                        <!--/Content -->
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>
+                                    <!--/filterDiv -->
 
-
-                                    </article>
-                                    <!--/Article -->
-                                    <article class="media">
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Baked onion</h3>
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font700">120 kr</strong>
+                                    <Div class="filterDiv mains">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Beet Rossini</h3>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font500">220 kr</strong>
+                                                    </div>
                                                 </div>
+                                                <p class="mb-0">Beet Rossini" false foie gras, Madeira gravy, truffle
+                                                    and
+                                                    retired dairy cow from Haghult</p>
                                             </div>
-                                            <p class="mb-0">Compost baked onion, mushroom, Jerusalem artichoke, truffle
-                                            </p>
-                                        </div>
-                                        <!--/Content -->
-                                    </article>
-                                    <!--/Article -->
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>
+                                    <!--/filterDiv -->
 
+                                    <Div class="filterDiv mains">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Ravioli</h3>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font700">120 kr</strong>
+                                                    </div>
+                                                </div>
+                                                <p class="mb-0">200% ravioli, fermented mushrooms, spruce shoots and
+                                                    Caesar's mushroom</p>
+                                            </div>
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>
+                                    <!--/filterDiv -->
+
+                                    <Div class="filterDiv dessert">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Baked onion</h3>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font700">120 kr</strong>
+                                                    </div>
+                                                </div>
+                                                <p class="mb-0">Compost baked onion, mushroom, Jerusalem artichoke,
+                                                    truffle
+                                                </p>
+                                            </div>
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>
+                                    <!--/filterDiv -->
                                 </div>
+
                                 <div class="col-md-6 mb20">
-                                    <article class="media">
+                                    <Div class="filterDiv dessert">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Poached potatoes</h3>
 
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Poached potatoes</h3>
-
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font700">220 kr</strong>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font700">220 kr</strong>
+                                                    </div>
                                                 </div>
+                                                <p class="mb-0">Poached potatoes and leek, crispy kale, velouté sauce
+                                                </p>
                                             </div>
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>
+                                    <!--/filterDiv -->
 
-                                            <p class="mb-0">Poached potatoes and leek, crispy kale, velouté sauce</p>
-                                        </div>
-                                        <!--/Content -->
+                                    <Div class="filterDiv dessert">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Chickpea Shawarma Salad</h3>
 
-
-                                    </article>
-                                    <!--/Article -->
-                                    <article class="media">
-
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Chickpea Shawarma Salad</h3>
-
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font700">98 kr</strong>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font700">98 kr</strong>
+                                                    </div>
                                                 </div>
+                                                <p class="mb-0">chickpea shawarma salad, pickled turnips, pita, lemon
+                                                    tahini
+                                                    dressing</p>
                                             </div>
-                                            <p class="mb-0">chickpea shawarma salad, pickled turnips, pita, lemon tahini
-                                                dressing</p>
-                                        </div>
-                                        <!--/Content -->
+                                            <!--/Content -->
+                                        </article>
+                                    </Div>
+                                    <!--/filterDiv -->
 
+                                    <Div class="filterDiv starters">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <!--/Article -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Golden Fennel Boulangère</h3>
 
-
-                                    </article>
-                                    <!--/Article -->
-                                    <article class="media">
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Golden Fennel Boulangère</h3>
-
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font700">129 kr</strong>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font700">129 kr</strong>
+                                                    </div>
                                                 </div>
+
+                                                <p class="mb-0">Golden Fennel Boulangère, Raw Williams, Pear, Toasted
+                                                    Walnut, Lovage Jus</p>
                                             </div>
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>
+                                    <!--/filterDiv -->
 
-                                            <p class="mb-0">Golden Fennel Boulangère, Raw Williams, Pear, Toasted
-                                                Walnut, Lovage Jus</p>
-                                        </div>
-                                        <!--/Content -->
+                                    <Div class="filterDiv mains">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Harissa Cauliflower</h3>
 
-
-                                    </article>
-                                    <!--/Article -->
-                                    <article class="media">
-
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Harissa Cauliflower</h3>
-
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font700">129 kr</strong>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font700">129 kr</strong>
+                                                    </div>
                                                 </div>
+
+                                                <p class="mb-0">Harissa Cauliflower, Simmered Rainbow Chard Almond &
+                                                    Golden
+                                                    Sultanas Grapes & Harissa Concassé</p>
                                             </div>
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>
+                                    <!--/filterDiv -->
 
-                                            <p class="mb-0">Harissa Cauliflower, Simmered Rainbow Chard Almond & Golden
-                                                Sultanas Grapes & Harissa Concassé</p>
-                                        </div>
-                                        <!--/Content -->
+                                    <Div class="filterDiv mains">
+                                        <!--/filterDiv is needed for food menu sorting -->
+                                        <article class="media">
+                                            <!--Content -->
+                                            <div class="media-body align-self-center g-pl-10">
+                                                <div class="d-flex justify-content-between mb10">
+                                                    <h3
+                                                        class="align-self-center text-uppercase mb0 h6 text-white font400">
+                                                        Harissa Brocoli</h3>
 
-
-                                    </article>
-                                    <!--/Article -->
-                                    <article class="media">
-
-                                        <!--Content -->
-                                        <div class="media-body align-self-center g-pl-10">
-                                            <div class="d-flex justify-content-between mb10">
-                                                <h3 class="align-self-center text-uppercase mb0 h6 text-white font400">
-                                                    Harissa Brocoli</h3>
-
-                                                <div class="align-self-center">
-                                                    <strong class="text-white font700">129 kr</strong>
+                                                    <div class="align-self-center">
+                                                        <strong class="text-white font700">129 kr</strong>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <p class="mb-0">Harissa Brocoli, Simmered Rainbow Chard Almond & Golden
-                                                Sultanas Grapes & Harissa Concassé</p>
-                                        </div>
-                                        <!--/Content -->
-                                    </article>
-                                    <!--/Article -->
+                                                <p class="mb-0">Harissa Brocoli, Simmered Rainbow Chard Almond & Golden
+                                                    Sultanas Grapes & Harissa Concassé</p>
+                                            </div>
+                                            <!--/Content -->
+                                        </article>
+                                        <!--/Article -->
+                                    </Div>
+                                    <!--/filterDiv -->
 
                                 </div>
                             </div>
@@ -1093,6 +1216,7 @@
         </div>
     </div>
 
+
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
 
@@ -1107,7 +1231,7 @@
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="#" data-gall="gallery-item">
-                            <img src="img/hero-bg.jpg" alt="" class="img-fluid">
+                            <img src="img/acrobat.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
@@ -1128,14 +1252,14 @@
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="hero-bg.jpg" data-gall="gallery-item">
-                            <img src="img/blue_lagoon_cocktail.jpg" alt="" class="img-fluid">
+                            <img src="img/rootfriuts.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="#" data-gall="gallery-item">
-                            <img src="img/rootfriuts.jpg" alt="" class="img-fluid">
+                            <img src="img/circus.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
@@ -1234,14 +1358,12 @@
                         <ul>
                             <li><i class="fa fa-chevron-right"></i><a lang-key="contact" id="modalActivate"
                                     data-toggle="modal" data-target="#ModalContact" href="#">Contact us</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="#">Work for us</a></li>
+                            <li><i class="fa fa-chevron-right"></i> <a href="/Job-Apply.html">Work for us</a></li>
                             <li><i class="fa fa-chevron-right"></i> <a href="/Terms-of-booking.html">Terms of
                                     booking</a></li>
                             <li><i class="fa fa-chevron-right"></i> <a href="/Datapolicy.html">Privacy policy</a></li>
                         </ul>
                     </div>
-
-
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Our Newsletter</h4>
@@ -1261,7 +1383,9 @@
                 </div>
 
             </div>
+
         </div>
+
         <div class="container">
             <div class="copyright">
                 &copy; Copyright <strong><span>Circus Grill</span></strong>. All Rights Reserved
@@ -1296,9 +1420,15 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group"> <input class="form-control"
-                                                                    id="fullName" type="name" placeholder="First Name"
-                                                                    required> <span class="form-label">Name</span>
-                                                            </div>
+                                                                    id="contactFname" type="name"
+                                                                    placeholder="First Name" required> <span
+                                                                    class="form-label">Name</span> </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group"> <input class="form-control"
+                                                                    id="contactLname" type="name"
+                                                                    placeholder="Last Name" required> <span
+                                                                    class="form-label">Name</span> </div>
                                                         </div>
 
                                                     </div>
@@ -1311,8 +1441,10 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group"> <input class="form-control"
-                                                                    id="tel" type="tel" placeholder="Phone number"
-                                                                    placeholder="Enter you Phone" required> <span
+                                                                    id="contactTel" type="contacttel"
+                                                                    placeholder="Phone number"
+                                                                    pattern="[0-9]{3}-[0-9]{3} [0-9]{2} [0-9]{2} placeholder="
+                                                                    Enter you Phone" required> <span
                                                                     class="form-label">Phone</span><b
                                                                     id='telResult'></b> </div>
                                                         </div>
@@ -1320,7 +1452,7 @@
 
                                                             <div class="form-group">
                                                                 <textarea id="message" class="form-control" type="text"
-                                                                    id="message" name="message" rows="4"
+                                                                    id="contactMessage" name="message" rows="4"
                                                                     placeholder="Your message"
                                                                     class="form-control"></textarea>
 
@@ -1330,7 +1462,8 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="form-btn"> <button class="submit-btn">Send<i
+                                                <div class="form-btn"> <button id="contact-btn"
+                                                        class="submit-btn">Send<i
                                                             class="far fa-paper-plane ml-2"></i></button> </div>
                                             </div>
 
@@ -1430,7 +1563,8 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="form-btn"> <button class="submit-btn">Book Now</button>
+                                                    <div class="form-btn"> <button id="submitBtn"
+                                                            class="submit-btn">Book Now</button>
                                                     </div>
 
                                                 </div>
@@ -1441,9 +1575,6 @@
                                 </div>
                             </div>
 
-
-
-
                         </div>
                     </div>
                 </div>
@@ -1453,21 +1584,18 @@
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
                     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
                     crossorigin="anonymous">
-                    </script>
+                </script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
                     crossorigin="anonymous">
-                    </script>
-
-
+                </script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
                 <!-- SweetAlert2 -->
 
-                <script
-                    src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js">
+                </script>
 
                 <script src="smtp.js"></script>
-
                 <script>
                     $(function () {
                         //clearForm();
@@ -1479,31 +1607,34 @@
                         var no_Companions = document.getElementById("no_Companions").value;
 
                         function clearForm() {
-                            
-                        document. getElementById('date'). value = ""; 
-                        document. getElementById('time'). value = "";
-                        document. getElementById('modalfullName'). value = "";
-                        document. getElementById('email'). value = "";
-                        document. getElementById('modalTel'). value = "";
-                        document. getElementById('no_Companions'). value = "";
-      
-           }
+
+                            document.getElementById('date').value = "";
+                            document.getElementById('time').value = "";
+                            document.getElementById('modalfullName').value = "";
+                            document.getElementById('email').value = "";
+                            document.getElementById('modalTel').value = "";
+                            document.getElementById('no_Companions').value = "";
+
+                        }
+
                         function validateEmail(email) {
-                            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                            const re =
+                                /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                             return re.test(email);
                         }
+
                         function validationPhonenumber(tel) {
                             const re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
                             return re.test(tel);
                         }
+
                         function validate() {
                             const $result = $("#emailResult");
                             const $result1 = $("#telResult");
                             const email = $("#email").val();
                             const tel = $("#modalTel").val();
                             $result.text("");
-                            if (validationPhonenumber(tel)) {
-                            } else {
+                            if (validationPhonenumber(tel)) {} else {
                                 $result1.text("Telephone number is not valid");
                                 $result1.css("color", "red");
                             }
@@ -1523,7 +1654,9 @@
                             dateFormat: "m-d-Y",
                             "disable": [
                                 function (date) {
-                                    return (date.getDay() === 0 || date.getDay() === 1 || date.getDay() === 2 || date.getDay() === 3 || date.getDay() === 4);  // disable weekends
+                                    return (date.getDay() === 0 || date.getDay() === 1 || date
+                                        .getDay() === 2 || date.getDay() === 3 || date
+                                        .getDay() === 4); // disable weekends
                                 }
                             ],
                             "locale": {
@@ -1539,39 +1672,42 @@
                                 To: reservation._email,
                                 From: "sobhi@cloudulu.com",
                                 Subject: "Circus Grill Reservation for " + reservation._date,
-                                Body: "<html><h1> Congratulations!!  "
-                                    + reservation._name
-                                    + "</h2>And thank you for making a reservation At The Circus Grill.<h2>"
-                                    + " <br/> We are expecting you on The"
-                                    + reservation._date
-                                    + " / "
-                                    + reservation._time
-                                    + " O'Clock.</h2><br/> We look forward to your visit and hope we will be enjoying your meal and the Circus experience at Circus Grill as much as we will be enjoying your company."
-                                    + "<br/>See you very soon / [or day of reservation],"
+                                Body: "<html><h1> Congratulations!!  " +
+                                    reservation._name +
+                                    "</h2>And thank you for making a reservation At The Circus Grill.<h2>" +
+                                    " <br/> We are expecting you on The" +
+                                    reservation._date +
+                                    " / " +
+                                    reservation._time +
+                                    " O'Clock.</h2><br/> We look forward to your visit and hope we will be enjoying your meal and the Circus experience at Circus Grill as much as we will be enjoying your company." +
+                                    "<br/>See you very soon / [or day of reservation],"
                                     // + reservation._no_Companions 
-                                    + " <br/>sincerely Tony Montana, Restaurant manager"
+                                    +
+                                    " <br/>sincerely Tony Montana, Restaurant manager"
 
                             });
                             Swal.fire({
                                 title: 'Your are About to make a Reservation',
-                                text: reservation._date + " " + reservation._time + " For you and " + reservation._no_Companions + " Persons",
+                                text: reservation._date + " " + reservation._time + " For you and " +
+                                    reservation._no_Companions + " Persons",
                                 showDenyButton: true,
                                 showCancelButton: true,
                                 confirmButtonText: 'Book',
                                 denyButtonText: `Cancel`,
                             }).then((result) => {
 
-                                Swal.fire('Booked!', 'The information has been sent to your email', 'success')
-                                sendMail(reservation);
-                                tableNo--;
-                                clearForm();
-                            }
+                                    Swal.fire('Booked!', 'The information has been sent to your email',
+                                        'success')
+                                    // sendMail(reservation);
+                                    tableNo--;
+                                    clearForm();
+                                }
 
                             )
                         }
 
 
-                        $('.submit-btn').on('click', function () {
+                        $('#submitBtn').on('click', function () {
 
                             var date = $("#date").val();
                             var time = $("#time").val();
@@ -1579,28 +1715,44 @@
                             var email = $("#email").val();
                             var tel = $("#modalTel").val();
                             var no_Companions = document.getElementById("no_Companions").value;
-                            var reservation = { _date: date, _time: time, _name: name, _email: email, _tel: tel, _no_Companions: no_Companions };
+                            var reservation = {
+                                _date: date,
+                                _time: time,
+                                _name: name,
+                                _email: email,
+                                _tel: tel,
+                                _no_Companions: no_Companions
+                            };
+
                             JSalert(reservation);
                             var errrormessage = "";
                             if (name == "") {
                                 errrormessage += "Name , ";
 
-                            } else { validate(); }
+                            } else {
+                                validate();
+                            }
                             if (email == "") {
                                 errrormessage += "Email ,   ";
 
-                            } else { validate(); }
+                            } else {
+                                validate();
+                            }
                             if (date == "") {
                                 errrormessage += "Date , ";
 
-                            } else { validate(); }
+                            } else {
+                                validate();
+                            }
                             if (time == "") {
                                 errrormessage += "Time , ";
                             }
 
                             if (tel == "") {
                                 errrormessage += "Tel , ";
-                            } else { validate(); }
+                            } else {
+                                validate();
+                            }
 
                             if (errrormessage != "") {
                                 errrormessage += "is mandatory";
@@ -1612,10 +1764,64 @@
                             }
 
                         });
+
+                        //----------------------------------Contact Form Script ---------------------------------
+                        var contactFname = $("#contactFname").val();
+                        var contactLname = $("#contactLname").val();
+                        var contactEmail = $("#contactEmail").val();
+                        var contactTel = $("#contactTel").val();
+                        var contactMessage = $("#contactMessage").val();
+
+                        function clearForm_contact() {
+                            document.getElementById('contactFname').value = "";
+                            document.getElementById('contactLname').value = "";
+                            document.getElementById('contactEmail').value = "";
+                            document.getElementById('contactTel').value = "";
+                            // document.getElementById('contactMessage').value = "";
+                        }
+
+                        $('#contact-btn').on('click', function () {
+                            var contactFname = $("#contactFname").val();
+                            var contactLname = $("#contactLname").val();
+                            var contactEmail = $("#contactEmail").val();
+                            var contactTel = $("#contactTel").val();
+                            var contactMessage = $("#contactMessage").val();
+                            var contactObj = {
+                                _contactFname: contactFname,
+                                _contactLname: contactLname,
+                                _contactEmail: contactEmail,
+                                _contactTel: contactTel,
+                                _contactMessage: contactMessage
+                            };
+                            if (contactFname != "") {
+                                Email.send({
+                                    Host: "send.one.com",
+                                    Username: "sobhi@cloudulu.com",
+                                    Password: "Nour070715",
+                                    To: contactObj._contactEmail,
+                                    From: "sobhi@cloudulu.com",
+                                    Subject: "Thank you for contacting us ",
+                                    Body: "<html><h2>   " +
+                                        contactObj._contactFname +
+                                        contactObj._contactLname +
+                                        " </h2><br/>sincerely Tony Montana, Restaurant manager"
+
+                                });
+
+
+                                Swal.fire('', 'Your are contacting with Circus Grill Restaurant.', '');
+
+
+                            }
+
+
+                        });
+
                     });
                 </script>
-                <script src="/Lang/lang_engine.js"></script>
-                <script src="/Lang/translation.js"></script>
+                <!--  <script src="/Lang/lang_engine.js"></script>
+                <script src="/Lang/translation.js"></script>-->
+
 
 </body>
 
