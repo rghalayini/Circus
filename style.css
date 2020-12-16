@@ -85,6 +85,31 @@ body {
   line-height:200%;
 }
 }
+.navbar-toggler{
+    width: 57px;
+    height: 34px;
+    outline: none !important;
+    margin-right: 10px;
+    border:none;
+    
+    
+  }
+  .navbar-toggler .line{
+    width: 100%;
+    float: left;
+    height: 1px;
+    background-color: #86C232;
+    margin-bottom: 5px;
+  }
+
+  
+
+
+
+
+
+
+
 
   #header {
     background: rgba(18, 21, 22, 0.863);
