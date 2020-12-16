@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #000000;
@@ -13,17 +14,7 @@ body {
     text-decoration: none;
   }
 
-/*--------------------------------------------------------------*/
-  .filterDiv {
-    display: none; /* Hidden by default */
-  }
   
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: block;
-  }
-/*--------------------------------------------------------------*/
-
   /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
@@ -86,29 +77,46 @@ body {
 /*--------------------------------------------------------------
 # Nav Bar 
 --------------------------------------------------------------*/
+@media only screen and (max-width : 768px) {
+  .navbar-collapse {
+  margin: 15px;
+  padding: 30px;
+  line-height:200%;
+}
+}
 .navbar-toggler{
-  width: 57px;
-  height: 34px;
+    width: 57px;
+    height: 34px;
+    outline: none !important;
+    margin-right: 10px;
+    border:none;
+    
+    
+  }
+  .navbar-toggler .line{
+    width: 100%;
+    float: left;
+    height: 1px;
+    background-color: #86C232;
+    margin-bottom: 5px;
+  }
+
   
-  margin-right: 10px;
-  border:none;
-  
-}
-.navbar-toggler .line{
-  width: 100%;
-  float: left;
-  height: 1px;
-  background-color: #86C232;
-  margin-bottom: 5px;
-}
+
+
+
+
+
+
+
 
   #header {
-    background: rgba(18, 21, 22, 0.397);
+    background: rgba(18, 21, 22, 0.863);
     border-bottom: 1px solid rgba(134, 194, 50, 0.4);
     transition: all 0.5s;
     z-index: 997;
-    padding: 15px 0;
-    top: 40px;
+    top: 30px;
+    
   }
   
   #header .header-scrolled {
@@ -137,6 +145,18 @@ body {
   }
   
 
+
+
+  /*--------------------------------------------------------------*/
+  .filterDiv {
+    display: none; /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+/*--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -189,7 +209,7 @@ body {
     color: #fff;
 }
 
-    
+
 /* Modal Content/Box */
 .modal-content {
   background-color:rgba(0,0,0,0.5);
@@ -206,106 +226,101 @@ body {
 --------------------------------------------------------------*/
 
 @font-face {
-    font-family: 'christmasFont';
-    font-style: normal;
-    font-weight: normal;
-    src: url('fonts/Christmas-Bell.otf')  format('opentype');
-  
+  font-family: 'christmasFont';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/Christmas-Bell.otf')  format('opentype');
+}
+
+.banner {
+  background-color: red; 
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+  letter-spacing: 5px;
+  top: 108px;
+}
+
+#promotionBanner01 {
+  background: red;
+  color: whilte;
+  border-bottom: 1px solid rgba(134, 194, 50, 0.4);
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+}
+
+#promotionBanner02 {
+  background: rgba(18, 21, 22, 0.397);
+  color: red;
+  border-bottom: 1px solid rgba(134, 194, 50, 0.4);
+  transition: all 0.5s;
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.banner h1 {
+  font-family: 'christmasFont', sans-serif;
+  margin: 0;
+  font-size: 4vw;
+  line-height: 1.5;
+}
+
+.banner a {
+  display: inline-block;
+  padding: 10px 22px;
+  background: white;
+  color: #333;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.banner a:hover{
+  background: none;
+  color: white;
+}
+
+  .bannerAnimations {
+    animation-name: fadeInLeft;
+    -webkit-animation-name: fadeInLeft;
+    /*
+    you can set different proporties to different animations too:
+    1s to bounce
+    2s to flash
+    3s to pulse
+    */
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
   }
-  
-  .banner {
-    position: relative;
-    background-size: cover;
-    width: 100%;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-    display: inline-block;
-    letter-spacing: 5px;
-  }
-  
-  #promotionBanner01 {
-    background: red;   
-    width:100%; 
-    height:220px; 
+
+  #bannerBookButton {
+    background:url('img/bookNow01.png');
+    background-size: contain;
+    width: 8vw; 
+    height: 8vw; 
+    max-height: 120px;
+    max-width: 120px;
+    background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
     overflow: hidden;
     outline:none;
-    top: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  #promotionBanner02 {
-    background:url('img/christmasBanner01.jpg');
-    width:100%; 
-    height:320px; 
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    top: 200px;
-  }
-  
-  .banner h1 {
-    font-family: 'christmasFont', sans-serif;;
-    margin: 0;
-    font-size: 80px;
-  }
-  
-  .banner h2 {
-    font-family: 'christmasFont',sans-serif;;
-    margin: 0;
-    font-size: 50px;
-  }
-  
-  .banner h3 {
-    font-family: sans-serif;;
-    margin: 0;
-    font-size: 20px;
-  }
-  
-  .banner a {
-    display: inline-block;
-    background: white;
-    color: #333;
-    font-size: 30px;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  .banner a:hover{
-    background: none;
-    color: white;
-  }
-    .bannerAnimations {
-      animation-name: fadeInLeft;
-      -webkit-animation-name: fadeInLeft;
-      /*
-      you can set different proporties to different animations too:
-      1s to bounce
-      2s to flash
-      3s to pulse
-      */
-      animation-duration: 3s;
-      -webkit-animation-duration: 3s;
-    }
-  
-    #bannerBookButton {
-      background:url('img/bookNow03.png');
-      background-size: contain;
-      width:300px; /* or whatever */
-      height:100px; /* or whatever */
-      background-color: Transparent;
-      background-repeat:no-repeat;
-      border: none;
-      cursor:pointer;
-      overflow: hidden;
-      outline:none;
-    }
-  
+
+
+
+
+
+
 
       /*--------------------------------------------------------------
       # Hero Section
@@ -313,13 +328,13 @@ body {
       
       #hero {
         width: 100%;
-        height: 100vh;
+        height: 100vh; 
         background: #eee;
-        background: url("img/hero-bg.jpg") top center;
+        background: url("img/hero-bg.jpg") no-repeat 50% 50%;
         background-size: cover;
-        position: relative;
-        padding: 0;
-        back
+        /* position: relative;
+        padding: 0;  */
+        
       }
       
       #hero:before {
@@ -609,7 +624,7 @@ section {
 } 
 
 /*--------------------------------------------------------------
-      # Jumbotron datapolicy
+      # Jumbotron data policy
       --------------------------------------------------------------*/
       .jumbotron{
         background-color: transparent;
@@ -705,6 +720,7 @@ section {
       .chef .chef-img {
         position: relative;
         transition: .5s;
+        
       }
       
       
@@ -799,8 +815,7 @@ section {
   --------------------------------------------------------------*/
   .gallery .gallery-item {
     overflow: hidden;
-    border-right: 1px solid #61892f;
-    border-bottom: 1px solid #61892f;
+    border: 1px solid #61892f;;
 }
   
   .gallery .gallery-item img {
@@ -879,17 +894,43 @@ color: #999;
 /* --------------------------
 event slider 
 -----------------------------*/
+
+.carouselIndicators i{
+  margin-left: 30%;
+  padding: 30px;
+  
+}
+
+.card {
+  background-color: black; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  
+}
+
+card::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+}
+.card p {
+  color:#fff;
+  background: rgba(0, 0, 0, 0.5);
+  
+  
+}
+
 .chef-bio{
 font-size: 10px;
 }
 
 
-
-
-
-
-
-  
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
@@ -927,11 +968,14 @@ font-size: 10px;
     margin-bottom: 0;
     color: #fff;
   }
-  
+
+  .social-links{
+    margin-left: 30%;
+  }
   #footer .footer-top .social-links a {
     font-size: 18px;
     display: inline-block;
-    background-color: #61892f;
+    background-color: #86C232;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
@@ -941,10 +985,14 @@ font-size: 10px;
     width: 36px;
     height: 36px;
     transition: 0.3s;
-  }
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
   
   #footer .footer-top .social-links a:hover {
-    background: #86C232;
+    background: #61892f;
     text-decoration: none;
   }
   
@@ -1041,7 +1089,7 @@ font-size: 10px;
     font-size: 13px;
     color: #fff;
   }
-  
+
   
 
 /* Language icon rotation */
@@ -1056,7 +1104,7 @@ font-size: 10px;
 
 
 
-
+/* Contact Form */
 
 #contact-form{
   padding: 50px 30px;
@@ -1077,37 +1125,18 @@ font-size: 10px;
   background-color:transparent;
   margin: 10px;
   
-  
 }
-.map-container {
-  height: 200px;
-  position: relative;
-}
-
-.map-container iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  filter: grayscale();
-  -webkit-filter: grayscale(0.6);
-}
-
-
-
 
 /* -------------Booking form css ------------*/
 .booking-form {
   position: relative;
-
   width: 100%;
   margin: auto;
   padding: 40px;
   overflow: hidden;
   background-image: linear-gradient(to right, #eee, #61892f);
   background-size: cover;
-  z-index: 20;
+  z-index:20;
 }
 
 #Contact-form::before{
@@ -1328,3 +1357,28 @@ font-size: 10px;
   box-shadow: 0 0 0 0 !important;
   
   }
+  
+
+
+
+
+
+
+/* About page */
+
+  #about {
+    background: url(img/Soleil.jpg) center center no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.about-text {
+    background: rgba(0,0,0,0.8);
+    padding: 1.875rem;
+    margin-top: 10%;
+}
+.fa {
+  margin: 2px;
+  
+}

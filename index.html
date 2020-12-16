@@ -2,20 +2,49 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/fa32db5069.js" crossorigin="anonymous"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;900&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
+  <script src="https://kit.fontawesome.com/fa32db5069.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;900&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        
-    <link rel="stylesheet" href="style.css">
     
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+            integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+            crossorigin="anonymous"></script>
+   <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/redmond/jquery-ui.css" rel="stylesheet" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+<!-- SweetAlert2 -->  
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.min.css">  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+   
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+ <!-- daryl booststrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+     <!-- Internal CSS -->
+      
+    <link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="main.css"> -->
+    <script src="/Forms/booking.js"></script>
+    <script src="/food-menu.js"></script>
+
     <script src="/Lang/lang_engine.js"></script>
     <script src="/Lang/translation.js"></script>
 
@@ -23,6 +52,7 @@
 </head>
 
 <body>
+    
     <!-- ======= Modified by Daryl 20201208 =======  -->
     <!-- ======= Top Bar ======= -->
     <div id="topbar" class="d-flex align-items-center fixed-top">
@@ -44,52 +74,52 @@
     <!-- nav-menu -->
 
     <!-- ======= Added by Daryl 20201208 =======  -->
-    <!-- ======= Header ======= -->
-    <header id="header" class="navbar navbar-expand-lg fixed">
+    <!-- ======= Header Navbar ======= -->
+    <header id="header" class="navbar navbar-expand-lg fixed-top">
         <div class="container d-flex align-items-center">
             <a href="index.html" class="logo mr-auto"><img src="/img/circus-tent.png" alt="" class="img-fluid"></a>
-            <!-- <h1 class="logo mr-auto"><a href="index.html">Circus Grill</a></h1> -->
             
-        <button 
-            class="navbar-toggler collapsed " 
-            data-target="#navbarToggler" 
-            data-toggle="collapse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="line"></span> 
             <span class="line"></span> 
-            <span class="line"></span>    
-        </button>
-
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i></span>
-            </button> -->
-            <div lang="en">
-                <nav class="collapse navbar-collapse nav-menu " id="navbarToggler">
-                    <ul class="navbar-nav ml-auto">
+            <span class="line"></span> 
+            </button>
+            
+                <nav class="collapse navbar-collapse nav-menu " id="navbarToggler" id="navbarNavAltMarkup">
+                    
+                    <ul  class=" navbar-nav ml-auto">
+                        <div lang="en"></div>
                         <li class="active"><a lang-key="home" href="index.html">Home</a></li>
                         <li><a lang-key="about" href="/AboutUs.html">About</a></li>
                         <li><a lang-key="menu" href="#FoodMenu">Menu</a></li>
                         <li><a lang-key="events" href="#event-slider">Events</a></li>
-                        <li><a lang-key="contact" id="modalActivate" data-toggle="modal" data-target="#ModalContact" href="#">Contact</a></li>
+                        <li><a lang-key="contact" id="modalActivate" data-toggle="modal" data-target="#ModalContact" href="#">Contact Us</a></li>
                         <button id="modalActivate" lang-key="booking" type="button" class="btn book-a-table text-center" data-toggle="modal" data-target="#Modal-Book-A-table">BOOK NOW</button>
-                        <!-- <li class="book-a-table text-center"><a lang-key="booking" href="Form.html">BOOK NOW</a>
-                        </li> -->
+                    </div>
                     </ul>
                 </nav>
-            </div>
         </div>
-    </header> <!-- End Header -->
+    </header> 
+    <!-- End Header Navbar -->
+    
+<!-- ======= Begins Banner Section ======= (Added by Daryl 20201215)  -->
+<div id="promotionBanner02" class="banner bannerAnimations">
+    <h1>( Magic show on this Christmas Eve )</h1>
+    
+    <!-- <a href="#" type="button" id="bannerBookButton" data-toggle="modal" data-target="#Modal-Book-A-table"></a> -->
+    <a href="#"  type="button" id="bannerBookButton" onclick="BookSpecialEvent()"></a>
+</div>
+<!--  ======= Ends Banner  Section ======= -->
 
-    <!-- ======= Begins Banner Section ======= (Added by Daryl 20201215) -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<script>
+    function BookSpecialEvent () { 
+     $('#Modal-Book-A-table').modal('show');
+     $('#date').val("12-24-2020");
+    }
+</script>
 
-    <div id="promotionBanner01" class="banner bannerAnimations">
-        <h2>( Magic show on this Christmas Eve )</h2>
-        <a href="#" type="image" id="bannerBookButton" ></a>
-    </div>
-    <!-- ======= Ends Banner  Section ======= -->
+
+
 
 
     <!-- ======= Hero Section ======= -->
@@ -102,7 +132,7 @@
 
                     <div class="btns">
                         <!-- <a href="#" class="btn">Our Menu</a> -->
-                        <a class="btn btn-menu" href="#FoodMenu" role="button">Our Menu</a>
+                        <a class="btn btn-menu" href="#" role="button">ORDER AND PAY IN THE APP</a>
                         <!-- <button id="modalActivate" type="button" class="btn btn-book" data-toggle="modal" data-target="#exampleModalPreview">
                             Book a Table
                           </button> -->
@@ -133,12 +163,12 @@
         </div>
     </section>
     <!-- ======= Meet The chef Section =======  -->
-<div class="container flex-center">
+ <div class="container flex-center">
         <section id="chef" class="chef">
             <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="chef-img">
-                        <img src="img/clown.jpg" alt="">
+                        <img src="img/chef3.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -179,7 +209,17 @@
                         <p>Check out our events</p>
                     </div>
                     
+
                     <div class="col-12">
+                        <a class=" carouselIndicators " href="#carouselIndicators" role="button" data-slide="prev">
+                            <i class="fa fa-arrow-left"></i>
+                        </a>
+                        <a  class=" carouselIndicators  "href="#carouselIndicators" role="button" data-slide="next">
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                        <div class="col-6">
+                            
+                        </div>
                         <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -249,7 +289,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -299,7 +338,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-3">
-                                            <div class="card card-image" style="background-image: url(img/circus.jpg);">
+                                            <div class="card card-image" style="background-image: url(img/red-pizza.jpg);">
                                                 <div
                                                     class="text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                                                     <div>
@@ -319,7 +358,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -330,16 +369,9 @@
     </div>
     </section>
 
-
-
-  <!-- Added by Daryl 20201214 Begins -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 <!-- Food menu Section -->
     <div id="FoodMenu" class="FoodMenu">
-        <div class="container ">
+        <div class="container">
             <div class="section-title">
                 <h2>Our food menu</h2>
                 <p>Our chefs serves better to our valuable customers</p>
@@ -347,85 +379,26 @@
             <div class="food-menu-card">
                 <div>
 
- <!-- Begins Added by Daryl 20201214  Nav tabs -->
-        <ul class="nav  tabs-menu-nav justify-content-center mb30" role="tablist">
-            <li><a id="allType" class="nav-link" href="#Starters">All</a></li>
-            <li><a id="starterType" class="nav-link" href="#Starters">Starters</a></li>
-            <li><a id="mainType" class="nav-link" href="#Mains">Mains</a></li>
-            <li><a id="dessertType" class="nav-link" href="#Dessert">Dessert</a></li>
-        </ul>
- 
-
-        <!-- Begins Commented out by Daryl 20201214 Nav tabs 
+                    <!-- Nav tabs -->
                     <ul class="nav  tabs-menu-nav justify-content-center mb30" role="tablist">
-                        <li class="nav-item" role="presentation"><a id="allType" class="nav-link active show" href="#All"
+                        <li><a id="allType" class="nav-link" href="#Starters">All</a></li>
+                        <li><a id="starterType" class="nav-link" href="#Starters">Starters</a></li>
+                        <li><a id="mainType" class="nav-link" href="#Mains">Mains</a></li>
+                        <li><a id="dessertType" class="nav-link" href="#Dessert">Dessert</a></li>
+                    </ul>
+                    <!-- <ul class="nav  tabs-menu-nav justify-content-center mb30" role="tablist">
+                        <li class="nav-item" role="presentation"><a class="nav-link active show" href="#All"
                                 aria-controls="All" role="tab" data-toggle="tab" aria-selected="true">All</a></li>
-                        <li class="nav-item" role="presentation"><a id="starterType" class="nav-link" href="#Starters"
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#Starters"
                                 aria-controls="Starters" role="tab" data-toggle="tab" aria-selected="false">
                                 Starters</a></li>
-                        <li class="nav-item" role="presentation"><a id="mainType" class="nav-link" href="#Mains" aria-controls="Mains"
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#Mains" aria-controls="Mains"
                                 role="tab" data-toggle="tab" aria-selected="false">Mains</a></li>
-                        <li class="nav-item" role="presentation"><a id="desertType" class="nav-link" href="#Dessert"
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#Dessert"
                                 aria-controls="Specialty" role="tab" data-toggle="tab" aria-selected="false">Dessert</a>
                         </li>
-                    </ul>
-        Ends Commented out by Daryl 20201214 Nav tabs  -->
 
-    <script>
-        function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("filterDiv");
-        if (c == "all") c = "";
-        for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) 
-                    w3AddClass(x[i], "show");
-            }
-        }
-
-        function w3AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        console.log ("arr1 " + arr1);
-        console.log ("2arr2 " + arr2);
-        for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) 
-            {element.className += " " + arr2[i];}
-            }
-        }
-
-        function w3RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-                arr1.splice(arr1.indexOf(arr2[i]), 1);     
-            }
-        }
-            element.className = arr1.join(" ");
-        }
-
-        $(document).ready(function() {
-            filterSelection("all");
-
-            $("#allType").click(function() {
-                filterSelection('all');
-            });
-            $("#starterType").click(function() {
-                filterSelection('starters');
-            });
-            $("#mainType").click(function() {
-                filterSelection('mains');
-            });
-            $("#dessertType").click(function() {
-                filterSelection('dessert');
-            });
-        });
-    </script>
-<!-- Ends Added by Daryl 20201214  Nav tabs -->
-
+                    </ul> -->
 
                     <!-- Tab panes -->
                     <div class="tab-content">
@@ -1183,6 +1156,7 @@
         </div>
     </div>
 
+
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
 
@@ -1197,7 +1171,7 @@
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="#" data-gall="gallery-item">
-                            <img src="img/hero-bg.jpg" alt="" class="img-fluid">
+                            <img src="img/acrobat.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
@@ -1218,14 +1192,14 @@
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="hero-bg.jpg" data-gall="gallery-item">
-                            <img src="img/blue_lagoon_cocktail.jpg" alt="" class="img-fluid">
+                            <img src="img/rootfriuts.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="#" data-gall="gallery-item">
-                            <img src="img/rootfriuts.jpg" alt="" class="img-fluid">
+                            <img src="img/circus.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
@@ -1323,19 +1297,18 @@
                         <h4>Useful Links</h4>
                         <ul>
                             <li><i class="fa fa-chevron-right"></i><a lang-key="contact" id="modalActivate" data-toggle="modal" data-target="#ModalContact" href="#">Contact us</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="#">Work for us</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="#">Terms of booking</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            <li><i class="fa fa-chevron-right"></i> <a href="/Job-Apply.html">Work for us</a></li>
+                            <li><i class="fa fa-chevron-right"></i> <a href="/Terms-of-booking.html">Terms of booking</a></li>
+                            <li><i class="fa fa-chevron-right"></i> <a href="/Datapolicy.html">Privacy policy</a></li>
                         </ul>
                     </div>
-
-
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Our Newsletter</h4>
                         <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
                         <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                            <!-- <input type="email" name="email"> -->
+                            <input class="form-control" id="email" type="email" placeholder="Enter your Email" required><input class="submit-btn" type="submit" value="Subscribe">
                         </form>
                          <div class="social-links mt-3">
                             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -1347,7 +1320,9 @@
                 </div>
                 
             </div>
+            
         </div>
+        
         <div class="container">
             <div class="copyright">
                 &copy; Copyright <strong><span>Circus Grill</span></strong>. All Rights Reserved
@@ -1451,7 +1426,7 @@
                                 </div>
                                 <div class="col-md-6">
 
-                                    <div class="form-group"> <input class="form-control" id="time" type="time-picker" placeholder="00:00" pattern="[0-9]{2}:[0-9]{2}" required > <span
+                                    <div class="form-group"> <input class="form-control" id="time" type="time" placeholder="00:00" pattern="[0-9]{2}:[0-9]{2}" required > <span
                                             class="form-label">time</span> </div>
                                 </div>
                                 <div class="col-md-6">
@@ -1510,9 +1485,6 @@
         </div>
     </div>
 
-
-
-    
       </div>
     </div>
   </div>
@@ -1526,7 +1498,7 @@
 
 
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
   
                 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
