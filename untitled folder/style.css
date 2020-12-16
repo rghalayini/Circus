@@ -1286,14 +1286,14 @@ font-size: 10px;
 # Banner  (Added by Daryl 20201215)
 --------------------------------------------------------------*/
  
-@font-face {​​​​​​​​
+/* @font-face {​​​​​​​​
   font-family: 'christmasFont';
   font-style: normal;
   font-weight: normal;
   src: url('fonts/Christmas-Bell.otf')  format('opentype');
-  }​​​​​​​​
+  }​​​​​​​​ */
    
-  .banner {​​​​​​​​
+/* .banner {​​​​​​​​
   background-color: red; 
   position: absolute;
   background-size: cover;
@@ -1305,34 +1305,34 @@ font-size: 10px;
   display: inline-block;
   letter-spacing: 5px;
   top: 108px;
-  }​​​​​​​​
+  }​​​​​​​​ */
    
-  #promotionBanner01 {​​​​​​​​
+  /* #promotionBanner01 {​​​​​​​​
   background: red;
   color: whilte;
   border-bottom: 1pxsolidrgba(134, 194, 50, 0.4);
   transition: all0.5s;
   z-index: 997;
   padding: 15px0;
-  }​​​​​​​​
+  }​​​​​​​​ */
    
-  #promotionBanner02 {​​​​​​​​
+  /* #promotionBanner02 {​​​​​​​​
   background: rgba(18, 21, 22, 0.397);
   color: red;
-  border-bottom: 1pxsolidrgba(134, 194, 50, 0.4);
+  border-bottom: 1px solid rgba(134, 194, 50, 0.4);
   transition: all0.5s;
   z-index: 100;
-  padding: 15px0;
-  }​​​​​​​​
+  padding: 15px;
+  }​​​​​​​​ */
    
-  .bannerh1 {​​​​​​​​
+  /* .bannerh1 {​​​​​​​​
   font-family: 'christmasFont', sans-serif;
   margin: 0;
   font-size: 4vw;
   line-height: 1.5;
-  }​​​​​​​​
+  }​​​​​​​​ */
    
-  .bannera {​​​​​​​​
+  /* .bannera {​​​​​​​​
   display: inline-block;
   padding: 10px22px;
   background: white;
@@ -1340,12 +1340,12 @@ font-size: 10px;
   font-size: 30px;
   text-decoration: none;
   transition: 0.3s;
-  }​​​​​​​​
+  }​​​​​​​​ */
    
-  .bannera:hover{​​​​​​​​
+  /* .bannera:hover{​​​​​​​​
   background: none;
   color: white;
-  }​​​​​​​​
+  }​​​​​​​​ */
    
   .bannerAnimations {​​​​​​​​
   animation-name: fadeInLeft;
@@ -1375,5 +1375,4 @@ font-size: 10px;
   outline:none;
   margin-left: auto;
   margin-right: auto;
-    }​​​​​​​​
-  
+}​​​​​​​​
