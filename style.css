@@ -243,7 +243,7 @@ body {
   margin: auto;
   display: inline-block;
   letter-spacing: 5px;
-  top: 100px;
+  top: 300px;
 }
 
 .banner h1{
@@ -926,13 +926,7 @@ event slider
   
 }
 
-@media (min-width: 992px){
-  .carouselIndicators i{
-    margin-left: 30%;
-    padding: 30px;
-    
-  }
-}
+
  
 
 
