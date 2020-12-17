@@ -225,47 +225,54 @@ body {
 # Banner  (Added by Daryl 20201215)
 --------------------------------------------------------------*/
 
-@font-face {
+/* @font-face {
   font-family: 'christmasFont';
   font-style: normal;
   font-weight: normal;
   src: url('fonts/Christmas-Bell.otf')  format('opentype');
-}
+} */
+
 
 .banner {
-  background-color: red; 
   position: absolute;
   background-size: cover;
   width: 100%;
   color: white;
   text-align: center;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: auto;
   display: inline-block;
   letter-spacing: 5px;
-  top: 108px;
+  top: 300px;
 }
 
-#promotionBanner01 {
-  background: red;
+.banner h1{
+  font-weight: 900;
+  background-color: #1a18147d;
+  text-transform: uppercase;
+}
+/* #promotionBanner01 {
+  background: blue;
   color: whilte;
   border-bottom: 1px solid rgba(134, 194, 50, 0.4);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-}
+} */
 
 #promotionBanner02 {
-  background: rgba(18, 21, 22, 0.397);
-  color: red;
+  background-image: url(/img/solil.jpg);
   border-bottom: 1px solid rgba(134, 194, 50, 0.4);
   transition: all 0.5s;
-  z-index: 100;
+  z-index: 500;
   padding: 15px 0;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position-y: 65%;
 }
 
 .banner h1 {
-  font-family: 'christmasFont', sans-serif;
+  
   margin: 0;
   font-size: 4vw;
   line-height: 1.5;
@@ -286,26 +293,27 @@ body {
   color: white;
 }
 
-  .bannerAnimations {
-    animation-name: fadeInLeft;
-    -webkit-animation-name: fadeInLeft;
-    /*
-    you can set different proporties to different animations too:
-    1s to bounce
-    2s to flash
-    3s to pulse
-    */
-    animation-duration: 3s;
-    -webkit-animation-duration: 3s;
-  }
+.bannerAnimations {
+  animation-name: fadeInLeft, fadeOut;
+  -webkit-animation-name: fadeInLeft, fadeOut;
+  
+  /*
+  you can set different proporties to different animations too:
+  1s to bounce
+  2s to flash
+  3s to pulse
+  */
+  animation-duration: 3s, 20s;
+  -webkit-animation-duration: 3s, 20s;
+}
 
   #bannerBookButton {
     background:url('img/bookNow01.png');
     background-size: contain;
-    width: 8vw; 
-    height: 8vw; 
-    max-height: 120px;
-    max-width: 120px;
+    width: 20vw; 
+    height: 50vw; 
+    max-height: 100px;
+    max-width: 500px;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -316,26 +324,75 @@ body {
     margin-right: auto;
   }
 
+  #closeBannerButton {
+    background:url('img/Cross-button.png');
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding: 12px 16px;
+    transform: translate(0%, -50%);
+  }
+  
 
 
+    /*--------------------------------------------------------------
+    # Hero Section
+    --------------------------------------------------------------*/
+    
+    #hero {
+      width: 100%;
+      height: 100vh; 
+      background: #eee;
+      background: url("img/hero-bg.jpg") no-repeat 50% 50%;
+      background-size: cover;
+  
+      -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
+          -moz-animation: fadein 15s; /* Firefox < 16 */
+          -ms-animation: fadein 15s; /* Internet Explorer */
+            -o-animation: fadein 15s; /* Opera < 12.1 */
+              animation: fadein 15s;
+    }
+    
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    
+    /* Opera < 12.1 */
+    @-o-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
 
-
-
-
-      /*--------------------------------------------------------------
-      # Hero Section
-      --------------------------------------------------------------*/
-      
-      #hero {
+      /* #hero {
         width: 100%;
         height: 100vh; 
         background: #eee;
         background: url("img/hero-bg.jpg") no-repeat 50% 50%;
         background-size: cover;
-        /* position: relative;
-        padding: 0;  */
-        
-      }
+      } */
       
       #hero:before {
         content: "";
@@ -359,7 +416,8 @@ body {
       
       #hero h1 {
         margin: 0;
-        font-size: 54px;
+        /* font-size: 54px; */
+        font-size: 50px;
         font-weight: 550;
         line-height: 56px;
         color: #fff;
@@ -802,13 +860,17 @@ section {
       @media (min-width: 1024px) {
         .chef {
           background-attachment: fixed;
+          
         }
       }
   
-
-
-
-
+      @media (min-width: 992px){
+       .order-lg-2 {
+         -ms-flex-order: 2;
+          order: 2;
+         padding-top: 80px;
+}
+      }
 
   /*--------------------------------------------------------------
   # Gallery
@@ -901,6 +963,7 @@ event slider
   
 }
 
+
 .card {
   background-color: black; 
   background-size: cover; 
@@ -909,22 +972,20 @@ event slider
   
 }
 
-card::before {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  
-}
+
 .card p {
   color:#fff;
   background: rgba(0, 0, 0, 0.5);
   
   
 }
+
+
+ 
+
+
+
+
 
 .chef-bio{
 font-size: 10px;
