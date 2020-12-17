@@ -1,16 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     var checkbox = document.querySelector('input[type="checkbox"]');
-//     checkbox.addEventListener('change', function() {
-//         if (checkbox.checked) {
-//             // do this
-//             console.log('Checked');
-//         } else {
-//             // do that
-//             console.log('Not checked');
-//         }
-//     });
-// });
-
 $(document).ready(function() {
 
     // ---------SECTION TRANSITION ---------//
@@ -47,7 +34,7 @@ $(document).ready(function() {
         $('#food-page').css('display', 'none');
         $('#drinks-page').css('display', 'block');
         $('#events-page').css('display', 'none');
-        $('#allergy-container').css('display', 'block');
+        $('#allergy-container').css('display', 'none');
         $('#drinks-btn').parent().addClass('active');
         $('#home-btn').parent().removeClass('active');
         $('#food-btn').parent().removeClass('active');
@@ -91,6 +78,16 @@ $(document).ready(function() {
         $('.become-member').css('display', 'none');
         $('.submit-email').css('display', 'block');
     });
+
+    $(document).on('submit', '#submit-email-subscription', function() {
+        // do your things
+        $('.member-confirmation').css('display', 'block');
+        $('.become-member').css('display', 'none');
+
+        return false;
+    });
+
+
     //take-away
     $('.take-away-box').on('click', function() {
         $('#home-page').css('display', 'none');
@@ -121,7 +118,6 @@ $(document).ready(function() {
 
     // ---------FOOD PAGE ---------//
 
-    //alergy
     $("#glutenfree").change(function() {
         if ($(this).prop('checked')) {
             $('.food-item-container').css('display', 'none');
@@ -174,13 +170,9 @@ $(document).ready(function() {
 
     //click on customize food
     $('.customize-button').on('click', function() {
-        $('.customize-popup').css('display', 'block');
-        $('.customize-food-container').css('display', 'block');
+        $(this).siblings('.customize-popup').children('.customize-food-container').css('display', 'block');
+        $(this).siblings('.customize-popup').css('display', 'block');
     });
-    // $('.submit-custom-btn').on('click', function() {
-    //     $('.customize-food-container').css('display', 'none');
-    //     $('.customize-confirmation').css('display', 'block');
-    // });
     $('.close-custom-order').on('click', function() {
         $('.customize-popup').css('display', 'none');
         $('.customize-food-container').css('display', 'none');
@@ -271,10 +263,8 @@ $(document).ready(function() {
                     .text('1'))
                 .append($('<p>')
                     .addClass('unit-name')
-                    .text(foodItemParent.siblings(".food-name").children("h1").text()))
-                .append($('<p>')
-                    // .addClass('unit-name')
-                    .text('custom order'))
+                    .text(foodItemParent.siblings(".food-name").children("h1").text() +
+                        '.......... Custom Order'))
                 .append($('<p>')
                     .addClass("unit-price")
                     .text(foodItemParent.siblings(".food-price").children("h1").text())
@@ -364,6 +354,18 @@ $(document).ready(function() {
         $('#PriceTotal').text(totalOrderPrice);
     }
 
+    //submit order
+    $(document).on('submit', '#send-order-button', function() {
+        // do your things
+        // $('.content_w').css('display', 'none');
+        $('.order-confirmation').css('display', 'block');
+        $('#PriceTotal').text('0');
+        $('.food-list').empty();
+        orderList = new Array();
+        totalOrderPrice = 0;
+        isPopupEmpty();
+        return false;
+    });
 
     //define function for the number quantity animation
     function disappear(input) {
@@ -378,7 +380,7 @@ $(document).ready(function() {
 
     });
 
-    $('#allergy-container').on('click', function() {
+    $('.allergy-box').on('click', function() {
         slide2($('.content-allergy'));
     });
 
@@ -413,7 +415,7 @@ $(document).ready(function() {
 
     function slide(content) {
         var wrapper = content.parent();
-        // var contentHeight = content.outerHeight(true);    //to use when we want automatic height
+        var contentHeight = content.outerHeight(true); //to use when we want automatic height
         var wrapperHeight = wrapper.height();
 
         wrapper.toggleClass('open');
@@ -421,7 +423,7 @@ $(document).ready(function() {
             $('.fa-arrow-circle-up').css('display', 'block');
             $('.fa-arrow-circle-down').css('display', 'none');
             setTimeout(function() {
-                wrapper.addClass('transition').css('height', '100vh'); //repace 100vh with contentHeight
+                wrapper.addClass('transition').css('height', contentHeight); //replace 100vh with contentHeight
             }, 10);
         } else {
             $('.fa-arrow-circle-down').css('display', 'block');
@@ -435,7 +437,7 @@ $(document).ready(function() {
         }
         wrapper.one('transitionEnd webkitTransitionEnd transitionend oTransitionEnd msTransitionEnd', function() {
             if (wrapper.hasClass('open')) {
-                wrapper.removeClass('transition').css('height', '100vh');
+                wrapper.removeClass('transition').css('height', contentHeight);
             }
         });
     }

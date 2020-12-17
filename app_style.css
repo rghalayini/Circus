@@ -307,7 +307,7 @@ a:link {
     height: 50vh;
     width: 90vw;
     background-color: rgb(184, 214, 231);
-    position: fixed;
+    position: absolute;
     left: 5%;
     border-radius: 40px;
     border: rgb(189, 190, 120);
@@ -512,6 +512,27 @@ form input[type="submit"]:hover {
         width: 60px;
         top: 70%;
         left: 50%;
+    }
+    .waiter-text h1 {
+        font-size: 25px;
+    }
+    .waiter-text h2 {
+        font-size: 20px;
+        padding-top: 50%;
+    }
+    .membership-text h1 {
+        font-size: 25px;
+        padding-top: 40px;
+    }
+    .membership-text h2 {
+        font-size: 14px;
+        padding-top: 10%;
+    }
+    form {
+        transform: translate(-50%, 65%);
+    }
+    form input[type="submit"] {
+        font-size: 12px;
     }
 }
 
@@ -721,6 +742,7 @@ span {
 .food-image-container {
     position: relative;
     z-index: -1;
+    object-fit: contain;
 }
 
 .food-image-container img {
@@ -783,6 +805,28 @@ span {
     }
     .top-container {
         height: 110px;
+    }
+    .food-item-container {
+        position: relative;
+        height: 300px;
+    }
+    .customize-button .btn-menu {
+        font-size: 12px;
+    }
+    .takeaway-container h1 {
+        font-size: 14px;
+    }
+    .take-away-list {
+        font-size: 10px;
+    }
+    .take-away-time {
+        margin-left: 15px;
+    }
+    .takeaway-container .btn-menu {
+        font-size: 10px;
+    }
+    .close-event-button .btn-menu {
+        padding: 7px, 8px;
     }
 }
 
@@ -938,7 +982,7 @@ span {
 
 @media screen and (max-width: 699px) {
     .grid-container-events {
-        padding-top: 110px;
+        padding-top: 0px;
     }
     .event-type h1 {
         font-size: 16px;
@@ -950,10 +994,9 @@ span {
         padding-left: 7px;
         padding-top: 5px;
     }
-    /* .event-date h2 {
-        font-size: 15px;
-        color: #86C232;
-    } */
+    .grid-item-events {
+        height: 200px
+    }
 }
 
 
@@ -995,9 +1038,9 @@ span {
 }
 
 #order-popup .content_w.transition {
-    /* -webkit-transition: height 0.5s;
+    -webkit-transition: height 0.5s;
     -moz-transition: height 0.5s;
-    -o-transition: height 0.5s; */
+    -o-transition: height 0.5s;
     transition: height 0.5s;
 }
 
@@ -1024,6 +1067,10 @@ section.entries .content-order {
 
 #order-popup p {
     color: black;
+}
+
+#order-popup .customized-unit-name {
+    color: red;
 }
 
 #order-popup hr {
@@ -1072,10 +1119,9 @@ section.entries .content-order {
     color: black;
 }
 
-
-/* #PriceTotal {
-    float: right;
-} */
+.total-price {
+    min-height: 100px;
+}
 
 .fa-plus-circle {
     font-size: 20px;
@@ -1091,6 +1137,65 @@ section.entries .content-order {
     position: absolute;
     top: 30%;
     bottom: 5%;
+}
+
+
+/* submit order buttons and table code */
+
+#order-popup form {
+    transform: translate(12%, -70%);
+    position: inherit;
+    width: 80%;
+}
+
+form input[type="text"] {
+    border: 0;
+    padding: 4px;
+    width: calc(100% - 110px);
+    background: #222629;
+    color: white;
+}
+
+.order-confirmation {
+    display: none;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+.order-confirmation .btn-menu {
+    color: black;
+}
+
+.order-confirmation h1,
+.order-confirmation h2 {
+    font-size: 32px;
+}
+
+.order-confirmation h1 {
+    padding-left: 0;
+    margin-left: 0;
+    font-size: 28px;
+}
+
+
+/* --IPHONE --If the screen size is 699px wide or less*/
+
+@media screen and (max-width: 699px) {
+    .order-confirmation {
+        top: 50%;
+    }
+    .order-confirmation h1,
+    .order-confirmation h2 {
+        padding-left: 0;
+        margin-left: 0;
+        font-size: 20px;
+    }
 }
 
 
@@ -1239,4 +1344,95 @@ input:checked+.slider:before {
 
 #header {
     display: none;
+}
+
+.name-details h2 {
+    padding-bottom: 12px;
+}
+
+.name-details h1 {
+    padding-top: 20px;
+}
+
+.member-confirmation .waiter-text {
+    margin-right: 6%;
+    margin-left: 6%;
+}
+
+
+/* IPHONE X --- If the screen size is 699px wide or less*/
+
+@media screen and (max-width: 699px) {
+    .event-detail .name-details h1,
+    .event-detail .name-details h2 {
+        font-size: 25px;
+    }
+    .event-detail .name-details h1 {
+        padding-top: 35px;
+    }
+    .event-detail .name-details h2 {
+        font-size: 25px;
+    }
+    .event-detail .name-details .event-date {
+        font-size: 14px;
+    }
+    .event-detail .event-text-description {
+        font-size: 12px;
+    }
+}
+
+
+/* --IPHONE --If the screen size is 699px wide or less*/
+
+@media screen and (max-width: 699px) {
+    .customize-popup .btn-menu {
+        font-size: 9px;
+    }
+    .ingredients-list ul li {
+        font-size: 16px;
+    }
+    .ingredients-list {
+        padding-top: 5px;
+    }
+    .customize-popup .btns {
+        transform: translate(-50%, 10%);
+    }
+    .customize-text {
+        padding-top: 8%;
+    }
+    .food-item-container .call-waiter-btn .btns {
+        bottom: 5%
+    }
+}
+
+
+/* --IPHONE --If the screen size is 699px wide or less*/
+
+@media screen and (max-width: 699px) {
+    #order-popup input {
+        font-size: 12px;
+    }
+    .name-details h2 {
+        padding-top: 0%;
+    }
+    .name-details h1 {
+        padding-top: 0px;
+    }
+    .waiter-confirmation .waiter-text {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .food-image-container .name-details h2 {
+        font-size: 16px;
+    }
+    .become-member .name-details h1,
+    .member-confirmation .name-details h1 {
+        padding-top: 50px;
+    }
+    .become-member .name-details h2 {
+        padding-top: 10%;
+    }
+    .member-confirmation .name-details h2 {
+        padding-top: 10%;
+    }
 }
