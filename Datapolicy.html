@@ -38,72 +38,68 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-     <!-- Internal CSS -->
+  <!-- Internal CSS -->
       
-    <link rel="stylesheet" href="style.css">
-<!-- <link rel="stylesheet" href="main.css"> -->
-    <script src="/Forms/booking.js"></script>
-    <script src="/food-menu.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./Job-Apply.css">
+  <!-- Internal JS -->
+   <script src="./food-menu.js"></script>
+   <script src="./Job-Apply.js"></script>
+   <script src="./Lang/lang_engine.js"></script>
+   <script src="./Lang/translation.js"></script>
 
-    <script src="/Lang/lang_engine.js"></script>
-    <script src="/Lang/translation.js"></script>
-
-    <title>Circus Grill</title>
+   <title>Circus Grill</title>
 </head>
 
 <body>
-    
-    <!-- ======= Modified by Daryl 20201208 =======  -->
-    <!-- ======= Top Bar ======= -->
-    <div id="topbar" class="d-flex align-items-center fixed-top">
-        <div class="container d-flex">
-            <div class="contact-info mr-auto">
-                <i class="fas fa-phone"></i> +46 739 66 66 66 &nbsp
-                <span class="d-none d-lg-inline-block"><i class="far fa-clock"></i> Fri & Sat: 11:00 AM - 23:00
-                    PM</span>
-            </div>
-            <div class="languages">
-                <ul>
-                    <li><i class="lang fas fa-globe-europe"></i>&nbsp;<a href="#" onclick="SwitchToEn()">EN</a></li>
-                    <li><a href="#" onclick="SwitchToSe()">SE</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+   
+   <!-- ======= Modified by Daryl 20201208 =======  -->
+   <!-- ======= Top Bar ======= -->
+   <div id="topbar" class="d-flex align-items-center fixed-top">
+       <div class="container d-flex">
+           <div class="contact-info mr-auto">
+               <i class="fas fa-phone"></i> +46 739 66 66 66 &nbsp
+               <span class="d-none d-lg-inline-block"><i class="far fa-clock"></i> Fri & Sat: 11:00 AM - 23:00
+                   PM</span>
+           </div>
+           <div class="languages">
+               <ul>
+                   <li><i class="lang fas fa-globe-europe"></i>&nbsp;<a href="#" onclick="SwitchToEn()">EN</a></li>
+                   <li><a href="#" onclick="SwitchToSe()">SE</a></li>
+               </ul>
+           </div>
+       </div>
+   </div>
 
-    <!-- nav-menu -->
+   <!-- nav-menu -->
 
-    <!-- ======= Added by Daryl 20201208 =======  -->
-    <!-- ======= Header Navbar ======= -->
-    <header id="header" class="navbar navbar-expand-lg fixed-top">
-        <div class="container d-flex align-items-center">
-            <a href="index.html" class="logo mr-auto"><img src="/img/circus-tent.png" alt="" class="img-fluid"></a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="line"></span> 
-            <span class="line"></span> 
-            <span class="line"></span> 
-            </button>
-            
-            <nav class="collapse navbar-collapse nav-menu " id="navbarToggler" id="navbarNavAltMarkup">
-                    
-                <ul  class=" navbar-nav ml-auto">
-                    <div lang="en"></div>
-                    <li class="active"><a lang-key="Home" href="#index.html">Home</a></li>
-                    <li><a lang-key="About us" href="/AboutUs.html">About us</a></li>
-                    <li><a lang-key="Menu" href="#FoodMenu">Menu</a></li>
-                    <li><a lang-key="Events" href="#event-slider">Events</a></li>
-                    <li><a lang-key="Contact us" id="modalActivate" data-toggle="modal" data-target="#ModalContact" href="#">Contact Us</a></li>
-                    <button id="modalActivate" lang-key="Book Now" type="button" class="btn book-a-table text-center" data-toggle="modal" data-target="#Modal-Book-A-table">BOOK NOW</button>
-                </div>
-                </ul>
-            </nav>
-        </div>
-    </header> 
-    <!-- End Header Navbar -->
-    
-
-
+   <!-- ======= Added by Daryl 20201208 =======  -->
+   <!-- ======= Header Navbar ======= -->
+   <header id="header" class="navbar navbar-expand-lg fixed-top">
+       <div class="container d-flex align-items-center">
+           <a href="./index.html" class="logo mr-auto"><img src="./img/circus-tent.png" alt="" class="img-fluid"></a>
+           
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="line"></span> 
+               <span class="line"></span> 
+               <span class="line"></span> 
+           </button>
+           
+               <nav class="collapse navbar-collapse nav-menu " id="navbarToggler" id="navbarNavAltMarkup">                   
+                   <ul  class=" navbar-nav ml-auto">
+                       <div lang="en"></div>
+                       <li class="active"><a lang-key="Home" href="./index.html">Home</a></li>
+                       <li><a lang-key="About us" href="./AboutUs.html">About</a></li>
+                       <li><a lang-key="Menu" href="./index.html#FoodMenu">Menu</a></li>
+                       <li><a lang-key="Events" href="./index.html#event-slider">Events</a></li>
+                       <li><a lang-key="Contact us" id="modalActivate" data-toggle="modal" data-target="#ModalContact" href="#">Contact Us</a></li>
+                       <button id="modalActivate" lang-key="Book Now" type="button" class="btn book-a-table text-center" data-toggle="modal" data-target="#Modal-Book-A-table">BOOK NOW</button>
+                   </div>
+                   </ul>
+               </nav>
+       </div>
+   </header> 
+   <!-- End Header Navbar -->
 
 
 
