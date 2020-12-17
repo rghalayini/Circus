@@ -3,13 +3,14 @@ let langdata = {
   "languages": {
     "en": {
       "strings": {
+      "openinghours":"Fri & Sat: 11:00 AM - 23:00 PM",
         "Home": "Home",
         "About us": "About us",
         "Menu": "Menu",
         "Events": "Events",
         "Contact us": "Contact us",
         "Book Now": "BOOK NOw",
-        "welcome": "Welcome to",
+        "welcome": "Welcome to Circus Grill",
         "circus-grill":"Circus Grill",
         "slogan": "Vegan Grill and Circus",
         "orderButton": "ORDER AND PAY IN THE APP",
@@ -27,13 +28,14 @@ let langdata = {
    },
    "sv": {
       "strings": {
+        "openinghours":"Fre & Lör: 11:00 AM - 23:00 PM",
         "Home": "Hem",
         "About us": "Om oss",
         "Menu": "Meny",
         "Events": "Event",
         "Contact us": "Kontakta oss",
         "Book Now": "BOKA NU",
-        "welcome": "Välkommen till",
+        "welcome": "Välkommen till Circus Grill",
         "circus-grill":"Circus Grill",
         "slogan": "Vegansk grill och cirkus",
         "orderButton": "BESTÄLL OCH BETALA I APPEN",
