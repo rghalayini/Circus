@@ -46,9 +46,6 @@ let langdata = {
         "chef-quest1":"Det här är köket som aldrig sover. Hur gör du det?",
         "chef-answer3":"Det är sant - vi är öppna hela dagen och hela natten.",
         "chef-answer4":"Varje person i detta kök har sin egen unika position.",
-
-
-
       }
     }
   }
