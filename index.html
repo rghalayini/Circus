@@ -1368,11 +1368,11 @@
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Our Newsletter</h4>
                         <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                        <form action="" method="post">
-                            <!-- <input type="email" name="email"> -->
-                            <input class="form-control" id="subscriptEmail" type="email" placeholder="Enter your Email"
-                                required><input class="submit-btn" type="submit" value="Subscribe">
-                        </form>
+                        <!-- <form action="" method="post">
+                            <input type="email" name="email"> -->
+                            <input class="form-control" id="subscribeEmail" type="email" placeholder="Enter your Email"
+                                required><input id="subscribeBtn" class="submit-btn" type="submit" value="Subscribe">
+                        <!--</form>-->  
                         <div class="social-links mt-3">
                             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="instagram"><i class="fa fa-instagram"></i>
@@ -1451,9 +1451,9 @@
                                                         <div class="col-md-12">
 
                                                             <div class="form-group">
-                                                                <textarea id="message" class="form-control" type="text"
-                                                                    id="contactMessage" name="message" rows="4"
-                                                                    placeholder="Your message"
+                                                                <textarea id="contactMessage" class="form-control"
+                                                                    type="text" id="contactMessage" name="message"
+                                                                    rows="4" placeholder="Your message"
                                                                     class="form-control"></textarea>
 
                                                             </div>
@@ -1598,7 +1598,9 @@
                 <script src="smtp.js"></script>
                 <script>
                     $(function () {
-                        //clearForm();
+                        clearForm();
+                        clearForm_contact();
+                        clearSubscribe();
                         var date = $("#date").val();
                         var time = $("#time").val();
                         var name = $("#modalfullName").val();
@@ -1640,8 +1642,7 @@
                             }
                             if (validateEmail(email)) {
                                 return;
-                                //$result.text(email + " is valid :)");
-                                // $result.css("color", "green");
+
                             } else {
                                 $result.text("email is not valid");
                                 $result.css("color", "red");
@@ -1681,7 +1682,7 @@
                                     reservation._time +
                                     " O'Clock.</h2><br/> We look forward to your visit and hope we will be enjoying your meal and the Circus experience at Circus Grill as much as we will be enjoying your company." +
                                     "<br/>See you very soon / [or day of reservation],"
-                                    // + reservation._no_Companions 
+
                                     +
                                     " <br/>sincerely Tony Montana, Restaurant manager"
 
@@ -1758,9 +1759,6 @@
                                 errrormessage += "is mandatory";
                                 Swal.fire('Try a gain!', errrormessage, '');
                                 return false;
-                            } else {
-
-                                // JSalert(reservation); 
                             }
 
                         });
@@ -1777,7 +1775,7 @@
                             document.getElementById('contactLname').value = "";
                             document.getElementById('contactEmail').value = "";
                             document.getElementById('contactTel').value = "";
-                            // document.getElementById('contactMessage').value = "";
+                            document.getElementById('contactMessage').value = "";
                         }
 
                         $('#contact-btn').on('click', function () {
@@ -1793,7 +1791,7 @@
                                 _contactTel: contactTel,
                                 _contactMessage: contactMessage
                             };
-                            if (contactFname != "") {
+                            if (contactEmail != "") {
                                 Email.send({
                                     Host: "send.one.com",
                                     Username: "sobhi@cloudulu.com",
@@ -1810,13 +1808,41 @@
 
 
                                 Swal.fire('', 'Your are contacting with Circus Grill Restaurant.', '');
-
-
+                            } else {
+                                Swal.fire('', 'Please enter your email for contacting us', '');
                             }
-
+                            
 
                         });
+                       //----------------------Subscribe Script--------------
+                       function clearSubscribe(){
+                        document.getElementById('subscribeEmail').value = "";
+                       }
 
+                       $('#subscribeBtn').on('click', function () {
+                          
+                            var subscribeEmail = $("#subscribeEmail").val();
+                            
+                            if ($("#subscribeEmail").val() != "") {
+                                
+                                Email.send({
+                                    Host: "send.one.com",
+                                    Username: "sobhi@cloudulu.com",
+                                    Password: "Nour070715",
+                                    To: $("#subscribeEmail").val() ,
+                                    From: "sobhi@cloudulu.com",
+                                    Subject: "Thank you for Subscribing us ",
+                                    Body: "sincerely Tony Montana, Restaurant manager   " 
+
+
+                                });
+
+
+                                Swal.fire('', 'Your are Subscribing  Circus Grill Restaurant.', '');
+                            } else {
+                                Swal.fire('', 'Please enter your email for subscribing us', '');
+                            }
+                        });
                     });
                 </script>
                 <!--  <script src="/Lang/lang_engine.js"></script>
