@@ -978,6 +978,7 @@ font-size: 10px;
 
   .social-links{
     margin-left: 30%;
+    padding-top: 20px;
   }
   #footer .footer-top .social-links a {
     font-size: 18px;
