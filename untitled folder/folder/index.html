@@ -22,7 +22,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 
-   
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
    
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
@@ -41,8 +41,9 @@
      <!-- Internal CSS -->
       
     <link rel="stylesheet" href="./style.css">
-   <link rel="stylesheet" href="./Job-Apply.css">
-   <!-- Internal JS -->
+    <link rel="stylesheet" href="./Job-Apply.css">
+<!-- Internal JS -->
+    <script src="./Forms/booking.js"></script>
     <script src="./food-menu.js"></script>
     <script src="./Job-Apply.js"></script>
     <script src="./Lang/lang_engine.js"></script>
@@ -1312,12 +1313,10 @@
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Our Newsletter</h4>
                         <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                      <!--  <form action="" method="post">-->
+                        <form action="" method="post">
                             <!-- <input type="email" name="email"> -->
-                            <input class="form-control" id="subscribeEmail" type="text" >
-                            <input id="subscribeBtn" class="submit-btn" type="button" value="Subscribe">
-                    <!--</form>-->  
-                         
+                            <input class="form-control" id="email" type="email" placeholder="Enter your Email" required><input class="submit-btn" type="submit" value="Subscribe">
+                        </form>
                          <div class="social-links mt-3">
                             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="instagram"><i class="fa fa-instagram"></i>
@@ -1361,51 +1360,42 @@
                               <h1>Contact Us</h1>
                           </div>
                           <div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group"> <input class="form-control"
-                                            id="contactFname" type="name"
-                                            placeholder="First Name" required> <span
-                                            class="form-label">Name</span> </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group"> <input class="form-control"
-                                            id="contactLname" type="name"
-                                            placeholder="Last Name" required> <span
-                                            class="form-label">Name</span> </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group"> <input class="form-control"
-                                            id="contactEmail" type="email" placeholder="Email"
-                                            required> <span class="form-label">Email</span><b
-                                            id='emailResult'></b> </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group"> <input class="form-control"
-                                            id="contactTel" type="contacttel"
-                                            placeholder="Phone number"
-                                            pattern="[0-9]{3}-[0-9]{3} [0-9]{2} [0-9]{2} placeholder="
-                                            Enter you Phone" required> <span
-                                            class="form-label">Phone</span><b
-                                            id='telResult'></b> </div>
-                                </div>
-                                <div class="col-md-12">
-
-                                    <div class="form-group">
-                                        <textarea id="contactMessage" class="form-control"
-                                            type="text" id="contactMessage" name="message"
-                                            rows="4" placeholder="Your message"
-                                            class="form-control"></textarea>
-
-                                    </div>
+                              <div class="row">                                                              
+                                  <div class="col-md-6">
+                                      <div class="form-group"> <input class="form-control" id="name" type="name"
+                                          placeholder="First Name" required> <span
+                                          class="form-label">Name</span> </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group"> <input class="form-control" id="name" type="name"
+                                          placeholder="Last Name" required> <span
+                                          class="form-label">Name</span> </div>
+                                  </div>
+                                  
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group"> <input class="form-control" id="email" type="email"
+                                              placeholder="Email" required> <span 
+                                              class="form-label">Email</span><b id='emailResult'></b> </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group"> <input class="form-control" id="tel" type="tel" placeholder="Phone number" 
+                                          pattern="[0-9]{3}-[0-9]{3} [0-9]{2} [0-9]{2} placeholder="Enter you Phone" required> <span
+                                              class="form-label">Phone</span><b id='telResult'></b> </div>
+                                  </div>
+                                  <div class="col-md-12">
+  
+                                      <div class="form-group">
+                                          <textarea id="message" class="form-control" type="text" id="message" name="message" rows="4" placeholder="Your message" class="form-control"></textarea>
+                                          
+                                      </div>
               
-                            </div>
+                                  </div>
                               </div>
                               </div>
                               
-                              <div class="form-btn"> <button  id="contact-btn" class="submit-btn">Send<i class="far fa-paper-plane ml-2"></i></button> </div>
+                              <div class="form-btn"> <button class="submit-btn">Send<i class="far fa-paper-plane ml-2"></i></button> </div>
                           </div>
   
                       </div>
@@ -1504,7 +1494,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="form-btn"> <button id="submitBtn" class="submit-btn">Book Now</button>
+                                                    <div class="form-btn"> <button class="submit-btn">Book Now</button>
                                                     </div>
 
                                                 </div>
@@ -1519,6 +1509,11 @@
                     </div>
                 </div>
                 <!-- End of booking form Modal -->
+
+
+
+
+
 
                 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -1536,14 +1531,12 @@
 
                 <script
                     src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
-                    
-                <script src="https://smtpjs.com/v3/smtp.js"></script>
-               <!-- <script src="./smtp.js"></script>-->
+
+                <script src="smtp.js"></script>
+
                 <script>
                     $(function () {
-                        clearForm();
-                        clearForm_contact();
-                        clearSubscribe();
+                        //clearForm();
                         var date = $("#date").val();
                         var time = $("#time").val();
                         var name = $("#modalfullName").val();
@@ -1552,40 +1545,38 @@
                         var no_Companions = document.getElementById("no_Companions").value;
 
                         function clearForm() {
-
-                            document.getElementById('date').value = "";
-                            document.getElementById('time').value = "";
-                            document.getElementById('modalfullName').value = "";
-                            document.getElementById('email').value = "";
-                            document.getElementById('modalTel').value = "";
-                            document.getElementById('no_Companions').value = "";
-
-                        }
-
+                            
+                        document. getElementById('date'). value = ""; 
+                        document. getElementById('time'). value = "";
+                        document. getElementById('modalfullName'). value = "";
+                        document. getElementById('email'). value = "";
+                        document. getElementById('modalTel'). value = "";
+                        document. getElementById('no_Companions'). value = "";
+      
+           }
                         function validateEmail(email) {
-                            const re =
-                                /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                             return re.test(email);
                         }
-
                         function validationPhonenumber(tel) {
                             const re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
                             return re.test(tel);
                         }
-
                         function validate() {
                             const $result = $("#emailResult");
                             const $result1 = $("#telResult");
                             const email = $("#email").val();
                             const tel = $("#modalTel").val();
                             $result.text("");
-                            if (validationPhonenumber(tel)) {} else {
+                            if (validationPhonenumber(tel)) {
+                            } else {
                                 $result1.text("Telephone number is not valid");
                                 $result1.css("color", "red");
                             }
                             if (validateEmail(email)) {
                                 return;
-
+                                //$result.text(email + " is valid :)");
+                                // $result.css("color", "green");
                             } else {
                                 $result.text("email is not valid");
                                 $result.css("color", "red");
@@ -1598,9 +1589,7 @@
                             dateFormat: "m-d-Y",
                             "disable": [
                                 function (date) {
-                                    return (date.getDay() === 0 || date.getDay() === 1 || date
-                                        .getDay() === 2 || date.getDay() === 3 || date
-                                        .getDay() === 4); // disable weekends
+                                    return (date.getDay() === 0 || date.getDay() === 1 || date.getDay() === 2 || date.getDay() === 3 || date.getDay() === 4);  // disable weekends
                                 }
                             ],
                             "locale": {
@@ -1616,200 +1605,83 @@
                                 To: reservation._email,
                                 From: "sobhi@cloudulu.com",
                                 Subject: "Circus Grill Reservation for " + reservation._date,
-                                Body: "<html><h1> Congratulations!!  " +
-                                    reservation._name +
-                                    "</h2>And thank you for making a reservation At The Circus Grill.<h2>" +
-                                    " <br/> We are expecting you on The" +
-                                    reservation._date +
-                                    " / " +
-                                    reservation._time +
-                                    " O'Clock.</h2><br/> We look forward to your visit and hope we will be enjoying your meal and the Circus experience at Circus Grill as much as we will be enjoying your company." +
-                                    "<br/>See you very soon !"
-
-                                    +
-                                    " <br/>Sincerely Tony Montana, Restaurant manager"
+                                Body: "<html><h1> Congratulations!!  "
+                                    + reservation._name
+                                    + "</h2>And thank you for making a reservation At The Circus Grill.<h2>"
+                                    + " <br/> We are expecting you on The"
+                                    + reservation._date
+                                    + " / "
+                                    + reservation._time
+                                    + " O'Clock.</h2><br/> We look forward to your visit and hope we will be enjoying your meal and the Circus experience at Circus Grill as much as we will be enjoying your company."
+                                    + "<br/>See you very soon / [or day of reservation],"
+                                    // + reservation._no_Companions 
+                                    + " <br/>sincerely Tony Montana, Restaurant manager"
 
                             });
                             Swal.fire({
                                 title: 'Your are About to make a Reservation',
-                                text: reservation._date + " " + reservation._time + " For you and " +
-                                    reservation._no_Companions + " Persons",
+                                text: reservation._date + " " + reservation._time + " For you and " + reservation._no_Companions + " Persons",
                                 showDenyButton: true,
                                 showCancelButton: true,
                                 confirmButtonText: 'Book',
                                 denyButtonText: `Cancel`,
                             }).then((result) => {
 
-                                    Swal.fire('Booked!', 'The information has been sent to your email',
-                                        'success')
-                                    // sendMail(reservation);
-                                    tableNo--;
-                                    clearForm();
-                                }
+                                Swal.fire('Booked!', 'The information has been sent to your email', 'success')
+                                sendMail(reservation);
+                                tableNo--;
+                                clearForm();
+                            }
 
                             )
                         }
 
 
-                        $('#submitBtn').on('click', function () {
-                           
+                        $('.submit-btn').on('click', function () {
+
                             var date = $("#date").val();
                             var time = $("#time").val();
                             var name = $("#modalfullName").val();
                             var email = $("#email").val();
                             var tel = $("#modalTel").val();
                             var no_Companions = document.getElementById("no_Companions").value;
-                            var reservation = {
-                                _date: date,
-                                _time: time,
-                                _name: name,
-                                _email: email,
-                                _tel: tel,
-                                _no_Companions: no_Companions
-                            };
-
+                            var reservation = { _date: date, _time: time, _name: name, _email: email, _tel: tel, _no_Companions: no_Companions };
                             JSalert(reservation);
                             var errrormessage = "";
                             if (name == "") {
                                 errrormessage += "Name , ";
 
-                            } else {
-                                validate();
-                            }
+                            } else { validate(); }
                             if (email == "") {
                                 errrormessage += "Email ,   ";
 
-                            } else {
-                                validate();
-                            }
+                            } else { validate(); }
                             if (date == "") {
                                 errrormessage += "Date , ";
 
-                            } else {
-                                validate();
-                            }
+                            } else { validate(); }
                             if (time == "") {
                                 errrormessage += "Time , ";
                             }
 
                             if (tel == "") {
                                 errrormessage += "Tel , ";
-                            } else {
-                                validate();
-                            }
+                            } else { validate(); }
 
                             if (errrormessage != "") {
                                 errrormessage += "is mandatory";
                                 Swal.fire('Try a gain!', errrormessage, '');
                                 return false;
-                            }
-
-                        });
-
-                        //----------------------------------Contact Form Script ---------------------------------
-                        var contactFname = $("#contactFname").val();
-                        var contactLname = $("#contactLname").val();
-                        var contactEmail = $("#contactEmail").val();
-                        var contactTel = $("#contactTel").val();
-                        var contactMessage = $("#contactMessage").val();
-
-                        function clearForm_contact() {
-                            document.getElementById('contactFname').value = "";
-                            document.getElementById('contactLname').value = "";
-                            document.getElementById('contactEmail').value = "";
-                            document.getElementById('contactTel').value = "";
-                            document.getElementById('contactMessage').value = "";
-                        }
-
-                        $('#contact-btn').on('click', function () {
-                            var contactFname = $("#contactFname").val();
-                            var contactLname = $("#contactLname").val();
-                            var contactEmail = $("#contactEmail").val();
-                            var contactTel = $("#contactTel").val();
-                            var contactMessage = $("#contactMessage").val();
-                            var contactObj = {
-                                _contactFname: contactFname,
-                                _contactLname: contactLname,
-                                _contactEmail: contactEmail,
-                                _contactTel: contactTel,
-                                _contactMessage: contactMessage
-                            };
-                            if (contactEmail != "") {
-                                Email.send({
-                                    Host: "send.one.com",
-                                    Username: "sobhi@cloudulu.com",
-                                    Password: "Nour070715",
-                                    To: contactObj._contactEmail,
-                                    From: "sobhi@cloudulu.com",
-                                    Subject: "Thank you for Contacting us ",
-                                    Body: "<html><h2>   " +
-                                        contactObj._contactFname +
-                                        contactObj._contactLname +
-                                        " </h2><br/>Sincerely Tony Montana, Restaurant manager"
-
-                                });
-
-
-                                Swal.fire('', 'Thank you for contacting us, at the  Circus Grill.', '');
                             } else {
-                                Swal.fire('', 'Please enter your email !', '');
+
+                                // JSalert(reservation); 
                             }
-                            
 
-                        });
-                       //----------------------Subscribe Script--------------
-                       function clearSubscribe(){
-                        document.getElementById('subscribeEmail').value = "";
-                       }
-                       var subscribeEmail = $("#subscribeEmail").val();
-                       
-                       function sendMail() {
-                        var subscribeEmail = $("#subscribeEmail").val();
-
-                        Email.send({
-                        Host : "send.one.com",
-                        Username : "noreply@ahoora.se",
-                        Password : "AwSeDr@!220",
-                        To : subscribeEmail,
-                        From : "noreply@ahoora.se",
-                        Subject : "Thank you for subscription. ",
-                        Body: "<html><h1> Circus Grill!!  "
-           
-        });
-
-
-
-    }
-                       $('#subscribeBtn').on('click', function () {
-                        
-                             
-                            var subscribeEmail = $("#subscribeEmail").val();
-                           
-                            if (subscribeEmail != "") {
-                                sendMail();
-                                
-                            //    Email.send({
-          //  Host : "send.one.com",
-         //   Username : "noreply@ahoora.se",
-         //   Password : "AwSeDr@!220",
-        //    To : "janalizade@gmail.com",
-        //    From : "noreply@ahoora.se",
-        //    Subject : "Thank you for Subscribing us ",
-        //   Body: "<html>  "
-        //        +" <br/>sincerely Tony Montana, Restaurant manager"
-       // });
-
-                               
-
-
-                                Swal.fire('', 'Thank you for subscription.', '');
-                            } else {
-                                Swal.fire('', 'Please enter your email !', '');
-                            }
                         });
                     });
                 </script>
-               
+                <script src="/Lang/lang_engine.js"></script>
+                <script src="/Lang/translation.js"></script>
 
 
 </body>
