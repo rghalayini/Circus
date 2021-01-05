@@ -178,17 +178,17 @@ event and a description of what will happen.
 ## Conclusions
 A complete design of Circus Restaurant website has been performed by taking into account:
 <ul>
-<il>The opinion of customers received through a general survey.</il>
-<il>Simple, sleek and family friendly design that showcases the vegan values and
-circus/mysterious concept of the restaurant.</il>
-<il>Responsiveness of the website in several devices
-<il>Booking system online.</il>
-<il>Creation of a web app to be used only in the restaurant for ordering food and reading
-upcoming events.</il>
-<il>Stressing on digitalization, i.e. customers can order food online or simply ask the help of
-waiters through the app.</il>
-<il>Showcasing the variety of events and stressing on their presence by spreading event
-buttons and popups throughout the website.</il>
-<il>Highlighting the high quality of the food and the available products through purposebuilt
-sections and high quality images of food products in the web app.</il>
+<li>The opinion of customers received through a general survey.</li>
+<li>Simple, sleek and family friendly design that showcases the vegan values and
+circus/mysterious concept of the restaurant.</li>
+<li>Responsiveness of the website in several devices
+<li>Booking system online.</li>
+<li>Creation of a web app to be used only in the restaurant for ordering food and reading
+upcoming events.</li>
+<li>Stressing on digitalization, i.e. customers can order food online or simply ask the help of
+waiters through the app.</li>
+<li>Showcasing the variety of events and stressing on their presence by spreading event
+buttons and popups throughout the website.</li>
+<li>Highlighting the high quality of the food and the available products through purposebuilt
+sections and high quality images of food products in the web app.</li>
 </ul>
