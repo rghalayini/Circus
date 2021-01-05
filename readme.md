@@ -191,4 +191,4 @@ waiters through the app.</il>
 buttons and popups throughout the website.</il>
 <il>Highlighting the high quality of the food and the available products through purposebuilt
 sections and high quality images of food products in the web app.</il>
-<ul>
+</ul>
